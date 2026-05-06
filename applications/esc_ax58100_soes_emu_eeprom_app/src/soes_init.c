@@ -2,6 +2,8 @@
 #include "soes_init.h"
 #include "enc_dma.h"
 #include "ecat_slv.h"
+#include "eep_backend.h"
+#include "esc_eep.h"
 #include "irq.h"
 #include "servo.h"
 
@@ -17,11 +19,15 @@ static uint16_t esc_check_dc_handler(void)
 void soes_init(void)
 {
     esc_cfg_t cfg = {0};
+
+    eep_backend_init();
+
     cfg.use_interrupt = 1; /* use IRQs on PC0 */
     cfg.watchdog_cnt = 1000;
     cfg.application_hook = servo_cycle;
     cfg.esc_hw_interrupt_enable = esc_hw_int_enable;
     cfg.esc_hw_interrupt_disable = esc_hw_int_disable;
+    cfg.esc_hw_eep_handler = eep_backend_event_handler;
     cfg.esc_check_dc_handler = esc_check_dc_handler;
 
     ecat_slv_init(&cfg);

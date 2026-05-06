@@ -9,6 +9,7 @@
 #include "utypes.h"
 
 #include "system_clock.h"
+#include "boot_eeprom_emu.h"
 #include "soes_init.h"
 #include "io.h"
 #include "irq.h"
@@ -22,6 +23,9 @@ int main(void)
 {
     /* Configure system clock (HSI -> PLL 168MHz) */
     SystemClock_Config();
+
+    /* Bring up the boot-time EEPROM emulator before the ESC SPI path starts. */
+    boot_eeprom_emu_init();
 
     /* Initialize simple GPIO I/O used by PDO callbacks */
     io_init();
