@@ -1,0 +1,322 @@
+{
+  "form": {
+    "VendorName": "RBR EtherCAT Devices",
+    "VendorID": "0x725",
+    "ProductCode": "0x00d9632",
+    "ProfileNo": "5001",
+    "RevisionNumber": "0x001",
+    "SerialNumber": "0x001",
+    "HWversion": "0.0.1",
+    "SWversion": "0.0.1",
+    "EEPROMsize": "2048",
+    "RxMailboxOffset": "0x1000",
+    "TxMailboxOffset": "0x1200",
+    "MailboxSize": "512",
+    "SM2Offset": "0x1600",
+    "SM3Offset": "0x1A00",
+    "TextGroupType": "Controller",
+    "TextGroupName5": "AX58100",
+    "ImageName": "IMGCBY",
+    "TextDeviceType": "AxisInterface2000",
+    "TextDeviceName": "4 Axis Pwm Enc Channels GPIOs",
+    "Port0Physical": "Y",
+    "Port1Physical": "Y",
+    "Port2Physical": " ",
+    "Port3Physical": " ",
+    "ESC": "AX58100",
+    "SPImode": "3",
+    "CoeDetailsEnableSDO": "EnableSDO",
+    "CoeDetailsEnableSDOInfo": "EnableSDOInfo",
+    "CoeDetailsEnablePDOAssign": "EnablePDOAssign",
+    "CoeDetailsEnablePDOConfiguration": "EnablePDOConfiguration",
+    "CoeDetailsEnableUploadAtStartup": "EnableUploadAtStartup",
+    "CoeDetailsEnableSDOCompleteAccess": "EnableSDOCompleteAccess"
+  },
+  "od": {
+    "sdo": {},
+    "txpdo": {
+      "6000": {
+        "otype": "ARRAY",
+        "name": "Enc_Pos",
+        "access": "RO",
+        "items": [
+          {
+            "name": "Max SubIndex"
+          },
+          {
+            "name": "Enc_0_Pos",
+            "data": "&Obj.Enc_Pos[0]",
+            "value": "0"
+          },
+          {
+            "name": "Enc_1_Pos",
+            "value": "0",
+            "data": "&Obj.Enc_Pos[1]"
+          },
+          {
+            "name": "Enc_2_Pos",
+            "value": "0",
+            "data": "&Obj.Enc_Pos[2]"
+          },
+          {
+            "name": "Enc_3_Pos",
+            "value": "0",
+            "data": "&Obj.Enc_Pos[3]"
+          }
+        ],
+        "pdo_mappings": [
+          "txpdo"
+        ],
+        "dtype": "INTEGER32"
+      },
+      "6001": {
+        "otype": "ARRAY",
+        "name": "Enc_Vel",
+        "access": "RO",
+        "items": [
+          {
+            "name": "Max SubIndex"
+          },
+          {
+            "name": "Enc_0_Vel",
+            "data": "&Obj.Enc_Vel[0]",
+            "value": "0"
+          },
+          {
+            "name": "Enc_1_Vel",
+            "value": "0",
+            "data": "&Obj.Enc_Vel[1]"
+          },
+          {
+            "name": "Enc_2_Vel",
+            "value": "0",
+            "data": "&Obj.Enc_Vel[2]"
+          },
+          {
+            "name": "Enc_3_Vel",
+            "value": "0",
+            "data": "&Obj.Enc_Vel[3]"
+          }
+        ],
+        "pdo_mappings": [
+          "txpdo"
+        ],
+        "dtype": "INTEGER32"
+      },
+      "6002": {
+        "otype": "VAR",
+        "name": "Inputs",
+        "access": "RO",
+        "pdo_mappings": [
+          "txpdo"
+        ],
+        "dtype": "UNSIGNED16",
+        "value": "0",
+        "data": "&Obj.Inputs"
+      },
+      "6003": {
+        "otype": "ARRAY",
+        "name": "Enc_Status",
+        "access": "RO",
+        "items": [
+          {
+            "name": "Max SubIndex"
+          },
+          {
+            "name": "Enc_0_Status",
+            "data": "&Obj.Enc_Status[0]",
+            "value": "0"
+          },
+          {
+            "name": "Enc_1_Status",
+            "value": "0",
+            "data": "&Obj.Enc_Status[1]"
+          },
+          {
+            "name": "Enc_2_Status",
+            "value": "0",
+            "data": "&Obj.Enc_Status[2]"
+          },
+          {
+            "name": "Enc_3_Status",
+            "value": "0",
+            "data": "&Obj.Enc_Status[3]"
+          }
+        ],
+        "pdo_mappings": [
+          "txpdo"
+        ],
+        "dtype": "UNSIGNED8"
+      },
+      "6004": {
+        "otype": "ARRAY",
+        "name": "Pwm_Status",
+        "access": "RO",
+        "items": [
+          {
+            "name": "Max SubIndex"
+          },
+          {
+            "name": "Pwm_0_Status",
+            "data": "&Obj.Pwm_Status[0]",
+            "value": "0"
+          },
+          {
+            "name": "Pwm_1_Status",
+            "value": "0",
+            "data": "&Obj.Pwm_Status[1]"
+          },
+          {
+            "name": "Pwm_2_Status",
+            "value": "0",
+            "data": "&Obj.Pwm_Status[2]"
+          },
+          {
+            "name": "Pwm_3_Status",
+            "value": "0",
+            "data": "&Obj.Pwm_Status[3]"
+          }
+        ],
+        "pdo_mappings": [
+          "txpdo"
+        ],
+        "dtype": "UNSIGNED8"
+      }
+    },
+    "rxpdo": {
+      "7000": {
+        "otype": "ARRAY",
+        "name": "Pwm_Cmd",
+        "access": "WO",
+        "items": [
+          {
+            "name": "Max SubIndex"
+          },
+          {
+            "name": "Pwm_0_Cmd",
+            "data": "&Obj.Pwm_Cmd[0]",
+            "value": "0"
+          },
+          {
+            "name": "Pwm_1_Cmd",
+            "value": "0",
+            "data": "&Obj.Pwm_Cmd[1]"
+          },
+          {
+            "name": "Pwm_2_Cmd",
+            "value": "0",
+            "data": "&Obj.Pwm_Cmd[2]"
+          },
+          {
+            "name": "Pwm_3_Cmd",
+            "value": "0",
+            "data": "&Obj.Pwm_Cmd[3]"
+          }
+        ],
+        "pdo_mappings": [
+          "rxpdo"
+        ],
+        "dtype": "INTEGER32"
+      },
+      "7001": {
+        "otype": "ARRAY",
+        "name": "Pwm_En",
+        "access": "WO",
+        "items": [
+          {
+            "name": "Max SubIndex"
+          },
+          {
+            "name": "Pwm_En",
+            "data": "&Obj.Pwm_En[0]",
+            "value": "0"
+          },
+          {
+            "name": "Pwm_1_En",
+            "value": "0",
+            "data": "&Obj.Pwm_En[1]"
+          },
+          {
+            "name": "Pwm_2_En",
+            "value": "0",
+            "data": "&Obj.Pwm_En[2]"
+          },
+          {
+            "name": "Pwm_3_En",
+            "value": "0",
+            "data": "&Obj.Pwm_En[3]"
+          }
+        ],
+        "pdo_mappings": [
+          "rxpdo"
+        ],
+        "dtype": "UNSIGNED8"
+      },
+      "7002": {
+        "otype": "ARRAY",
+        "name": "Enc_En",
+        "access": "WO",
+        "items": [
+          {
+            "name": "Max SubIndex"
+          },
+          {
+            "name": "Enc_0_En",
+            "data": "&Obj.Enc_En[0]",
+            "value": "0"
+          },
+          {
+            "name": "Enc_1_En",
+            "value": "0",
+            "data": "&Obj.Enc_En[1]"
+          },
+          {
+            "name": "Enc_2_En",
+            "value": "0",
+            "data": "&Obj.Enc_En[2]"
+          },
+          {
+            "name": "Enc_3_En",
+            "value": "0",
+            "data": "&Obj.Enc_En[3]"
+          }
+        ],
+        "pdo_mappings": [
+          "rxpdo"
+        ],
+        "dtype": "UNSIGNED8"
+      },
+      "7003": {
+        "otype": "VAR",
+        "name": "Outputs",
+        "access": "WO",
+        "pdo_mappings": [
+          "rxpdo"
+        ],
+        "dtype": "UNSIGNED16",
+        "value": "0",
+        "data": "&Obj.Outputs"
+      }
+    }
+  },
+  "dc": [
+    {
+      "Name": "SM-Synchron",
+      "Description": "SM-Synchron",
+      "AssignActivate": "#x000",
+      "Sync0cycleTime": "0",
+      "Sync0shiftTime": "0",
+      "Sync1cycleTime": "0",
+      "Sync1shiftTime": "0"
+    },
+    {
+      "Name": "DC",
+      "Description": "DC-Synchron",
+      "AssignActivate": "#x300",
+      "Sync0cycleTime": "1000000",
+      "Sync0shiftTime": "0",
+      "Sync1cycleTime": "0",
+      "Sync1shiftTime": "0"
+    }
+  ]
+}
