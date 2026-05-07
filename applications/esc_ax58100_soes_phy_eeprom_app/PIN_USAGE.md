@@ -34,10 +34,10 @@ Reservas consideradas:
 
 | Puerto | Usados por firmware | Reservados | Libres |
 | --- | --- | --- | --- |
-| `PA` | `PA0`, `PA1`, `PA4`, `PA5`, `PA6`, `PA7`, `PA8`, `PA9`, `PA10`, `PA11`, `PA12`, `PA15` | `PA13`, `PA14` | `PA2`, `PA3` |
-| `PB` | `PB0`, `PB1`, `PB2`, `PB3`, `PB4`, `PB5`, `PB6`, `PB7`, `PB8`, `PB9`, `PB10`, `PB11`, `PB12` | none | `PB13`, `PB14`, `PB15` |
-| `PC` | `PC0`, `PC2`, `PC3`, `PC4`, `PC6`, `PC7`, `PC8`, `PC9` | none | `PC1`, `PC5`, `PC10`, `PC11`, `PC12`, `PC13`, `PC14`, `PC15` |
-| `PD` | `PD0`, `PD1`, `PD2`, `PD3`, `PD4`, `PD5`, `PD6`, `PD7`, `PD8`, `PD9`, `PD10`, `PD11`, `PD12`, `PD13` | none | `PD14`, `PD15` |
+| `PA` | `PA0`, `PA1`, `PA2`, `PA3`, `PA4`, `PA5`, `PA6`, `PA7`, `PA15` | `PA13`, `PA14` | `PA8`, `PA9`, `PA10`, `PA11`, `PA12` |
+| `PB` | `PB3`, `PB4`, `PB5`, `PB9`, `PB10`, `PB11`, `PB12`, `PB13`, `PB14`, `PB15` | none | `PB0`, `PB1`, `PB2`, `PB6`, `PB7`, `PB8` |
+| `PC` | `PC0`, `PC1`, `PC2`, `PC3`, `PC5`, `PC6`, `PC7`, `PC8`, `PC9`, `PC10`, `PC11`, `PC12` | none | `PC4`, `PC13`, `PC14`, `PC15` |
+| `PD` | `PD0`, `PD1`, `PD2`, `PD3`, `PD4`, `PD5`, `PD6`, `PD7`, `PD8`, `PD9`, `PD10`, `PD11`, `PD12`, `PD13`, `PD14`, `PD15` | none | none |
 | `PE` | `PE0`, `PE1`, `PE2`, `PE3`, `PE4`, `PE5`, `PE6`, `PE7`, `PE8`, `PE9`, `PE10`, `PE11`, `PE12`, `PE13`, `PE14`, `PE15` | none | none |
 | `PH` | none | `PH0`, `PH1` | none |
 
@@ -102,8 +102,59 @@ Captura de `Z` / index implementada por interrupcion:
 
 Nota importante:
 
-- `PA15`, `PB3` y `PB4` comparten funciones con JTAG. En esta app se usan para encoder/captura, asi que en practica debes quedarte con `SWD` sobre `PA13/PA14` y no contar con JTAG completo.
+- `PA15`, `PB3` y `PB4` comparten funciones con `SWJ/JTAG`, pero eso no impide usar depuracion/programacion normal por `SWD` mientras se reserven `PA13` (`SWDIO`) y `PA14` (`SWCLK`). La implicacion real es otra: si esos tres pines se usan para encoder/captura, renuncias a `JTAG` completo y tambien a `SWO`/trace en `PB3`.
+- En otras palabras: para una placa que solo vaya a usar `SWD`, reutilizar `PA15/PB3/PB4` es tecnicamente viable; se vuelve una mala eleccion solo si quieres mantener opciones de `JTAG`, `SWO`, boundary-scan, o una zona de debug mas limpia para futuras revisiones.
 - `Z` se expone ya a traves de `Enc_Status` en el OD/PDO existente: bit 5 = nivel actual fisico de la entrada Z; bit 6 = pulso de un ciclo servo cuando hubo un flanco ascendente nuevo desde el ultimo latch. En otras palabras, bit 5 describe el estado instantaneo del pin y bit 6 describe un evento nuevo.
+
+## Estado actual del proyecto
+
+El proyecto queda documentado segun el firmware actual, sin proponer aqui un
+pinout alternativo. La distribucion vigente que debe considerarse congelada es:
+
+- PWM de los 4 ejes en `TIM1` sobre `PE9`, `PE11`, `PE13`, `PE14`, con
+  direccion en `PE8`, `PE10`, `PE12`, `PE15`.
+- Posicion en cuadratura en `TIM5`, `TIM2`, `TIM4` y `TIM8` usando
+  `PA0/PA1`, `PA15/PB3`, `PD12/PD13`, `PC6/PC7`.
+- Captura lenta de velocidad en `TIM3_CH1..CH4` usando `PB4`, `PB5`, `PC8`,
+  `PC9`.
+- `Z` por `EXTI` en `PB9..PB12`.
+
+Con la decision actual de depurar solo por `SWD` mediante `CMSIS-DAP` o
+`ST-Link/V2`, esta asignacion es valida: `PA15`, `PB3` y `PB4` pueden usarse
+en la aplicacion siempre que `PA13` y `PA14` sigan reservados para `SWDIO` y
+`SWCLK`.
+
+## Estado funcional expuesto por firmware
+
+La superficie funcional visible hoy desde EtherCAT es minimalista y estable:
+
+- `servo.c` publica por eje `Enc_Pos`, `Enc_Vel`, `Enc_Status` y `Pwm_Status`.
+- Las salidas del master siguen siendo `Pwm_Cmd`, `Pwm_En`, `Enc_En` y
+  `Outputs`.
+- No hay objetos extra para posicion exacta de index ni contador de eventos de
+  index; la semantica de `Z` queda encapsulada en firmware.
+
+Bits actuales de `Enc_Status`:
+
+| Bit | Mascara | Significado |
+| --- | --- | --- |
+| 0 | `1U << 0` | Encoder habilitado |
+| 1 | `1U << 1` | Captura lenta valida |
+| 2 | `1U << 2` | Captura lenta fresca en este latch |
+| 3 | `1U << 3` | Velocidad fusionada basada en fuente rapida |
+| 4 | `1U << 4` | Velocidad fusionada basada en fuente lenta |
+| 5 | `1U << 5` | Nivel actual de `Z` |
+| 6 | `1U << 6` | Pulso de un ciclo servo por nuevo evento de `Z` |
+
+Resumen practico del estado actual:
+
+- La unica redistribucion de GPIO temporales respecto al reparto anterior esta
+  en `src/io.c`, que movio las entradas temporales a `PA2/PA3`, `PB13..PB15`,
+  `PC1`, `PC5`, `PC10..PC12`, `PD14`, `PD15`.
+- El bloque encoder mantiene la combinacion actual de contador en cuadratura,
+  captura lenta por `TIM3` y latch de `Z` por `EXTI`.
+- El OD/PDO activo sigue siendo el minimo necesario para LinuxCNC: posicion,
+  velocidad, entradas, `Enc_Status`, `Pwm_Status`, comandos y enables.
 
 ## IO temporales expuestos por PDO
 
@@ -136,34 +187,33 @@ Entradas digitales temporales:
 | `Inputs[1]` | `PE5` |
 | `Inputs[2]` | `PE6` |
 | `Inputs[3]` | `PE7` |
-| `Inputs[4]` | `PA8` |
-| `Inputs[5]` | `PA9` |
-| `Inputs[6]` | `PA10` |
-| `Inputs[7]` | `PA11` |
-| `Inputs[8]` | `PA12` |
-| `Inputs[9]` | `PB0` |
-| `Inputs[10]` | `PB1` |
-| `Inputs[11]` | `PB2` |
-| `Inputs[12]` | `PB6` |
-| `Inputs[13]` | `PB7` |
-| `Inputs[14]` | `PB8` |
-| `Inputs[15]` | `PC4` |
+| `Inputs[4]` | `PA2` |
+| `Inputs[5]` | `PA3` |
+| `Inputs[6]` | `PB13` |
+| `Inputs[7]` | `PB14` |
+| `Inputs[8]` | `PB15` |
+| `Inputs[9]` | `PC1` |
+| `Inputs[10]` | `PC5` |
+| `Inputs[11]` | `PC10` |
+| `Inputs[12]` | `PC11` |
+| `Inputs[13]` | `PC12` |
+| `Inputs[14]` | `PD14` |
+| `Inputs[15]` | `PD15` |
 
 ## Pines libres
 
 Los siguientes pines no aparecen reclamados por esta app:
 
-- `PA2`, `PA3`
-- `PB13`, `PB14`, `PB15`
-- `PC1`, `PC5`, `PC10`, `PC11`, `PC12`, `PC13`, `PC14`, `PC15`
-- `PD14`, `PD15`
+- `PA8`, `PA9`, `PA10`, `PA11`, `PA12`
+- `PB0`, `PB1`, `PB2`, `PB6`, `PB7`, `PB8`
+- `PC4`, `PC13`, `PC14`, `PC15`
 
 ## Reservas y notas de diseno
 
 - `PA13` y `PA14` deben mantenerse para `SWDIO` y `SWCLK`.
 - `PH0` y `PH1` conviene reservarlos para `HSE_IN` y `HSE_OUT` en la PCB, aunque el firmware actual arranque con HSI.
 - `PE0..PE15` quedan completamente ocupados por IO temporal y PWM/direccion.
-- `PD0..PD13` quedan casi completos por IO temporal y encoder del eje 2.
+- `PD0..PD15` quedan completamente ocupados por IO temporal, encoder del eje 2 y las entradas temporales `Inputs[14]` y `Inputs[15]`.
 - `PDI_EMU` debe leerse como bootstrap del AX58100 (`Device emulation`, bit `0x0141.0`), no como salida de estado de EEPROM cargada.
 - `EEP_DONE` sigue siendo una salida de estado util para diagnostico, pero no es obligatoria para el firmware actual con EEPROM fisica.
 - Esta variante con EEPROM fisica no asigna pines STM32 a la carga de EEPROM del AX58100. Si en el futuro migras a una solucion asistida por MCU, habra que reservar al menos `SCL`, `SDA` y, si quieres diagnostico de arranque, `EEP_DONE`.

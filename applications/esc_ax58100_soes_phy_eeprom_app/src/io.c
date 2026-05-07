@@ -10,10 +10,10 @@
  * Outputs  0..11 : PD0..PD11
  * Outputs 12..15 : PE0..PE3
  * Inputs   0..3  : PE4..PE7
- * Inputs   4..8  : PA8..PA12
- * Inputs   9..11 : PB0..PB2
- * Inputs  12..14 : PB6..PB8
- * Inputs  15     : PC4
+ * Inputs   4..5  : PA2..PA3
+ * Inputs   6..8  : PB13..PB15
+ * Inputs   9..13 : PC1, PC5, PC10..PC12
+ * Inputs  14..15 : PD14..PD15
  *
  * The regenerated EtherCAT object dictionary now exposes full 16-bit Inputs and
  * Outputs variables, so the callbacks map the whole temporary IO pool.
@@ -49,18 +49,18 @@ static const io_pin_t io_in_pins[IO_TEMP_INPUT_CHANNELS] = {
     {GPIOE, LL_GPIO_PIN_5},
     {GPIOE, LL_GPIO_PIN_6},
     {GPIOE, LL_GPIO_PIN_7},
-    {GPIOA, LL_GPIO_PIN_8},
-    {GPIOA, LL_GPIO_PIN_9},
-    {GPIOA, LL_GPIO_PIN_10},
-    {GPIOA, LL_GPIO_PIN_11},
-    {GPIOA, LL_GPIO_PIN_12},
-    {GPIOB, LL_GPIO_PIN_0},
-    {GPIOB, LL_GPIO_PIN_1},
-    {GPIOB, LL_GPIO_PIN_2},
-    {GPIOB, LL_GPIO_PIN_6},
-    {GPIOB, LL_GPIO_PIN_7},
-    {GPIOB, LL_GPIO_PIN_8},
-    {GPIOC, LL_GPIO_PIN_4},
+    {GPIOA, LL_GPIO_PIN_2},
+    {GPIOA, LL_GPIO_PIN_3},
+    {GPIOB, LL_GPIO_PIN_13},
+    {GPIOB, LL_GPIO_PIN_14},
+    {GPIOB, LL_GPIO_PIN_15},
+    {GPIOC, LL_GPIO_PIN_1},
+    {GPIOC, LL_GPIO_PIN_5},
+    {GPIOC, LL_GPIO_PIN_10},
+    {GPIOC, LL_GPIO_PIN_11},
+    {GPIOC, LL_GPIO_PIN_12},
+    {GPIOD, LL_GPIO_PIN_14},
+    {GPIOD, LL_GPIO_PIN_15},
 };
 
 void io_init(void)
