@@ -10,6 +10,8 @@
 #define ENC_STATUS_CAPTURE_FRESH        (1U << 2)
 #define ENC_STATUS_VELOCITY_SOURCE_FAST (1U << 3)
 #define ENC_STATUS_VELOCITY_SOURCE_SLOW (1U << 4)
+#define ENC_STATUS_INDEX_LEVEL          (1U << 5)
+#define ENC_STATUS_INDEX_LATCHED        (1U << 6)
 
 void enc_dma_init(void);
 void enc_dma_latch(void);

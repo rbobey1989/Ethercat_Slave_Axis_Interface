@@ -13,16 +13,17 @@ Alcance de este documento:
 
 Esta variante no emula la EEPROM de arranque desde el STM32. El AX58100 debe
 cargar su EEPROM fisica directamente en el lado ESC. Por tanto, en esta app el
-STM32 no reclama pines de `SCL`, `SDA`, `PDI_EMU` ni `EEP_DONE` para boot
-EEPROM.
+STM32 no reclama pines de `SCL`, `SDA` ni `EEP_DONE` para boot EEPROM.
+`PDI_EMU` no se trata aqui como señal de estado del arranque, sino como pin
+bootstrap del AX58100 para `0x0141.0` (`Device emulation`).
 
 Recuento consolidado sobre los puertos visibles en el firmware:
 
 | Grupo | Cantidad |
 | --- | ---: |
-| GPIO usados por el firmware | 59 |
+| GPIO usados por el firmware | 63 |
 | GPIO reservados | 4 |
-| GPIO libres | 19 |
+| GPIO libres | 15 |
 
 Reservas consideradas:
 
@@ -34,7 +35,7 @@ Reservas consideradas:
 | Puerto | Usados por firmware | Reservados | Libres |
 | --- | --- | --- | --- |
 | `PA` | `PA0`, `PA1`, `PA4`, `PA5`, `PA6`, `PA7`, `PA8`, `PA9`, `PA10`, `PA11`, `PA12`, `PA15` | `PA13`, `PA14` | `PA2`, `PA3` |
-| `PB` | `PB0`, `PB1`, `PB2`, `PB3`, `PB4`, `PB5`, `PB6`, `PB7`, `PB8` | none | `PB9`, `PB10`, `PB11`, `PB12`, `PB13`, `PB14`, `PB15` |
+| `PB` | `PB0`, `PB1`, `PB2`, `PB3`, `PB4`, `PB5`, `PB6`, `PB7`, `PB8`, `PB9`, `PB10`, `PB11`, `PB12` | none | `PB13`, `PB14`, `PB15` |
 | `PC` | `PC0`, `PC2`, `PC3`, `PC4`, `PC6`, `PC7`, `PC8`, `PC9` | none | `PC1`, `PC5`, `PC10`, `PC11`, `PC12`, `PC13`, `PC14`, `PC15` |
 | `PD` | `PD0`, `PD1`, `PD2`, `PD3`, `PD4`, `PD5`, `PD6`, `PD7`, `PD8`, `PD9`, `PD10`, `PD11`, `PD12`, `PD13` | none | `PD14`, `PD15` |
 | `PE` | `PE0`, `PE1`, `PE2`, `PE3`, `PE4`, `PE5`, `PE6`, `PE7`, `PE8`, `PE9`, `PE10`, `PE11`, `PE12`, `PE13`, `PE14`, `PE15` | none | none |
@@ -90,9 +91,19 @@ Captura lenta de periodo, normalmente derivada de la fase A:
 | 2 | `PC8` | `TIM3_CH3` | `DMA1 Stream7 Channel5` |
 | 3 | `PC9` | `TIM3_CH4` | `DMA1 Stream2 Channel5` |
 
+Captura de `Z` / index implementada por interrupcion:
+
+| Eje | Z / Index | Uso previsto |
+| --- | --- | --- |
+| 0 | `PB9` | `EXTI9`, latched por firmware |
+| 1 | `PB10` | `EXTI10`, latched por firmware |
+| 2 | `PB11` | `EXTI11`, latched por firmware |
+| 3 | `PB12` | `EXTI12`, latched por firmware |
+
 Nota importante:
 
 - `PA15`, `PB3` y `PB4` comparten funciones con JTAG. En esta app se usan para encoder/captura, asi que en practica debes quedarte con `SWD` sobre `PA13/PA14` y no contar con JTAG completo.
+- `Z` se expone ya a traves de `Enc_Status` en el OD/PDO existente: bit 5 = nivel actual fisico de la entrada Z; bit 6 = pulso de un ciclo servo cuando hubo un flanco ascendente nuevo desde el ultimo latch. En otras palabras, bit 5 describe el estado instantaneo del pin y bit 6 describe un evento nuevo.
 
 ## IO temporales expuestos por PDO
 
@@ -143,7 +154,7 @@ Entradas digitales temporales:
 Los siguientes pines no aparecen reclamados por esta app:
 
 - `PA2`, `PA3`
-- `PB9`, `PB10`, `PB11`, `PB12`, `PB13`, `PB14`, `PB15`
+- `PB13`, `PB14`, `PB15`
 - `PC1`, `PC5`, `PC10`, `PC11`, `PC12`, `PC13`, `PC14`, `PC15`
 - `PD14`, `PD15`
 
@@ -153,4 +164,6 @@ Los siguientes pines no aparecen reclamados por esta app:
 - `PH0` y `PH1` conviene reservarlos para `HSE_IN` y `HSE_OUT` en la PCB, aunque el firmware actual arranque con HSI.
 - `PE0..PE15` quedan completamente ocupados por IO temporal y PWM/direccion.
 - `PD0..PD13` quedan casi completos por IO temporal y encoder del eje 2.
-- Esta variante con EEPROM fisica no asigna pines STM32 a la carga de EEPROM del AX58100. Si en el futuro migras a emulacion desde MCU, habra que reservar una interfaz distinta para `SCL`, `SDA`, `PDI_EMU` y `EEP_DONE`.
+- `PDI_EMU` debe leerse como bootstrap del AX58100 (`Device emulation`, bit `0x0141.0`), no como salida de estado de EEPROM cargada.
+- `EEP_DONE` sigue siendo una salida de estado util para diagnostico, pero no es obligatoria para el firmware actual con EEPROM fisica.
+- Esta variante con EEPROM fisica no asigna pines STM32 a la carga de EEPROM del AX58100. Si en el futuro migras a una solucion asistida por MCU, habra que reservar al menos `SCL`, `SDA` y, si quieres diagnostico de arranque, `EEP_DONE`.

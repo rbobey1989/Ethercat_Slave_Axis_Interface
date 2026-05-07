@@ -4,7 +4,9 @@
 
 #include "stm32f407xx.h"
 #include "stm32f4xx_ll_bus.h"
+#include "stm32f4xx_ll_exti.h"
 #include "stm32f4xx_ll_gpio.h"
+#include "stm32f4xx_ll_system.h"
 
 /*
  * Encoder module pinout
@@ -27,8 +29,9 @@
  * 3. If the encoder is differential (RS-422 line driver), place a receiver before
  *    the MCU and feed the single-ended A/B/Z signals to the STM32 pins.
  * 4. MCU and encoder interface must share a valid signal ground reference.
- * 5. Z/index is not yet consumed by this module; if needed it should go to a
- *    separate EXTI or capture input.
+ * 5. Z/index is sampled on PB9..PB12 and folded into Enc_Status as:
+ *    - INDEX_LEVEL: current logic level on the Z input.
+ *    - INDEX_LATCHED: one-servo-cycle pulse when a new rising edge arrived.
  */
 
 typedef struct
@@ -68,6 +71,14 @@ typedef struct
     uint8_t dma_channel;
 } enc_capture_dma_cfg_t;
 
+typedef struct
+{
+    GPIO_TypeDef *port;
+    uint32_t pin;
+    uint32_t exti_line;
+    uint32_t exti_source;
+} enc_index_irq_cfg_t;
+
 #define ENC_DMA_CAPTURE_TIMER         TIM3
 #define ENC_DMA_CAPTURE_TIMER_HZ      100000UL
 #define ENC_DMA_CAPTURE_BUFFER_LEN    8U
@@ -92,7 +103,15 @@ static const enc_capture_dma_cfg_t g_capture_hw[] = {
     {DMA1_Stream2, &TIM3->CCR4, GPIOC, LL_GPIO_PIN_9, LL_GPIO_AF_2, 5U},
 };
 
+static const enc_index_irq_cfg_t g_index_irq_hw[] = {
+    {GPIOB, LL_GPIO_PIN_9, LL_EXTI_LINE_9, LL_SYSCFG_EXTI_LINE9},
+    {GPIOB, LL_GPIO_PIN_10, LL_EXTI_LINE_10, LL_SYSCFG_EXTI_LINE10},
+    {GPIOB, LL_GPIO_PIN_11, LL_EXTI_LINE_11, LL_SYSCFG_EXTI_LINE11},
+    {GPIOB, LL_GPIO_PIN_12, LL_EXTI_LINE_12, LL_SYSCFG_EXTI_LINE12},
+};
+
 static enc_dma_state_t g_enc_state[ENC_DMA_CHANNELS];
+static volatile uint8_t g_enc_index_latched[ENC_DMA_CHANNELS];
 
 static void enc_dma_wait_disabled(DMA_Stream_TypeDef *stream)
 {
@@ -101,6 +120,8 @@ static void enc_dma_wait_disabled(DMA_Stream_TypeDef *stream)
     {
     }
 }
+
+static int32_t enc_dma_delta(uint32_t current, uint32_t previous, uint8_t counter_bits);
 
 static void enc_dma_gpio_set_af(GPIO_TypeDef *port, uint32_t pin, uint32_t af)
 {
@@ -139,6 +160,64 @@ static void enc_dma_capture_gpio_init(void)
     enc_dma_gpio_set_af(g_capture_hw[1].port, g_capture_hw[1].pin, g_capture_hw[1].af);
     enc_dma_gpio_set_af(g_capture_hw[2].port, g_capture_hw[2].pin, g_capture_hw[2].af);
     enc_dma_gpio_set_af(g_capture_hw[3].port, g_capture_hw[3].pin, g_capture_hw[3].af);
+}
+
+static void enc_dma_index_gpio_init(void)
+{
+    for (uint8_t index = 0; index < ENC_DMA_CHANNELS; ++index)
+    {
+        const enc_index_irq_cfg_t *cfg = &g_index_irq_hw[index];
+
+        LL_GPIO_SetPinMode(cfg->port, cfg->pin, LL_GPIO_MODE_INPUT);
+        LL_GPIO_SetPinPull(cfg->port, cfg->pin, LL_GPIO_PULL_NO);
+    }
+}
+
+static void enc_dma_index_irq_init(void)
+{
+    LL_APB2_GRP1_EnableClock(LL_APB2_GRP1_PERIPH_SYSCFG);
+
+    for (uint8_t index = 0; index < ENC_DMA_CHANNELS; ++index)
+    {
+        const enc_index_irq_cfg_t *cfg = &g_index_irq_hw[index];
+
+        LL_SYSCFG_SetEXTISource(LL_SYSCFG_EXTI_PORTB, cfg->exti_source);
+        LL_EXTI_ClearFlag_0_31(cfg->exti_line);
+        LL_EXTI_EnableRisingTrig_0_31(cfg->exti_line);
+        LL_EXTI_DisableFallingTrig_0_31(cfg->exti_line);
+        LL_EXTI_EnableIT_0_31(cfg->exti_line);
+    }
+
+    NVIC_SetPriority(EXTI9_5_IRQn, 5);
+    NVIC_EnableIRQ(EXTI9_5_IRQn);
+    NVIC_SetPriority(EXTI15_10_IRQn, 5);
+    NVIC_EnableIRQ(EXTI15_10_IRQn);
+}
+
+static void enc_dma_handle_index_irq(uint8_t index)
+{
+    if (g_enc_state[index].enabled == 0U)
+    {
+        return;
+    }
+
+    g_enc_index_latched[index] = 1U;
+}
+
+static void enc_dma_index_latch_status(uint8_t index, enc_dma_state_t *state)
+{
+    const enc_index_irq_cfg_t *irq_cfg = &g_index_irq_hw[index];
+
+    if (LL_GPIO_IsInputPinSet(irq_cfg->port, irq_cfg->pin))
+    {
+        state->status |= ENC_STATUS_INDEX_LEVEL;
+    }
+
+    if (g_enc_index_latched[index] != 0U)
+    {
+        state->status |= ENC_STATUS_INDEX_LATCHED;
+        g_enc_index_latched[index] = 0U;
+    }
 }
 
 static void enc_dma_position_timer_init(const enc_dma_hw_cfg_t *cfg)
@@ -274,6 +353,8 @@ void enc_dma_init(void)
 
     enc_dma_position_gpio_init();
     enc_dma_capture_gpio_init();
+    enc_dma_index_gpio_init();
+    enc_dma_index_irq_init();
 
     for (uint8_t index = 0; index < ENC_DMA_CHANNELS; ++index)
     {
@@ -291,6 +372,7 @@ void enc_dma_init(void)
         state->capture_valid = 0U;
         state->dma_head = 0U;
         state->stale_cycles = ENC_DMA_STALE_LIMIT_CYCLES;
+        g_enc_index_latched[index] = 0U;
 
         enc_dma_position_timer_init(cfg);
         enc_dma_capture_stream_init(index);
@@ -316,6 +398,7 @@ void enc_dma_set_enabled(uint8_t encoder_index, uint8_t enabled)
     g_enc_state[encoder_index].dma_head = (uint8_t)((ENC_DMA_CAPTURE_BUFFER_LEN - g_capture_hw[encoder_index].stream->NDTR) & (ENC_DMA_CAPTURE_BUFFER_LEN - 1U));
     g_enc_state[encoder_index].previous_sample = g_enc_hw[encoder_index].tim->CNT;
     g_enc_state[encoder_index].last_capture = 0U;
+    g_enc_index_latched[encoder_index] = 0U;
 }
 
 uint8_t enc_dma_is_enabled(uint8_t encoder_index)
@@ -352,6 +435,7 @@ void enc_dma_latch(void)
             state->velocity_fast = 0;
             state->velocity_slow = 0;
             state->velocity_fused = 0;
+            g_enc_index_latched[index] = 0U;
             continue;
         }
 
@@ -407,6 +491,38 @@ void enc_dma_latch(void)
             state->velocity_slow = 0;
             state->velocity_fused = 0;
         }
+
+        enc_dma_index_latch_status(index, state);
+    }
+}
+
+void EXTI9_5_IRQHandler(void)
+{
+    if (LL_EXTI_IsActiveFlag_0_31(LL_EXTI_LINE_9))
+    {
+        LL_EXTI_ClearFlag_0_31(LL_EXTI_LINE_9);
+        enc_dma_handle_index_irq(0U);
+    }
+}
+
+void EXTI15_10_IRQHandler(void)
+{
+    if (LL_EXTI_IsActiveFlag_0_31(LL_EXTI_LINE_10))
+    {
+        LL_EXTI_ClearFlag_0_31(LL_EXTI_LINE_10);
+        enc_dma_handle_index_irq(1U);
+    }
+
+    if (LL_EXTI_IsActiveFlag_0_31(LL_EXTI_LINE_11))
+    {
+        LL_EXTI_ClearFlag_0_31(LL_EXTI_LINE_11);
+        enc_dma_handle_index_irq(2U);
+    }
+
+    if (LL_EXTI_IsActiveFlag_0_31(LL_EXTI_LINE_12))
+    {
+        LL_EXTI_ClearFlag_0_31(LL_EXTI_LINE_12);
+        enc_dma_handle_index_irq(3U);
     }
 }
 
