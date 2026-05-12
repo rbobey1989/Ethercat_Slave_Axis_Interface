@@ -1,0 +1,9 @@
+Manufacturer=COILCRAFT
+PartNumber=XAL5050-822MEC
+PartCategory=Inductor
+PackageCategory=Other
+PinCount=2
+Version=1.4
+Released=2019-11-04 09:38:13
+Downloaded=2026-05-10 14:05:19
+3D=Y

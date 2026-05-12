@@ -1,6 +1,5 @@
 /* soes_init.c - SOES stack initialization helper */
 #include "soes_init.h"
-#include "enc_dma.h"
 #include "ecat_slv.h"
 #include "irq.h"
 #include "servo.h"
@@ -31,6 +30,5 @@ void soes_init(void)
     if (sync0)
     {
         ESCvar.dcsync = 1;
-        enc_dma_set_servo_period_ns(sync0);
     }
 }

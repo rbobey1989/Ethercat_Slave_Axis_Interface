@@ -1,0 +1,7549 @@
+(kicad_sch
+	(version 20260306)
+	(generator "eeschema")
+	(generator_version "10.0")
+	(uuid "ca31a4dd-6722-4041-be8d-f818a4acf6cd")
+	(paper "A4")
+	(lib_symbols
+		(symbol "Connector_Generic:Conn_01x04"
+			(pin_names
+				(offset 1.016)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "J"
+				(at 0 5.08 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "Conn_01x04"
+				(at 0 -7.62 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "connector"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "Connector*:*_1x??_*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "Conn_01x04_1_1"
+				(rectangle
+					(start -1.27 3.81)
+					(end 1.27 -6.35)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(rectangle
+					(start -1.27 2.667)
+					(end 0 2.413)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start -1.27 0.127)
+					(end 0 -0.127)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start -1.27 -2.413)
+					(end 0 -2.667)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start -1.27 -4.953)
+					(end 0 -5.207)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin passive line
+					(at -5.08 2.54 0)
+					(length 3.81)
+					(name "Pin_1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 0 0)
+					(length 3.81)
+					(name "Pin_2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 -2.54 0)
+					(length 3.81)
+					(name "Pin_3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 -5.08 0)
+					(length 3.81)
+					(name "Pin_4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "Device:R"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "R"
+				(at 2.032 0 90)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "R"
+				(at 0 0 90)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at -1.778 0 90)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Resistor"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "R res resistor"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "R_*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "R_0_1"
+				(rectangle
+					(start -1.016 -2.54)
+					(end 1.016 2.54)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "R_1_1"
+				(pin passive line
+					(at 0 3.81 270)
+					(length 1.27)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -3.81 90)
+					(length 1.27)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "Isolator:TLP291-4"
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "U"
+				(at -5.08 5.08 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "TLP291-4"
+				(at 0 5.08 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" "Package_SO:SOIC-16_4.55x10.3mm_P1.27mm"
+				(at -5.08 -5.08 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+						(italic yes)
+					)
+					(justify left)
+				)
+			)
+			(property "Datasheet" "https://toshiba.semicon-storage.com/info/docget.jsp?did=12858&prodName=TLP291-4"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Description" "Quad DC Optocoupler, Vce 80V, CTR 50-100%, SOP16"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "NPN DC Quad Optocoupler"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "SOIC*4.55x10.3mm*P1.27mm*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "TLP291-4_0_1"
+				(rectangle
+					(start -5.08 3.81)
+					(end 5.08 -3.81)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(polyline
+					(pts
+						(xy -5.08 2.54) (xy -2.54 2.54) (xy -2.54 0.635)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -3.175 -0.635) (xy -1.905 -0.635)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -2.54 0.635) (xy -2.54 -2.54) (xy -5.08 -2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -2.54 -0.635) (xy -3.175 0.635) (xy -1.905 0.635) (xy -2.54 -0.635)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.508 0.508) (xy 0.762 0.508) (xy 0.381 0.381) (xy 0.381 0.635) (xy 0.762 0.508)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -0.508 -0.508) (xy 0.762 -0.508) (xy 0.381 -0.635) (xy 0.381 -0.381) (xy 0.762 -0.508)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 1.905) (xy 2.54 -1.905) (xy 2.54 -1.905)
+					)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 2.54 0.635) (xy 4.445 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 3.048 -1.651) (xy 3.556 -1.143) (xy 4.064 -2.159) (xy 3.048 -1.651) (xy 3.048 -1.651)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(polyline
+					(pts
+						(xy 4.445 2.54) (xy 5.08 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 4.445 -2.54) (xy 2.54 -0.635)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+				(polyline
+					(pts
+						(xy 4.445 -2.54) (xy 5.08 -2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "TLP291-4_1_1"
+				(pin passive line
+					(at -7.62 2.54 0)
+					(length 2.54)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -7.62 -2.54 0)
+					(length 2.54)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 7.62 -2.54 180)
+					(length 2.54)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "15"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 7.62 2.54 180)
+					(length 2.54)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "16"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(symbol "TLP291-4_2_1"
+				(pin passive line
+					(at -7.62 2.54 0)
+					(length 2.54)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -7.62 -2.54 0)
+					(length 2.54)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 7.62 -2.54 180)
+					(length 2.54)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "13"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 7.62 2.54 180)
+					(length 2.54)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "14"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(symbol "TLP291-4_3_1"
+				(pin passive line
+					(at -7.62 2.54 0)
+					(length 2.54)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -7.62 -2.54 0)
+					(length 2.54)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 7.62 -2.54 180)
+					(length 2.54)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "11"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 7.62 2.54 180)
+					(length 2.54)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "12"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(symbol "TLP291-4_4_1"
+				(pin passive line
+					(at -7.62 2.54 0)
+					(length 2.54)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "7"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -7.62 -2.54 0)
+					(length 2.54)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "8"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 7.62 -2.54 180)
+					(length 2.54)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "9"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 7.62 2.54 180)
+					(length 2.54)
+					(name ""
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "10"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "power:GND"
+			(power global)
+			(pin_names
+				(offset 0)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "#PWR"
+				(at 0 -6.35 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "GND"
+				(at 0 -3.81 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "global power"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "GND_0_1"
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 -1.27) (xy 1.27 -1.27) (xy 0 -2.54) (xy -1.27 -1.27) (xy 0 -1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "GND_1_1"
+				(pin power_in line
+					(at 0 0 270)
+					(length 0)
+					(hide yes)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+	)
+	(rectangle
+		(start 17.78 16.51)
+		(end 276.86 163.83)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill
+			(type none)
+		)
+		(uuid "f98a8e6e-6fce-4a66-a97b-c045945566e7")
+	)
+	(text "Outputs"
+		(exclude_from_sim no)
+		(at 18.542 15.494 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "81d46b71-7b53-4e83-8754-0bd74d2d0ca4")
+	)
+	(junction
+		(at 36.83 81.28)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "19fb02e4-4a5c-4658-83a7-2448fdaf9c95")
+	)
+	(junction
+		(at 40.64 152.4)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "2523bb80-de7e-45bf-8693-55e6e4e6706a")
+	)
+	(junction
+		(at 43.18 152.4)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "3b22aebd-b86c-4586-9b84-bb0b968b11e7")
+	)
+	(junction
+		(at 38.1 152.4)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "46dd8cd0-6fb7-48b3-9848-0b459d5d8c69")
+	)
+	(junction
+		(at 184.15 81.28)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "4c928ce1-9b86-4ab6-97dc-2fe14dba3836")
+	)
+	(junction
+		(at 39.37 81.28)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "63f058ee-9e37-4c04-8faa-6a8a267a96e6")
+	)
+	(junction
+		(at 185.42 152.4)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "82ffb6f5-e48f-45ae-9947-f23cea46ceb7")
+	)
+	(junction
+		(at 181.61 81.28)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "83b84afd-aa85-4e5b-93d9-360158b5eb8f")
+	)
+	(junction
+		(at 186.69 81.28)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "a1dfc705-c782-400b-ab50-025d4ecdae9d")
+	)
+	(junction
+		(at 182.88 152.4)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "b0a56d08-e08a-4a60-97a3-2c6bf607dcc2")
+	)
+	(junction
+		(at 187.96 152.4)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "f59b3714-13cc-4664-87b1-31062f19b933")
+	)
+	(junction
+		(at 41.91 81.28)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "f9eaa865-a45b-41a5-9419-737ba0a6f706")
+	)
+	(wire
+		(pts
+			(xy 44.45 40.64) (xy 36.83 40.64)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "01662fb4-821e-4fde-af12-7cad475d8cc5")
+	)
+	(wire
+		(pts
+			(xy 180.34 147.32) (xy 180.34 152.4)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "02111ff0-2362-458c-859a-45d92e59919e")
+	)
+	(wire
+		(pts
+			(xy 219.71 39.37) (xy 219.71 35.56)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0300429c-633c-4f65-aa87-4a0614f092ca")
+	)
+	(wire
+		(pts
+			(xy 77.47 58.42) (xy 77.47 49.53)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "04437b0c-2084-4179-87c3-cb6d234e30aa")
+	)
+	(wire
+		(pts
+			(xy 180.34 100.33) (xy 180.34 139.7)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "04d11d6c-abb8-4e41-a4a6-aa3207521a4d")
+	)
+	(wire
+		(pts
+			(xy 59.69 46.99) (xy 72.39 46.99)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "04e33a6a-cecf-4967-96ea-7d9679f5c146")
+	)
+	(wire
+		(pts
+			(xy 226.06 95.25) (xy 205.74 95.25)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "09a77242-c009-4171-8d19-5074d4b9710e")
+	)
+	(wire
+		(pts
+			(xy 190.5 100.33) (xy 180.34 100.33)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0a7b3b6d-05b7-44b1-9574-d19fd8c9cea3")
+	)
+	(wire
+		(pts
+			(xy 182.88 147.32) (xy 182.88 152.4)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "11541159-dab9-4b61-8dd1-2dde8c4a2ae0")
+	)
+	(wire
+		(pts
+			(xy 223.52 129.54) (xy 223.52 120.65)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "144a2953-f037-495b-a835-d92a986aa224")
+	)
+	(wire
+		(pts
+			(xy 77.47 29.21) (xy 77.47 36.83)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1646d2f1-3d42-4812-94cf-44301c8020a4")
+	)
+	(wire
+		(pts
+			(xy 29.21 106.68) (xy 45.72 106.68)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "172ec746-cce8-4070-ad86-2abf832f5d19")
+	)
+	(wire
+		(pts
+			(xy 222.25 49.53) (xy 229.235 49.53)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "18f836d9-0bb6-4b40-9466-15737899a304")
+	)
+	(wire
+		(pts
+			(xy 230.505 118.11) (xy 220.98 118.11)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1bfcffc2-c9fd-4ec4-beba-fe331ef64599")
+	)
+	(wire
+		(pts
+			(xy 226.06 105.41) (xy 230.505 105.41)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1c386f8a-e09c-47e1-9931-a3eb0f60071f")
+	)
+	(wire
+		(pts
+			(xy 217.17 44.45) (xy 229.235 44.45)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1d0d93dd-64e3-4598-925d-ae5518860654")
+	)
+	(wire
+		(pts
+			(xy 217.17 41.91) (xy 229.235 41.91)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1eb0eb60-f0b1-4b9d-a1e9-e9ac542d6e58")
+	)
+	(wire
+		(pts
+			(xy 226.06 123.19) (xy 230.505 123.19)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1ef44cd0-d544-4224-bd32-524ab2024dea")
+	)
+	(wire
+		(pts
+			(xy 73.66 118.11) (xy 73.66 115.57)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1fefe815-bddc-4a28-bafc-0c333b384251")
+	)
+	(wire
+		(pts
+			(xy 224.79 34.29) (xy 224.79 24.13)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "20df7853-dba1-4efb-bc58-ec50f1d823cb")
+	)
+	(wire
+		(pts
+			(xy 184.15 81.28) (xy 186.69 81.28)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "21531c52-fb05-42d3-9dab-f2cdb39496e0")
+	)
+	(wire
+		(pts
+			(xy 222.25 36.83) (xy 229.235 36.83)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "22802793-c00a-46ce-8166-7d46e4058558")
+	)
+	(wire
+		(pts
+			(xy 173.99 95.25) (xy 190.5 95.25)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "23e5391f-78ea-45f9-8f9e-8f2066930b66")
+	)
+	(wire
+		(pts
+			(xy 80.01 52.07) (xy 80.01 63.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "27d3770f-0c08-4e90-bd3f-b95898e10c45")
+	)
+	(wire
+		(pts
+			(xy 27.94 35.56) (xy 44.45 35.56)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "28eed63c-34ec-47e6-900e-12cbdb4a2537")
+	)
+	(wire
+		(pts
+			(xy 204.47 46.99) (xy 217.17 46.99)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2b5f9e9b-bd31-44a0-9f64-603f2617c41e")
+	)
+	(wire
+		(pts
+			(xy 205.74 118.11) (xy 218.44 118.11)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2b6181a6-976e-4dfd-8da8-11290e5733e0")
+	)
+	(wire
+		(pts
+			(xy 224.79 63.5) (xy 204.47 63.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2bf576b1-2336-4626-8db1-6db4fda91132")
+	)
+	(wire
+		(pts
+			(xy 40.64 123.19) (xy 40.64 139.7)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2ef066f8-47da-43ab-a53f-beb62832785e")
+	)
+	(wire
+		(pts
+			(xy 76.2 110.49) (xy 76.2 106.68)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "30a7bdb8-cd16-4726-8f9f-22be07463314")
+	)
+	(wire
+		(pts
+			(xy 45.72 81.28) (xy 41.91 81.28)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "31c367b4-5e2a-486b-8298-fc5f7e999f0d")
+	)
+	(wire
+		(pts
+			(xy 229.235 46.99) (xy 219.71 46.99)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "32141485-641a-49f1-a074-3c49474c3993")
+	)
+	(wire
+		(pts
+			(xy 45.72 100.33) (xy 35.56 100.33)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "32864531-acbb-4bd2-83b7-8240d17d7595")
+	)
+	(wire
+		(pts
+			(xy 180.34 152.4) (xy 182.88 152.4)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "33165d9c-3d8a-4764-bb3e-975919a8bd8e")
+	)
+	(wire
+		(pts
+			(xy 184.15 76.2) (xy 184.15 81.28)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3604969f-9ffe-4703-983e-ce4383c34e6e")
+	)
+	(wire
+		(pts
+			(xy 44.45 52.07) (xy 39.37 52.07)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "37002172-c031-4a6e-94a4-192ab8c48040")
+	)
+	(wire
+		(pts
+			(xy 60.96 100.33) (xy 78.74 100.33)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "386ffb97-2f28-414d-b7b2-2cde5772587f")
+	)
+	(wire
+		(pts
+			(xy 173.99 106.68) (xy 190.5 106.68)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3913c231-7c22-42af-afde-726e201d9b31")
+	)
+	(wire
+		(pts
+			(xy 179.07 81.28) (xy 181.61 81.28)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3943f001-13f8-40c0-b759-262e7d82a20d")
+	)
+	(wire
+		(pts
+			(xy 226.06 134.62) (xy 205.74 134.62)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3a274b64-e231-40c9-b128-c6dd8e7cf1e4")
+	)
+	(wire
+		(pts
+			(xy 74.93 35.56) (xy 59.69 35.56)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3a9e9303-f6b8-4c67-b67b-1f93d9bd7d3a")
+	)
+	(wire
+		(pts
+			(xy 34.29 29.21) (xy 34.29 68.58)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3bd1ee6d-e067-4834-828c-b52e3a881662")
+	)
+	(wire
+		(pts
+			(xy 36.83 81.28) (xy 39.37 81.28)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3c9d8bfa-4b77-46c4-8777-c77b2cd47793")
+	)
+	(wire
+		(pts
+			(xy 224.79 34.29) (xy 229.235 34.29)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3d2ec11b-85f9-449f-9920-c3adafcd6cdd")
+	)
+	(wire
+		(pts
+			(xy 81.28 123.19) (xy 81.28 134.62)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3e748f36-2761-44b8-b4dd-ca937f57de43")
+	)
+	(wire
+		(pts
+			(xy 185.42 147.32) (xy 185.42 152.4)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4121dae2-b87d-453c-bdf4-e3cd6087eb70")
+	)
+	(wire
+		(pts
+			(xy 204.47 29.21) (xy 222.25 29.21)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "426b3c40-fb44-49c1-b0f8-0fc7f421a733")
+	)
+	(wire
+		(pts
+			(xy 84.455 39.37) (xy 74.93 39.37)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "430a26d2-a51a-43fd-81f7-dc2319f9d0f5")
+	)
+	(wire
+		(pts
+			(xy 72.39 41.91) (xy 84.455 41.91)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4591fae9-41e7-45bf-9dc1-754f2c33523f")
+	)
+	(wire
+		(pts
+			(xy 223.52 107.95) (xy 230.505 107.95)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "47307d29-04e8-40a0-9e5c-75fdfa611484")
+	)
+	(wire
+		(pts
+			(xy 224.79 24.13) (xy 204.47 24.13)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "48d2e0d0-c971-40f4-8fca-b7a2673d732d")
+	)
+	(wire
+		(pts
+			(xy 78.74 107.95) (xy 85.725 107.95)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4a16f991-4955-4652-a25d-9ea2450681a9")
+	)
+	(wire
+		(pts
+			(xy 189.23 29.21) (xy 179.07 29.21)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4b17186c-a2e2-441a-be44-285029176b71")
+	)
+	(wire
+		(pts
+			(xy 220.98 110.49) (xy 220.98 106.68)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4bcc85f6-e04d-4a40-80c5-65a4496903af")
+	)
+	(wire
+		(pts
+			(xy 35.56 152.4) (xy 38.1 152.4)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4c29e0fc-abc2-4184-aca3-3328e66f16bf")
+	)
+	(wire
+		(pts
+			(xy 190.5 111.76) (xy 182.88 111.76)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4c3eec71-ceec-47f9-9cff-f5f7bb13318a")
+	)
+	(wire
+		(pts
+			(xy 73.66 111.76) (xy 73.66 113.03)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4d44e399-cec6-4ed5-a7a4-843178ae913b")
+	)
+	(wire
+		(pts
+			(xy 220.98 106.68) (xy 205.74 106.68)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4d9dd559-021a-4c54-a814-04d8fe22dbb5")
+	)
+	(wire
+		(pts
+			(xy 43.18 134.62) (xy 43.18 139.7)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4dae05d9-6fae-49f7-8947-4e6d112165a7")
+	)
+	(wire
+		(pts
+			(xy 43.18 147.32) (xy 43.18 152.4)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "507f84d8-3552-43c5-b730-eb42f5da14a2")
+	)
+	(wire
+		(pts
+			(xy 74.93 52.07) (xy 59.69 52.07)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5089be53-873f-4c72-b5c3-0b1447f0bcdb")
+	)
+	(wire
+		(pts
+			(xy 182.88 152.4) (xy 185.42 152.4)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "510444fd-cf4a-4e36-95f0-44ae130d9475")
+	)
+	(wire
+		(pts
+			(xy 39.37 81.28) (xy 41.91 81.28)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "52ba26a7-9fcf-4d94-b4aa-ebf17fc194be")
+	)
+	(wire
+		(pts
+			(xy 80.01 52.07) (xy 84.455 52.07)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "52cce256-3b02-48e5-b7e8-318d3e58400b")
+	)
+	(wire
+		(pts
+			(xy 85.725 118.11) (xy 76.2 118.11)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "57408e62-8b1a-44bd-85c2-dc157e4cf0b8")
+	)
+	(wire
+		(pts
+			(xy 186.69 63.5) (xy 186.69 68.58)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5763bca4-4191-4d8d-bf0a-26fe564a4759")
+	)
+	(wire
+		(pts
+			(xy 38.1 152.4) (xy 40.64 152.4)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "57667f2a-3869-483d-b6d6-62a499fbf3ab")
+	)
+	(wire
+		(pts
+			(xy 190.5 134.62) (xy 187.96 134.62)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "582c6f7d-549b-4e1c-913e-c0a2bb2d93ab")
+	)
+	(wire
+		(pts
+			(xy 81.28 105.41) (xy 85.725 105.41)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5a0da440-79b0-4667-9b8c-b8310fc8f453")
+	)
+	(wire
+		(pts
+			(xy 173.99 118.11) (xy 190.5 118.11)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5c762815-f402-456e-8ddb-d1cbae68d2f6")
+	)
+	(wire
+		(pts
+			(xy 218.44 111.76) (xy 218.44 113.03)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5ca4cda5-e2b7-4db3-8c7f-d4c5d2229950")
+	)
+	(wire
+		(pts
+			(xy 44.45 29.21) (xy 34.29 29.21)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5d55314f-4243-49c7-b4f0-e948ede0940a")
+	)
+	(wire
+		(pts
+			(xy 204.47 58.42) (xy 222.25 58.42)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5da75113-5cca-4e37-9893-4c80423526f0")
+	)
+	(wire
+		(pts
+			(xy 27.94 46.99) (xy 44.45 46.99)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5e1832be-9c32-4c6d-a271-4175e549b4af")
+	)
+	(wire
+		(pts
+			(xy 60.96 111.76) (xy 73.66 111.76)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5ebe54a3-9ae3-4ae1-a0b1-455ed241de83")
+	)
+	(wire
+		(pts
+			(xy 76.2 118.11) (xy 76.2 123.19)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "601593f3-3335-4891-9e6b-d82950b74c2b")
+	)
+	(wire
+		(pts
+			(xy 74.93 46.99) (xy 74.93 52.07)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "64af8d13-39ee-4ca7-bc99-81b9927d1ecb")
+	)
+	(wire
+		(pts
+			(xy 185.42 152.4) (xy 187.96 152.4)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6553ac86-06d6-47d3-bc88-4dce4af9f933")
+	)
+	(wire
+		(pts
+			(xy 172.72 35.56) (xy 189.23 35.56)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "67d04aac-1750-49d2-97c3-24d979b09908")
+	)
+	(wire
+		(pts
+			(xy 41.91 63.5) (xy 41.91 68.58)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "69c3887f-1014-43a4-aa76-389a143c3664")
+	)
+	(wire
+		(pts
+			(xy 189.23 40.64) (xy 181.61 40.64)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6a770314-b59a-4f94-85ac-78ab07760a80")
+	)
+	(wire
+		(pts
+			(xy 77.47 36.83) (xy 84.455 36.83)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6a95cfca-21d0-4288-b7ce-e8395fe61a19")
+	)
+	(wire
+		(pts
+			(xy 185.42 123.19) (xy 185.42 139.7)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6c947540-0cf6-4502-bfa4-c91be51c593a")
+	)
+	(wire
+		(pts
+			(xy 81.28 95.25) (xy 60.96 95.25)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6f4dd3c2-7e48-43cf-8a5d-7b9ca72834e4")
+	)
+	(wire
+		(pts
+			(xy 40.64 147.32) (xy 40.64 152.4)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6f74aa23-f3bb-4735-98f4-ef1691712540")
+	)
+	(wire
+		(pts
+			(xy 218.44 115.57) (xy 230.505 115.57)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "70040814-8ab9-44f4-9591-d3889536c8cf")
+	)
+	(wire
+		(pts
+			(xy 179.07 76.2) (xy 179.07 81.28)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "71dec6a7-5e3f-476f-97fa-b1f03f814615")
+	)
+	(wire
+		(pts
+			(xy 226.06 123.19) (xy 226.06 134.62)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "73ba87e0-8706-42e6-9d12-35bef41509ef")
+	)
+	(wire
+		(pts
+			(xy 187.96 147.32) (xy 187.96 152.4)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "74b537ab-1168-489c-baf8-c8d5d84b2d11")
+	)
+	(wire
+		(pts
+			(xy 81.28 134.62) (xy 60.96 134.62)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7606997e-618d-4c29-b746-f2ec8b43ab90")
+	)
+	(wire
+		(pts
+			(xy 218.44 118.11) (xy 218.44 115.57)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7b3ec383-04f7-4959-8d84-da41d98d9d13")
+	)
+	(wire
+		(pts
+			(xy 189.23 63.5) (xy 186.69 63.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7b5b7c54-9632-4df8-9aa8-8a5e6fe2d4bc")
+	)
+	(wire
+		(pts
+			(xy 27.94 24.13) (xy 44.45 24.13)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7c5a47a3-b0c2-402b-be50-fd03087a0b7c")
+	)
+	(wire
+		(pts
+			(xy 181.61 40.64) (xy 181.61 68.58)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7ce84ec0-c2ea-42a5-944f-1e46ebb9eb27")
+	)
+	(wire
+		(pts
+			(xy 80.01 63.5) (xy 59.69 63.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7f73f92c-995b-46e5-a6c7-0ba9e85b2011")
+	)
+	(wire
+		(pts
+			(xy 59.69 58.42) (xy 77.47 58.42)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "822a571c-4d0c-4014-81a1-c53617f51fd9")
+	)
+	(wire
+		(pts
+			(xy 41.91 76.2) (xy 41.91 81.28)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8309952f-0ee7-4434-8a11-6ac676c58773")
+	)
+	(wire
+		(pts
+			(xy 204.47 40.64) (xy 217.17 40.64)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "845ada04-cb91-47a7-b910-1f33b2b1ce62")
+	)
+	(wire
+		(pts
+			(xy 72.39 46.99) (xy 72.39 44.45)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "84f878b1-c63f-405e-9a6a-875f5f0d9479")
+	)
+	(wire
+		(pts
+			(xy 39.37 76.2) (xy 39.37 81.28)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "858e2bae-6e57-4efa-a661-115e2be5fe51")
+	)
+	(wire
+		(pts
+			(xy 172.72 46.99) (xy 189.23 46.99)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "86651896-31f7-4634-b799-2d09fbea6919")
+	)
+	(wire
+		(pts
+			(xy 36.83 76.2) (xy 36.83 81.28)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "86b6b326-9e88-48a1-b448-129a6ec7a243")
+	)
+	(wire
+		(pts
+			(xy 59.69 40.64) (xy 72.39 40.64)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8711eb01-cced-4f16-b6ca-48b0e072d7ef")
+	)
+	(wire
+		(pts
+			(xy 84.455 46.99) (xy 74.93 46.99)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8fa1702f-304a-4184-a163-6126f3f6b91d")
+	)
+	(wire
+		(pts
+			(xy 35.56 100.33) (xy 35.56 139.7)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "90e11062-1f62-4a98-a8f5-9571bcd4ad2d")
+	)
+	(wire
+		(pts
+			(xy 49.53 152.4) (xy 43.18 152.4)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "92227f53-72bb-48b4-b517-74e501ea5dca")
+	)
+	(wire
+		(pts
+			(xy 182.88 111.76) (xy 182.88 139.7)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "92bd7a48-daf8-4860-a5e3-4d177df04b66")
+	)
+	(wire
+		(pts
+			(xy 72.39 44.45) (xy 84.455 44.45)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "93d10e09-c397-4b08-aa72-287b69062540")
+	)
+	(wire
+		(pts
+			(xy 223.52 120.65) (xy 230.505 120.65)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "952bb02f-8ac8-4d5e-b156-fb2acddad0c2")
+	)
+	(wire
+		(pts
+			(xy 189.23 52.07) (xy 184.15 52.07)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "95e55184-cb30-4bf0-bd6b-601d314025ec")
+	)
+	(wire
+		(pts
+			(xy 45.72 111.76) (xy 38.1 111.76)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "96662cfe-c860-468b-b686-de837572627c")
+	)
+	(wire
+		(pts
+			(xy 81.28 123.19) (xy 85.725 123.19)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "97abb932-7119-432d-a95f-fe97a1819709")
+	)
+	(wire
+		(pts
+			(xy 187.96 134.62) (xy 187.96 139.7)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "987e8f52-0bae-4f44-98fd-bb646b6a38f9")
+	)
+	(wire
+		(pts
+			(xy 39.37 52.07) (xy 39.37 68.58)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "99d8610c-64db-4cd1-a3e0-8ff9fcdcf43d")
+	)
+	(wire
+		(pts
+			(xy 78.74 129.54) (xy 78.74 120.65)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9c15ab44-a12c-4fdc-a2de-5402d1c1e2cb")
+	)
+	(wire
+		(pts
+			(xy 229.235 39.37) (xy 219.71 39.37)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9d109a0b-fa70-4417-a055-db5e0abd6180")
+	)
+	(wire
+		(pts
+			(xy 27.94 58.42) (xy 44.45 58.42)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9dca4e19-1d08-4c02-9e85-fcd078a19a84")
+	)
+	(wire
+		(pts
+			(xy 44.45 63.5) (xy 41.91 63.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9ef9f121-1cae-466f-8f5f-b4f24855fdae")
+	)
+	(wire
+		(pts
+			(xy 186.69 76.2) (xy 186.69 81.28)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a0718b28-23ac-44b1-aaa4-7acf88b0ea40")
+	)
+	(wire
+		(pts
+			(xy 205.74 111.76) (xy 218.44 111.76)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a235837d-29f7-4c82-835d-6c99f8f1b55c")
+	)
+	(wire
+		(pts
+			(xy 73.66 115.57) (xy 85.725 115.57)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a31321a3-999e-473b-b2eb-d5c7532fb1a9")
+	)
+	(wire
+		(pts
+			(xy 29.21 129.54) (xy 45.72 129.54)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a32bf0e3-5723-4720-8315-eff8f91d2943")
+	)
+	(wire
+		(pts
+			(xy 40.64 152.4) (xy 43.18 152.4)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a5c2250b-0e33-45c0-82dc-86d78eec8f4b")
+	)
+	(wire
+		(pts
+			(xy 74.93 39.37) (xy 74.93 35.56)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a7226807-a077-4536-86e7-a3d7a650f9fb")
+	)
+	(wire
+		(pts
+			(xy 80.01 24.13) (xy 59.69 24.13)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a8408eb1-45c9-4c01-8360-8b66b992dfc7")
+	)
+	(wire
+		(pts
+			(xy 217.17 40.64) (xy 217.17 41.91)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a8472d5e-b349-4462-beef-f846b4404751")
+	)
+	(wire
+		(pts
+			(xy 219.71 52.07) (xy 204.47 52.07)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "aa51cf1e-6bd7-4f1b-81eb-ab9487b013c4")
+	)
+	(wire
+		(pts
+			(xy 59.69 29.21) (xy 77.47 29.21)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ab282ea8-72cc-4391-9371-6205b6cf887d")
+	)
+	(wire
+		(pts
+			(xy 34.29 81.28) (xy 36.83 81.28)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ac865f55-a6fd-4866-8cd2-071bca49a4e5")
+	)
+	(wire
+		(pts
+			(xy 36.83 40.64) (xy 36.83 68.58)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "af84c846-cdc2-4f72-a5d3-a86e7ec554fe")
+	)
+	(wire
+		(pts
+			(xy 222.25 58.42) (xy 222.25 49.53)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b029c78b-df91-4f3f-b073-541306dde5ed")
+	)
+	(wire
+		(pts
+			(xy 38.1 111.76) (xy 38.1 139.7)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b0718c8b-3d93-43c7-9125-0b54fbc5deea")
+	)
+	(wire
+		(pts
+			(xy 220.98 118.11) (xy 220.98 123.19)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b10c8623-e4c1-493c-b5c7-35e8f163ac07")
+	)
+	(wire
+		(pts
+			(xy 181.61 76.2) (xy 181.61 81.28)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b306ab22-4928-42db-9e78-e08ee4ab4746")
+	)
+	(wire
+		(pts
+			(xy 29.21 95.25) (xy 45.72 95.25)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b36a44f2-ec0d-409a-a45b-6218375fc262")
+	)
+	(wire
+		(pts
+			(xy 224.79 52.07) (xy 224.79 63.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b37964f3-6224-43bc-b3da-490b351762b9")
+	)
+	(wire
+		(pts
+			(xy 45.72 123.19) (xy 40.64 123.19)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b42f3ec6-85cf-4a02-98ba-b91e1ffb959f")
+	)
+	(wire
+		(pts
+			(xy 38.1 147.32) (xy 38.1 152.4)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b52d3c48-7162-4dc9-bf69-4ece03353ea6")
+	)
+	(wire
+		(pts
+			(xy 173.99 129.54) (xy 190.5 129.54)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b669cd9a-7a21-4683-894f-1810b433a35e")
+	)
+	(wire
+		(pts
+			(xy 205.74 129.54) (xy 223.52 129.54)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b759ad13-9074-43dd-b500-6d1d874f94ff")
+	)
+	(wire
+		(pts
+			(xy 226.06 105.41) (xy 226.06 95.25)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b93ee61b-98d3-4fea-a7e1-70277d75be6e")
+	)
+	(wire
+		(pts
+			(xy 217.17 46.99) (xy 217.17 44.45)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "be6d743a-1b2d-44f6-8d2d-41916c5477e6")
+	)
+	(wire
+		(pts
+			(xy 219.71 35.56) (xy 204.47 35.56)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "beb3abba-2d16-4e47-acf7-7070f706592c")
+	)
+	(wire
+		(pts
+			(xy 218.44 113.03) (xy 230.505 113.03)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bf1280a1-b163-4c5b-a4ce-345cc906c028")
+	)
+	(wire
+		(pts
+			(xy 205.74 100.33) (xy 223.52 100.33)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c0128ee8-e7d5-4536-9e5b-3b426457ae08")
+	)
+	(wire
+		(pts
+			(xy 78.74 100.33) (xy 78.74 107.95)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c1707f28-5d0e-45e5-8015-43214f678b47")
+	)
+	(wire
+		(pts
+			(xy 76.2 123.19) (xy 60.96 123.19)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c500df27-7554-4565-bed5-0263a113e90c")
+	)
+	(wire
+		(pts
+			(xy 191.77 152.4) (xy 187.96 152.4)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c5a57a02-560e-45ed-82cb-cb07916d032d")
+	)
+	(wire
+		(pts
+			(xy 190.5 123.19) (xy 185.42 123.19)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c85056c2-1ccf-4f97-8214-66413fa678a6")
+	)
+	(wire
+		(pts
+			(xy 230.505 110.49) (xy 220.98 110.49)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c88c8c4f-e66b-44f6-a1ae-8781d1990170")
+	)
+	(wire
+		(pts
+			(xy 172.72 24.13) (xy 189.23 24.13)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cce3ca93-67de-404f-becf-a4de0856c2db")
+	)
+	(wire
+		(pts
+			(xy 80.01 34.29) (xy 80.01 24.13)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cfde9b1f-9c66-4cff-8703-3d28f9d59a52")
+	)
+	(wire
+		(pts
+			(xy 80.01 34.29) (xy 84.455 34.29)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d500ee89-b059-4b64-b75e-7a63e4de981d")
+	)
+	(wire
+		(pts
+			(xy 29.21 118.11) (xy 45.72 118.11)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d8270b3c-8b07-41db-94a1-590b7f9cc829")
+	)
+	(wire
+		(pts
+			(xy 81.28 105.41) (xy 81.28 95.25)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d9e4bdb1-0682-43d7-bceb-b010c9364ef4")
+	)
+	(wire
+		(pts
+			(xy 76.2 106.68) (xy 60.96 106.68)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "da6d009b-b4b5-4669-9bc8-7061388f337c")
+	)
+	(wire
+		(pts
+			(xy 35.56 147.32) (xy 35.56 152.4)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "da874ab4-6f22-4f64-ae8a-322ec91043b4")
+	)
+	(wire
+		(pts
+			(xy 72.39 40.64) (xy 72.39 41.91)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "de5c9b9a-d6fc-49f0-a838-e685436d23d3")
+	)
+	(wire
+		(pts
+			(xy 179.07 29.21) (xy 179.07 68.58)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "df6a3b5d-2db3-4ed1-8c9a-51f4ccc76af2")
+	)
+	(wire
+		(pts
+			(xy 85.725 110.49) (xy 76.2 110.49)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e09a06ed-e31a-49ba-b73b-85d3e6805f07")
+	)
+	(wire
+		(pts
+			(xy 172.72 58.42) (xy 189.23 58.42)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e2bc036f-426c-4338-abc5-79da9434de18")
+	)
+	(wire
+		(pts
+			(xy 34.29 76.2) (xy 34.29 81.28)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e6421462-df25-4f9c-b365-5ea3fdd21c12")
+	)
+	(wire
+		(pts
+			(xy 60.96 118.11) (xy 73.66 118.11)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e86c2d76-2a11-4fb2-b7db-76d34ce46308")
+	)
+	(wire
+		(pts
+			(xy 60.96 129.54) (xy 78.74 129.54)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e93e80ba-20d8-4cba-8705-71f40cae1fc7")
+	)
+	(wire
+		(pts
+			(xy 220.98 123.19) (xy 205.74 123.19)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ea33e722-cc7e-4903-b02d-8cbe404b3339")
+	)
+	(wire
+		(pts
+			(xy 78.74 120.65) (xy 85.725 120.65)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ea548867-1215-4bf7-a3cb-6ccbcedaab27")
+	)
+	(wire
+		(pts
+			(xy 219.71 46.99) (xy 219.71 52.07)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f28df5af-087b-4105-a28c-8df23ab7f059")
+	)
+	(wire
+		(pts
+			(xy 191.77 81.28) (xy 186.69 81.28)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f2fe4e7a-5a1a-4aee-a7a4-1f8b33fd173b")
+	)
+	(wire
+		(pts
+			(xy 184.15 52.07) (xy 184.15 68.58)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f340ff8c-f2d5-4c23-8cba-7ec840ff6427")
+	)
+	(wire
+		(pts
+			(xy 45.72 134.62) (xy 43.18 134.62)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f3d34c85-c463-4f16-8e77-5cfde2fbbd64")
+	)
+	(wire
+		(pts
+			(xy 77.47 49.53) (xy 84.455 49.53)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f4a7c64e-bef4-4aca-91a5-172599ffccd0")
+	)
+	(wire
+		(pts
+			(xy 222.25 29.21) (xy 222.25 36.83)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f896b1f2-5ba6-429a-a977-aa87c5ed8ddd")
+	)
+	(wire
+		(pts
+			(xy 223.52 100.33) (xy 223.52 107.95)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fb3be2e7-ef52-40de-b437-d01fc71420ba")
+	)
+	(wire
+		(pts
+			(xy 181.61 81.28) (xy 184.15 81.28)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fb52c3aa-3014-4f93-bd3f-0a85942431ec")
+	)
+	(wire
+		(pts
+			(xy 73.66 113.03) (xy 85.725 113.03)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fbefc29e-34b0-4a46-a4b2-894f5a010261")
+	)
+	(wire
+		(pts
+			(xy 224.79 52.07) (xy 229.235 52.07)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fdf3db0c-9e2e-417a-8801-9acb0b3e625a")
+	)
+	(global_label "OUT_03"
+		(shape input)
+		(at 27.94 58.42 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "00bf519d-73a2-4eaf-b204-e2c1d0b8422a")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 17.9396 58.42 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+	)
+	(global_label "OUT_05"
+		(shape input)
+		(at 29.21 106.68 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "0e22be88-448f-4d31-803a-b284ae010eef")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 19.2096 106.68 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+	)
+	(global_label "OUT_15"
+		(shape input)
+		(at 173.99 129.54 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "25426d27-f025-445c-998f-9c856b31bbb8")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 163.9896 129.54 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+	)
+	(global_label "OUT_10"
+		(shape input)
+		(at 172.72 46.99 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "51d759f6-96fa-49f3-afd4-d7e93f471f16")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 162.7196 46.99 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+	)
+	(global_label "OUT_09"
+		(shape input)
+		(at 172.72 35.56 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "73862700-9e06-462d-8c6f-dfd68057926c")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 162.7196 35.56 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+	)
+	(global_label "OUT_02"
+		(shape input)
+		(at 27.94 46.99 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "7d8298f6-8430-49cb-b5d3-38bd8fbc4864")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 17.9396 46.99 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+	)
+	(global_label "OUT_04"
+		(shape input)
+		(at 29.21 95.25 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "8f39787d-76d6-4905-8885-b876e867b434")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 19.2096 95.25 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+	)
+	(global_label "OUT_13"
+		(shape input)
+		(at 173.99 106.68 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "9a382476-24ad-4710-b312-102e9c3bf11b")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 163.9896 106.68 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+	)
+	(global_label "OUT_08"
+		(shape input)
+		(at 172.72 24.13 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "9e811d4b-2bf5-410e-b626-d801c9505083")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 162.7196 24.13 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+	)
+	(global_label "OUT_00"
+		(shape input)
+		(at 27.94 24.13 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "a297d494-e53e-4b3d-9473-adc5c939ead8")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 17.9396 24.13 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+	)
+	(global_label "OUT_11"
+		(shape input)
+		(at 172.72 58.42 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "add14d3a-dda4-4f5f-9dd9-62550a27ecff")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 162.7196 58.42 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+	)
+	(global_label "OUT_06"
+		(shape input)
+		(at 29.21 118.11 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "b7c426d1-1961-4396-9788-9aa3998670bc")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 19.2096 118.11 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+	)
+	(global_label "OUT_07"
+		(shape input)
+		(at 29.21 129.54 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "c03c1ec2-7575-4180-b0aa-ff38c9c31125")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 19.2096 129.54 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+	)
+	(global_label "OUT_14"
+		(shape input)
+		(at 173.99 118.11 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "d4c5fa51-b19f-4085-9ca4-f04f63c9ef4e")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 163.9896 118.11 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+	)
+	(global_label "OUT_01"
+		(shape input)
+		(at 27.94 35.56 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "e4f9c41e-a4e5-428a-ad16-e5e94efcdb1d")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 17.9396 35.56 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+	)
+	(global_label "OUT_12"
+		(shape input)
+		(at 173.99 95.25 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "f481a57e-e005-4098-981b-265d9ad472a4")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 163.9896 95.25 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Isolator:TLP291-4")
+		(at 198.12 120.65 0)
+		(unit 3)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "0143de9a-0f35-4ae2-9090-9158daaf8c97")
+		(property "Reference" "U13"
+			(at 198.12 112.6957 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "TLP292-4"
+			(at 198.12 115.1199 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Package_SO:SOIC-16_4.55x10.3mm_P1.27mm"
+			(at 193.04 125.73 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+			)
+		)
+		(property "Datasheet" "https://toshiba.semicon-storage.com/info/docget.jsp?did=12858&prodName=TLP291-4"
+			(at 198.12 120.65 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Description" ""
+			(at 198.12 120.65 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "10"
+			(uuid "6c4c30ff-5178-4107-a287-95a6b9e60e8f")
+		)
+		(pin "11"
+			(uuid "4484232f-a6be-4637-be17-5b04a4b63f26")
+		)
+		(pin "6"
+			(uuid "07388384-89f1-4976-8eff-a3f1a9626160")
+		)
+		(pin "12"
+			(uuid "b7fa341d-db85-4908-83ca-97f62710f495")
+		)
+		(pin "7"
+			(uuid "5119a297-c90e-43c6-a6bb-aaaa1e8a587e")
+		)
+		(pin "15"
+			(uuid "1c2125d8-27db-41f5-a00e-49ed6ef2d0cf")
+		)
+		(pin "2"
+			(uuid "befd0a1e-30d4-4a0e-bf90-3e768912a772")
+		)
+		(pin "8"
+			(uuid "6527b396-a6ea-405b-8d39-1836b401ae7d")
+		)
+		(pin "4"
+			(uuid "0030b690-0e96-497a-b544-a4745fe78c27")
+		)
+		(pin "9"
+			(uuid "b20aff88-5854-4053-8d2d-c18c408553d7")
+		)
+		(pin "14"
+			(uuid "e8ed82fa-0f8d-489b-9717-5f3199810417")
+		)
+		(pin "16"
+			(uuid "7d3b3b4f-b830-4a63-869a-b2b5ab461d23")
+		)
+		(pin "3"
+			(uuid "0562c575-5329-4b60-bd3c-802ee14a5df9")
+		)
+		(pin "13"
+			(uuid "f900e549-71b8-459e-b11d-3c870ab9c509")
+		)
+		(pin "5"
+			(uuid "32d5f330-2aaf-43f8-b0e6-f758b2b15a33")
+		)
+		(pin "1"
+			(uuid "b96b518a-7d3f-44b4-b5f2-8b44a264c10d")
+		)
+		(instances
+			(project "EthercatAxisInterface"
+				(path "/5597aedc-b607-407f-bbfd-31b3b298ecb1/f395bce8-1f34-4034-a5f2-566a34e78cc6"
+					(reference "U13")
+					(unit 3)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 38.1 143.51 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "027d0637-8655-4a68-a483-b077735abcde")
+		(property "Reference" "R87"
+			(at 38.1 145.415 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "330"
+			(at 36.83 150.495 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 36.322 143.51 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 38.1 143.51 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 38.1 143.51 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "6bb4887e-44ef-4066-869a-b8b1eda8b6d8")
+		)
+		(pin "2"
+			(uuid "ffa68e52-8f65-40a6-898d-21d8bcaf6670")
+		)
+		(instances
+			(project "EthercatAxisInterface"
+				(path "/5597aedc-b607-407f-bbfd-31b3b298ecb1/f395bce8-1f34-4034-a5f2-566a34e78cc6"
+					(reference "R87")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 43.18 143.51 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "0283bbfa-41fe-4d97-87fd-2b372ad4581c")
+		(property "Reference" "R91"
+			(at 43.18 145.415 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "330"
+			(at 41.91 150.495 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 41.402 143.51 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 43.18 143.51 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 43.18 143.51 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "7c93ec00-4703-4fcd-84f2-d119459b377e")
+		)
+		(pin "2"
+			(uuid "411c9018-e5e5-48ab-8c3a-1261c259ed1a")
+		)
+		(instances
+			(project "EthercatAxisInterface"
+				(path "/5597aedc-b607-407f-bbfd-31b3b298ecb1/f395bce8-1f34-4034-a5f2-566a34e78cc6"
+					(reference "R91")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector_Generic:Conn_01x04")
+		(at 235.585 107.95 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "07f01842-ebe7-45a2-9a83-770c4b506625")
+		(property "Reference" "J17"
+			(at 239.395 104.775 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Output1-2"
+			(at 243.84 107.315 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Connector_Phoenix_MC:PhoenixContact_MCV_1,5_4-G-3.5_1x04_P3.50mm_Vertical"
+			(at 235.585 107.95 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 235.585 107.95 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 235.585 107.95 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "d6c05125-bfc3-4575-ab43-6525760f77f4")
+		)
+		(pin "2"
+			(uuid "ab00bc9b-2835-4f0b-8921-8c414ed553f3")
+		)
+		(pin "3"
+			(uuid "48fb38ea-2764-407a-be37-fb928432c749")
+		)
+		(pin "4"
+			(uuid "51732a1b-acbf-4520-8c26-17f5a2a223b9")
+		)
+		(instances
+			(project "EthercatAxisInterface"
+				(path "/5597aedc-b607-407f-bbfd-31b3b298ecb1/f395bce8-1f34-4034-a5f2-566a34e78cc6"
+					(reference "J17")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Isolator:TLP291-4")
+		(at 196.85 38.1 0)
+		(unit 2)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "08d28e2c-547c-4e81-970a-a4254cfd1877")
+		(property "Reference" "U12"
+			(at 196.85 30.1457 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "TLP292-4"
+			(at 196.85 32.5699 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Package_SO:SOIC-16_4.55x10.3mm_P1.27mm"
+			(at 191.77 43.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+			)
+		)
+		(property "Datasheet" "https://toshiba.semicon-storage.com/info/docget.jsp?did=12858&prodName=TLP291-4"
+			(at 196.85 38.1 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Description" ""
+			(at 196.85 38.1 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "10"
+			(uuid "6c4c30ff-5178-4107-a287-95a6b9e60e91")
+		)
+		(pin "11"
+			(uuid "a19fb357-9eac-4b0f-9ed0-d5629c713fee")
+		)
+		(pin "6"
+			(uuid "0ba2739c-d9a1-4263-9562-5c4c38d9558a")
+		)
+		(pin "12"
+			(uuid "79ad1f5a-5973-4531-87fa-de7716c9bd31")
+		)
+		(pin "7"
+			(uuid "5119a297-c90e-43c6-a6bb-aaaa1e8a5880")
+		)
+		(pin "15"
+			(uuid "1c2125d8-27db-41f5-a00e-49ed6ef2d0d1")
+		)
+		(pin "2"
+			(uuid "befd0a1e-30d4-4a0e-bf90-3e768912a774")
+		)
+		(pin "8"
+			(uuid "6527b396-a6ea-405b-8d39-1836b401ae7f")
+		)
+		(pin "4"
+			(uuid "7a080fdf-25dd-4389-a005-93fa5c0c5865")
+		)
+		(pin "9"
+			(uuid "b20aff88-5854-4053-8d2d-c18c408553d9")
+		)
+		(pin "14"
+			(uuid "97d8bb19-c22d-4a57-83cb-541a67f98901")
+		)
+		(pin "16"
+			(uuid "7d3b3b4f-b830-4a63-869a-b2b5ab461d25")
+		)
+		(pin "3"
+			(uuid "8dcc3b61-0120-4fb1-99c8-e815a8ac5ca1")
+		)
+		(pin "13"
+			(uuid "aa6f64e1-6fd2-445b-b36f-6056ef60606e")
+		)
+		(pin "5"
+			(uuid "97436f36-f7f7-4874-9a78-bca2f17a9b4a")
+		)
+		(pin "1"
+			(uuid "b96b518a-7d3f-44b4-b5f2-8b44a264c10f")
+		)
+		(instances
+			(project "EthercatAxisInterface"
+				(path "/5597aedc-b607-407f-bbfd-31b3b298ecb1/f395bce8-1f34-4034-a5f2-566a34e78cc6"
+					(reference "U12")
+					(unit 2)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 41.91 72.39 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "0a9efabc-985d-4165-ad36-b4ecf6132449")
+		(property "Reference" "R90"
+			(at 41.91 74.295 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "330"
+			(at 40.64 79.375 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 40.132 72.39 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 41.91 72.39 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 41.91 72.39 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "5416baaf-fd2f-4aed-bb31-d657a9cd603d")
+		)
+		(pin "2"
+			(uuid "e28c6bbf-dc58-46a9-9665-705238ad5ba5")
+		)
+		(instances
+			(project "EthercatAxisInterface"
+				(path "/5597aedc-b607-407f-bbfd-31b3b298ecb1/f395bce8-1f34-4034-a5f2-566a34e78cc6"
+					(reference "R90")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Isolator:TLP291-4")
+		(at 53.34 132.08 0)
+		(unit 4)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "1174fd43-f858-4996-9579-62115016d6ab")
+		(property "Reference" "U11"
+			(at 53.34 124.1257 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "TLP292-4"
+			(at 53.34 126.5499 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Package_SO:SOIC-16_4.55x10.3mm_P1.27mm"
+			(at 48.26 137.16 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+			)
+		)
+		(property "Datasheet" "https://toshiba.semicon-storage.com/info/docget.jsp?did=12858&prodName=TLP291-4"
+			(at 53.34 132.08 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Description" ""
+			(at 53.34 132.08 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "10"
+			(uuid "bed80e23-c639-4bc9-abdf-82cdb70585c8")
+		)
+		(pin "11"
+			(uuid "a19fb357-9eac-4b0f-9ed0-d5629c713fe0")
+		)
+		(pin "6"
+			(uuid "0ba2739c-d9a1-4263-9562-5c4c38d9557c")
+		)
+		(pin "12"
+			(uuid "79ad1f5a-5973-4531-87fa-de7716c9bd23")
+		)
+		(pin "7"
+			(uuid "c2ef36a0-811a-4cea-80d7-4688e842a6b2")
+		)
+		(pin "15"
+			(uuid "1c2125d8-27db-41f5-a00e-49ed6ef2d0c4")
+		)
+		(pin "2"
+			(uuid "befd0a1e-30d4-4a0e-bf90-3e768912a767")
+		)
+		(pin "8"
+			(uuid "5a1049f9-7663-49c6-922d-80824ca553f1")
+		)
+		(pin "4"
+			(uuid "0030b690-0e96-497a-b544-a4745fe78c1a")
+		)
+		(pin "9"
+			(uuid "95138cbd-36cb-4d30-90b6-52c7b30050dd")
+		)
+		(pin "14"
+			(uuid "e8ed82fa-0f8d-489b-9717-5f319981040a")
+		)
+		(pin "16"
+			(uuid "7d3b3b4f-b830-4a63-869a-b2b5ab461d18")
+		)
+		(pin "3"
+			(uuid "0562c575-5329-4b60-bd3c-802ee14a5dec")
+		)
+		(pin "13"
+			(uuid "f900e549-71b8-459e-b11d-3c870ab9c4fc")
+		)
+		(pin "5"
+			(uuid "97436f36-f7f7-4874-9a78-bca2f17a9b3c")
+		)
+		(pin "1"
+			(uuid "b96b518a-7d3f-44b4-b5f2-8b44a264c102")
+		)
+		(instances
+			(project "EthercatAxisInterface"
+				(path "/5597aedc-b607-407f-bbfd-31b3b298ecb1/f395bce8-1f34-4034-a5f2-566a34e78cc6"
+					(reference "U11")
+					(unit 4)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 187.96 143.51 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "1391fd3b-7ed0-4f47-9070-cd197b61efe4")
+		(property "Reference" "R99"
+			(at 187.96 145.415 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "330"
+			(at 186.69 150.495 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 186.182 143.51 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 187.96 143.51 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 187.96 143.51 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "11f9ec9d-f2fa-40af-b98f-a1704af5d4ee")
+		)
+		(pin "2"
+			(uuid "61a2dc1b-ec74-4dab-8f7e-1fe008714cab")
+		)
+		(instances
+			(project "EthercatAxisInterface"
+				(path "/5597aedc-b607-407f-bbfd-31b3b298ecb1/f395bce8-1f34-4034-a5f2-566a34e78cc6"
+					(reference "R99")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 181.61 72.39 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "17cf9220-3cfe-4cde-b5dc-90376623f852")
+		(property "Reference" "R94"
+			(at 181.61 74.295 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "330"
+			(at 180.34 79.375 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 179.832 72.39 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 181.61 72.39 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 181.61 72.39 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "34180087-e1aa-4a44-ba58-e851c9f908ea")
+		)
+		(pin "2"
+			(uuid "108b76ac-d2a5-4b64-ae62-ca8b57202537")
+		)
+		(instances
+			(project "EthercatAxisInterface"
+				(path "/5597aedc-b607-407f-bbfd-31b3b298ecb1/f395bce8-1f34-4034-a5f2-566a34e78cc6"
+					(reference "R94")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector_Generic:Conn_01x04")
+		(at 234.315 36.83 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "1ad0a4b8-ddc9-4113-83e2-5ed1d63b8672")
+		(property "Reference" "J15"
+			(at 238.125 33.655 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Output1-2"
+			(at 242.57 36.195 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Connector_Phoenix_MC:PhoenixContact_MCV_1,5_4-G-3.5_1x04_P3.50mm_Vertical"
+			(at 234.315 36.83 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 234.315 36.83 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 234.315 36.83 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "7fa847d8-315b-4b40-bed1-18e3096e1e5c")
+		)
+		(pin "2"
+			(uuid "a311d0dc-e1cf-4c34-9d96-6db454c2db06")
+		)
+		(pin "3"
+			(uuid "b5e139e1-843f-40e1-a104-78b50a3a2e98")
+		)
+		(pin "4"
+			(uuid "b2d017f3-cd15-4b86-9cf9-3e0b19d9e3af")
+		)
+		(instances
+			(project "EthercatAxisInterface"
+				(path "/5597aedc-b607-407f-bbfd-31b3b298ecb1/f395bce8-1f34-4034-a5f2-566a34e78cc6"
+					(reference "J15")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 185.42 143.51 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "216e9da1-739d-43dc-ad69-c7d4d1bbc6f1")
+		(property "Reference" "R97"
+			(at 185.42 145.415 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "330"
+			(at 184.15 150.495 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 183.642 143.51 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 185.42 143.51 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 185.42 143.51 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "bd171cf5-98e6-45f0-b33b-e19656103e64")
+		)
+		(pin "2"
+			(uuid "2859e348-83cb-4d29-9ccb-d28a2b1093d5")
+		)
+		(instances
+			(project "EthercatAxisInterface"
+				(path "/5597aedc-b607-407f-bbfd-31b3b298ecb1/f395bce8-1f34-4034-a5f2-566a34e78cc6"
+					(reference "R97")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 186.69 72.39 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "26e31702-5cc9-4546-9eb1-f7f704c08e06")
+		(property "Reference" "R98"
+			(at 186.69 74.295 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "330"
+			(at 185.42 79.375 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 184.912 72.39 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 186.69 72.39 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 186.69 72.39 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "0702e74d-b9e9-439c-91a6-c123f35c3150")
+		)
+		(pin "2"
+			(uuid "7f57ee3b-a07d-4441-b477-02149e8cb758")
+		)
+		(instances
+			(project "EthercatAxisInterface"
+				(path "/5597aedc-b607-407f-bbfd-31b3b298ecb1/f395bce8-1f34-4034-a5f2-566a34e78cc6"
+					(reference "R98")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Isolator:TLP291-4")
+		(at 52.07 26.67 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "33b6e5b4-ed4f-4abd-816a-f448507dc2d0")
+		(property "Reference" "U10"
+			(at 52.07 18.7157 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "TLP292-4"
+			(at 52.07 21.1399 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Package_SO:SOIC-16_4.55x10.3mm_P1.27mm"
+			(at 46.99 31.75 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+			)
+		)
+		(property "Datasheet" "https://toshiba.semicon-storage.com/info/docget.jsp?did=12858&prodName=TLP291-4"
+			(at 52.07 26.67 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Description" ""
+			(at 52.07 26.67 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "10"
+			(uuid "6c4c30ff-5178-4107-a287-95a6b9e60e87")
+		)
+		(pin "11"
+			(uuid "a19fb357-9eac-4b0f-9ed0-d5629c713fe5")
+		)
+		(pin "6"
+			(uuid "0ba2739c-d9a1-4263-9562-5c4c38d95581")
+		)
+		(pin "12"
+			(uuid "79ad1f5a-5973-4531-87fa-de7716c9bd28")
+		)
+		(pin "7"
+			(uuid "5119a297-c90e-43c6-a6bb-aaaa1e8a5876")
+		)
+		(pin "15"
+			(uuid "8581aacd-f263-47d1-aed8-fa6ae0225f23")
+		)
+		(pin "2"
+			(uuid "ee104785-ec42-456e-af90-2ec45d17282d")
+		)
+		(pin "8"
+			(uuid "6527b396-a6ea-405b-8d39-1836b401ae75")
+		)
+		(pin "4"
+			(uuid "0030b690-0e96-497a-b544-a4745fe78c1e")
+		)
+		(pin "9"
+			(uuid "b20aff88-5854-4053-8d2d-c18c408553cf")
+		)
+		(pin "14"
+			(uuid "e8ed82fa-0f8d-489b-9717-5f319981040e")
+		)
+		(pin "16"
+			(uuid "d234b85a-8ad6-400d-9d81-0fce71dc847f")
+		)
+		(pin "3"
+			(uuid "0562c575-5329-4b60-bd3c-802ee14a5df0")
+		)
+		(pin "13"
+			(uuid "f900e549-71b8-459e-b11d-3c870ab9c500")
+		)
+		(pin "5"
+			(uuid "97436f36-f7f7-4874-9a78-bca2f17a9b41")
+		)
+		(pin "1"
+			(uuid "a2ff977c-3929-494e-9ad5-2b448a41919d")
+		)
+		(instances
+			(project "EthercatAxisInterface"
+				(path "/5597aedc-b607-407f-bbfd-31b3b298ecb1/f395bce8-1f34-4034-a5f2-566a34e78cc6"
+					(reference "U10")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 184.15 72.39 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "3c984bf6-4745-4f02-a27f-77cbe645de58")
+		(property "Reference" "R96"
+			(at 184.15 74.295 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "330"
+			(at 182.88 79.375 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 182.372 72.39 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 184.15 72.39 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 184.15 72.39 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "43b9150e-0db2-46f0-a4f5-f2327c78ea2c")
+		)
+		(pin "2"
+			(uuid "a6e95466-20ef-440a-a52b-02c3abb93f17")
+		)
+		(instances
+			(project "EthercatAxisInterface"
+				(path "/5597aedc-b607-407f-bbfd-31b3b298ecb1/f395bce8-1f34-4034-a5f2-566a34e78cc6"
+					(reference "R96")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 45.72 81.28 90)
+		(mirror x)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "405cb871-798c-4847-8cdf-218dc42b6653")
+		(property "Reference" "#PWR097"
+			(at 52.07 81.28 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND_ISOL"
+			(at 49.53 81.28 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" ""
+			(at 45.72 81.28 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 45.72 81.28 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 45.72 81.28 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "069f5ba0-56c7-44e2-ac53-da267f8a23e7")
+		)
+		(instances
+			(project "EthercatAxisInterface"
+				(path "/5597aedc-b607-407f-bbfd-31b3b298ecb1/f395bce8-1f34-4034-a5f2-566a34e78cc6"
+					(reference "#PWR097")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Isolator:TLP291-4")
+		(at 53.34 120.65 0)
+		(unit 3)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "43c832a1-baed-4108-8029-97a739b6fb4b")
+		(property "Reference" "U11"
+			(at 53.34 112.6957 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "TLP292-4"
+			(at 53.34 115.1199 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Package_SO:SOIC-16_4.55x10.3mm_P1.27mm"
+			(at 48.26 125.73 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+			)
+		)
+		(property "Datasheet" "https://toshiba.semicon-storage.com/info/docget.jsp?did=12858&prodName=TLP291-4"
+			(at 53.34 120.65 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Description" ""
+			(at 53.34 120.65 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "10"
+			(uuid "6c4c30ff-5178-4107-a287-95a6b9e60e8e")
+		)
+		(pin "11"
+			(uuid "27e22b69-7b7a-4eb5-a22d-728f9075cfcf")
+		)
+		(pin "6"
+			(uuid "055b6e5d-907f-4334-b2a1-965b77f8a4ea")
+		)
+		(pin "12"
+			(uuid "7b1d7a59-2208-410c-8fc5-da888d5133fe")
+		)
+		(pin "7"
+			(uuid "5119a297-c90e-43c6-a6bb-aaaa1e8a587d")
+		)
+		(pin "15"
+			(uuid "1c2125d8-27db-41f5-a00e-49ed6ef2d0ce")
+		)
+		(pin "2"
+			(uuid "befd0a1e-30d4-4a0e-bf90-3e768912a771")
+		)
+		(pin "8"
+			(uuid "6527b396-a6ea-405b-8d39-1836b401ae7c")
+		)
+		(pin "4"
+			(uuid "0030b690-0e96-497a-b544-a4745fe78c26")
+		)
+		(pin "9"
+			(uuid "b20aff88-5854-4053-8d2d-c18c408553d6")
+		)
+		(pin "14"
+			(uuid "e8ed82fa-0f8d-489b-9717-5f3199810416")
+		)
+		(pin "16"
+			(uuid "7d3b3b4f-b830-4a63-869a-b2b5ab461d22")
+		)
+		(pin "3"
+			(uuid "0562c575-5329-4b60-bd3c-802ee14a5df8")
+		)
+		(pin "13"
+			(uuid "f900e549-71b8-459e-b11d-3c870ab9c508")
+		)
+		(pin "5"
+			(uuid "385b80b3-a9fd-4b7f-b957-5baf110ddcc5")
+		)
+		(pin "1"
+			(uuid "b96b518a-7d3f-44b4-b5f2-8b44a264c10c")
+		)
+		(instances
+			(project "EthercatAxisInterface"
+				(path "/5597aedc-b607-407f-bbfd-31b3b298ecb1/f395bce8-1f34-4034-a5f2-566a34e78cc6"
+					(reference "U11")
+					(unit 3)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 180.34 143.51 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "46489fff-6e0b-4e1b-b748-9da116003205")
+		(property "Reference" "R93"
+			(at 180.34 145.415 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "330"
+			(at 179.07 150.495 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 178.562 143.51 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 180.34 143.51 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 180.34 143.51 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "97cb8f10-5967-492a-8e64-2d96d937ba1b")
+		)
+		(pin "2"
+			(uuid "84876e97-6f52-473e-aa3f-3b7c74d5ea02")
+		)
+		(instances
+			(project "EthercatAxisInterface"
+				(path "/5597aedc-b607-407f-bbfd-31b3b298ecb1/f395bce8-1f34-4034-a5f2-566a34e78cc6"
+					(reference "R93")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Isolator:TLP291-4")
+		(at 52.07 49.53 0)
+		(unit 3)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "507b863c-eb0f-4c2f-88ea-0d99b9f15856")
+		(property "Reference" "U10"
+			(at 52.07 41.5757 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "TLP292-4"
+			(at 52.07 43.9999 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Package_SO:SOIC-16_4.55x10.3mm_P1.27mm"
+			(at 46.99 54.61 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+			)
+		)
+		(property "Datasheet" "https://toshiba.semicon-storage.com/info/docget.jsp?did=12858&prodName=TLP291-4"
+			(at 52.07 49.53 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Description" ""
+			(at 52.07 49.53 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "10"
+			(uuid "6c4c30ff-5178-4107-a287-95a6b9e60e90")
+		)
+		(pin "11"
+			(uuid "94c9f1bf-05c1-4c1f-af01-ea1a4e556a10")
+		)
+		(pin "6"
+			(uuid "945da628-4f93-4101-b1da-c294f1eaef61")
+		)
+		(pin "12"
+			(uuid "5a66d561-ff49-465b-a0e3-44a330b79164")
+		)
+		(pin "7"
+			(uuid "5119a297-c90e-43c6-a6bb-aaaa1e8a587f")
+		)
+		(pin "15"
+			(uuid "1c2125d8-27db-41f5-a00e-49ed6ef2d0d0")
+		)
+		(pin "2"
+			(uuid "befd0a1e-30d4-4a0e-bf90-3e768912a773")
+		)
+		(pin "8"
+			(uuid "6527b396-a6ea-405b-8d39-1836b401ae7e")
+		)
+		(pin "4"
+			(uuid "0030b690-0e96-497a-b544-a4745fe78c28")
+		)
+		(pin "9"
+			(uuid "b20aff88-5854-4053-8d2d-c18c408553d8")
+		)
+		(pin "14"
+			(uuid "e8ed82fa-0f8d-489b-9717-5f3199810418")
+		)
+		(pin "16"
+			(uuid "7d3b3b4f-b830-4a63-869a-b2b5ab461d24")
+		)
+		(pin "3"
+			(uuid "0562c575-5329-4b60-bd3c-802ee14a5dfa")
+		)
+		(pin "13"
+			(uuid "f900e549-71b8-459e-b11d-3c870ab9c50a")
+		)
+		(pin "5"
+			(uuid "4f956c7f-eb20-473a-b0a2-775b5f52e47d")
+		)
+		(pin "1"
+			(uuid "b96b518a-7d3f-44b4-b5f2-8b44a264c10e")
+		)
+		(instances
+			(project "EthercatAxisInterface"
+				(path "/5597aedc-b607-407f-bbfd-31b3b298ecb1/f395bce8-1f34-4034-a5f2-566a34e78cc6"
+					(reference "U10")
+					(unit 3)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector_Generic:Conn_01x04")
+		(at 90.805 118.11 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "5283d32b-4ce5-4e4f-9bee-0d07487408c7")
+		(property "Reference" "J14"
+			(at 94.615 115.57 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Output3-4"
+			(at 98.425 118.745 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Connector_Phoenix_MC:PhoenixContact_MCV_1,5_4-G-3.5_1x04_P3.50mm_Vertical"
+			(at 90.805 118.11 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 90.805 118.11 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 90.805 118.11 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "89f46a0d-69e2-4a45-b0ed-b850a62ca1dd")
+		)
+		(pin "2"
+			(uuid "f8608b65-78d3-4730-a45f-d921c57d3225")
+		)
+		(pin "3"
+			(uuid "6a33628e-f02b-4ed2-b9d6-b092b7337106")
+		)
+		(pin "4"
+			(uuid "f4e3a185-fa7f-4b6a-84e5-ac44b4123689")
+		)
+		(instances
+			(project "EthercatAxisInterface"
+				(path "/5597aedc-b607-407f-bbfd-31b3b298ecb1/f395bce8-1f34-4034-a5f2-566a34e78cc6"
+					(reference "J14")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 35.56 143.51 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "57da4ba8-99c8-4d56-b288-000b635c7f1a")
+		(property "Reference" "R85"
+			(at 35.56 145.415 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "330"
+			(at 34.29 150.495 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 33.782 143.51 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 35.56 143.51 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 35.56 143.51 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "21eb629f-c3aa-49f1-a39e-d4f4eee654d1")
+		)
+		(pin "2"
+			(uuid "c9d4fe84-cee3-4c53-afe7-ba5003825580")
+		)
+		(instances
+			(project "EthercatAxisInterface"
+				(path "/5597aedc-b607-407f-bbfd-31b3b298ecb1/f395bce8-1f34-4034-a5f2-566a34e78cc6"
+					(reference "R85")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 179.07 72.39 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "5e9da8b2-bf1a-454f-bc87-e2494cb06b9c")
+		(property "Reference" "R92"
+			(at 179.07 74.295 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "330"
+			(at 177.8 79.375 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 177.292 72.39 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 179.07 72.39 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 179.07 72.39 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "67710ab7-0618-4235-b85f-d76e07ec14df")
+		)
+		(pin "2"
+			(uuid "ff500e33-213b-46cd-b968-3dee6b65916b")
+		)
+		(instances
+			(project "EthercatAxisInterface"
+				(path "/5597aedc-b607-407f-bbfd-31b3b298ecb1/f395bce8-1f34-4034-a5f2-566a34e78cc6"
+					(reference "R92")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Isolator:TLP291-4")
+		(at 196.85 26.67 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "67a390f6-a97d-4b87-bfc6-3e25a86b26ba")
+		(property "Reference" "U12"
+			(at 196.85 18.7157 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "TLP292-4"
+			(at 196.85 21.1399 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Package_SO:SOIC-16_4.55x10.3mm_P1.27mm"
+			(at 191.77 31.75 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+			)
+		)
+		(property "Datasheet" "https://toshiba.semicon-storage.com/info/docget.jsp?did=12858&prodName=TLP291-4"
+			(at 196.85 26.67 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Description" ""
+			(at 196.85 26.67 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "10"
+			(uuid "6c4c30ff-5178-4107-a287-95a6b9e60e88")
+		)
+		(pin "11"
+			(uuid "a19fb357-9eac-4b0f-9ed0-d5629c713fe6")
+		)
+		(pin "6"
+			(uuid "0ba2739c-d9a1-4263-9562-5c4c38d95582")
+		)
+		(pin "12"
+			(uuid "79ad1f5a-5973-4531-87fa-de7716c9bd29")
+		)
+		(pin "7"
+			(uuid "5119a297-c90e-43c6-a6bb-aaaa1e8a5877")
+		)
+		(pin "15"
+			(uuid "dc68c645-534b-4114-9780-6a89c024100e")
+		)
+		(pin "2"
+			(uuid "8ac82024-692f-4c83-a015-6e94a5367cff")
+		)
+		(pin "8"
+			(uuid "6527b396-a6ea-405b-8d39-1836b401ae76")
+		)
+		(pin "4"
+			(uuid "0030b690-0e96-497a-b544-a4745fe78c1f")
+		)
+		(pin "9"
+			(uuid "b20aff88-5854-4053-8d2d-c18c408553d0")
+		)
+		(pin "14"
+			(uuid "e8ed82fa-0f8d-489b-9717-5f319981040f")
+		)
+		(pin "16"
+			(uuid "475668ff-0b19-416e-b7e9-269917444bac")
+		)
+		(pin "3"
+			(uuid "0562c575-5329-4b60-bd3c-802ee14a5df1")
+		)
+		(pin "13"
+			(uuid "f900e549-71b8-459e-b11d-3c870ab9c501")
+		)
+		(pin "5"
+			(uuid "97436f36-f7f7-4874-9a78-bca2f17a9b42")
+		)
+		(pin "1"
+			(uuid "ad87cd81-7ee4-43c3-9483-8c3246d7a8b1")
+		)
+		(instances
+			(project "EthercatAxisInterface"
+				(path "/5597aedc-b607-407f-bbfd-31b3b298ecb1/f395bce8-1f34-4034-a5f2-566a34e78cc6"
+					(reference "U12")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Isolator:TLP291-4")
+		(at 198.12 109.22 0)
+		(unit 2)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "688bdd6c-8453-474a-9616-0de834fc52b1")
+		(property "Reference" "U13"
+			(at 198.12 101.2657 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "TLP292-4"
+			(at 198.12 103.6899 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Package_SO:SOIC-16_4.55x10.3mm_P1.27mm"
+			(at 193.04 114.3 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+			)
+		)
+		(property "Datasheet" "https://toshiba.semicon-storage.com/info/docget.jsp?did=12858&prodName=TLP291-4"
+			(at 198.12 109.22 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Description" ""
+			(at 198.12 109.22 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "10"
+			(uuid "6c4c30ff-5178-4107-a287-95a6b9e60e92")
+		)
+		(pin "11"
+			(uuid "a19fb357-9eac-4b0f-9ed0-d5629c713fef")
+		)
+		(pin "6"
+			(uuid "0ba2739c-d9a1-4263-9562-5c4c38d9558b")
+		)
+		(pin "12"
+			(uuid "79ad1f5a-5973-4531-87fa-de7716c9bd32")
+		)
+		(pin "7"
+			(uuid "5119a297-c90e-43c6-a6bb-aaaa1e8a5881")
+		)
+		(pin "15"
+			(uuid "1c2125d8-27db-41f5-a00e-49ed6ef2d0d2")
+		)
+		(pin "2"
+			(uuid "befd0a1e-30d4-4a0e-bf90-3e768912a775")
+		)
+		(pin "8"
+			(uuid "6527b396-a6ea-405b-8d39-1836b401ae80")
+		)
+		(pin "4"
+			(uuid "2efd09ad-b9dd-4c33-9280-bb563491bd2a")
+		)
+		(pin "9"
+			(uuid "b20aff88-5854-4053-8d2d-c18c408553da")
+		)
+		(pin "14"
+			(uuid "7d7fe993-300c-41ad-bd9f-4ac7a86eba04")
+		)
+		(pin "16"
+			(uuid "7d3b3b4f-b830-4a63-869a-b2b5ab461d26")
+		)
+		(pin "3"
+			(uuid "bcf62096-a7fc-4da4-8063-331bb0ded283")
+		)
+		(pin "13"
+			(uuid "f3250a09-e32e-42df-8f4d-b0981b00efc7")
+		)
+		(pin "5"
+			(uuid "97436f36-f7f7-4874-9a78-bca2f17a9b4b")
+		)
+		(pin "1"
+			(uuid "b96b518a-7d3f-44b4-b5f2-8b44a264c110")
+		)
+		(instances
+			(project "EthercatAxisInterface"
+				(path "/5597aedc-b607-407f-bbfd-31b3b298ecb1/f395bce8-1f34-4034-a5f2-566a34e78cc6"
+					(reference "U13")
+					(unit 2)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Isolator:TLP291-4")
+		(at 196.85 49.53 0)
+		(unit 3)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "6edd99ad-3fab-47f0-aef8-19c60fd46e19")
+		(property "Reference" "U12"
+			(at 196.85 41.5757 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "TLP292-4"
+			(at 196.85 43.9999 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Package_SO:SOIC-16_4.55x10.3mm_P1.27mm"
+			(at 191.77 54.61 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+			)
+		)
+		(property "Datasheet" "https://toshiba.semicon-storage.com/info/docget.jsp?did=12858&prodName=TLP291-4"
+			(at 196.85 49.53 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Description" ""
+			(at 196.85 49.53 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "10"
+			(uuid "6c4c30ff-5178-4107-a287-95a6b9e60e93")
+		)
+		(pin "11"
+			(uuid "8b7aab9f-64cb-4123-84ef-c61126fc7f06")
+		)
+		(pin "6"
+			(uuid "93cd7429-ca0b-4a04-b80c-b0fe930d7144")
+		)
+		(pin "12"
+			(uuid "ff069338-feef-4288-8187-7e14af1d7137")
+		)
+		(pin "7"
+			(uuid "5119a297-c90e-43c6-a6bb-aaaa1e8a5882")
+		)
+		(pin "15"
+			(uuid "1c2125d8-27db-41f5-a00e-49ed6ef2d0d3")
+		)
+		(pin "2"
+			(uuid "befd0a1e-30d4-4a0e-bf90-3e768912a776")
+		)
+		(pin "8"
+			(uuid "6527b396-a6ea-405b-8d39-1836b401ae81")
+		)
+		(pin "4"
+			(uuid "0030b690-0e96-497a-b544-a4745fe78c29")
+		)
+		(pin "9"
+			(uuid "b20aff88-5854-4053-8d2d-c18c408553db")
+		)
+		(pin "14"
+			(uuid "e8ed82fa-0f8d-489b-9717-5f3199810419")
+		)
+		(pin "16"
+			(uuid "7d3b3b4f-b830-4a63-869a-b2b5ab461d27")
+		)
+		(pin "3"
+			(uuid "0562c575-5329-4b60-bd3c-802ee14a5dfb")
+		)
+		(pin "13"
+			(uuid "f900e549-71b8-459e-b11d-3c870ab9c50b")
+		)
+		(pin "5"
+			(uuid "64188010-767d-43fe-b5d4-304ce253b484")
+		)
+		(pin "1"
+			(uuid "b96b518a-7d3f-44b4-b5f2-8b44a264c111")
+		)
+		(instances
+			(project "EthercatAxisInterface"
+				(path "/5597aedc-b607-407f-bbfd-31b3b298ecb1/f395bce8-1f34-4034-a5f2-566a34e78cc6"
+					(reference "U12")
+					(unit 3)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 36.83 72.39 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "6eeb7367-7b96-4052-b233-4d40262d8f51")
+		(property "Reference" "R86"
+			(at 36.83 74.295 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "330"
+			(at 35.56 79.375 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 35.052 72.39 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 36.83 72.39 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 36.83 72.39 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "9667611e-6a34-4bd3-83b9-7af381feb803")
+		)
+		(pin "2"
+			(uuid "e112e1da-53b3-46fb-ab2c-8a60bafa0edc")
+		)
+		(instances
+			(project "EthercatAxisInterface"
+				(path "/5597aedc-b607-407f-bbfd-31b3b298ecb1/f395bce8-1f34-4034-a5f2-566a34e78cc6"
+					(reference "R86")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector_Generic:Conn_01x04")
+		(at 89.535 46.99 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "70537b88-c4ed-49f3-b02d-95b665124d56")
+		(property "Reference" "J12"
+			(at 93.345 44.45 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Output3-4"
+			(at 97.155 47.625 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Connector_Phoenix_MC:PhoenixContact_MCV_1,5_4-G-3.5_1x04_P3.50mm_Vertical"
+			(at 89.535 46.99 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 89.535 46.99 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 89.535 46.99 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "e9fda4c3-5ef8-4481-93e0-84b55762bef8")
+		)
+		(pin "2"
+			(uuid "3d7e4603-4016-46da-83c8-4270688623aa")
+		)
+		(pin "3"
+			(uuid "31284d74-6347-495f-8518-3d27404e968f")
+		)
+		(pin "4"
+			(uuid "2e567db3-38a5-4864-8e43-430b41403423")
+		)
+		(instances
+			(project "EthercatAxisInterface"
+				(path "/5597aedc-b607-407f-bbfd-31b3b298ecb1/f395bce8-1f34-4034-a5f2-566a34e78cc6"
+					(reference "J12")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 40.64 143.51 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "73f37825-610b-41c4-b737-b31378afbf4f")
+		(property "Reference" "R89"
+			(at 40.64 145.415 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "330"
+			(at 39.37 150.495 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 38.862 143.51 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 40.64 143.51 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 40.64 143.51 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "38969ff9-d5e0-4055-a248-4ebff7dac849")
+		)
+		(pin "2"
+			(uuid "1c45541b-806d-466f-b09a-0e528dbfe2c6")
+		)
+		(instances
+			(project "EthercatAxisInterface"
+				(path "/5597aedc-b607-407f-bbfd-31b3b298ecb1/f395bce8-1f34-4034-a5f2-566a34e78cc6"
+					(reference "R89")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector_Generic:Conn_01x04")
+		(at 89.535 36.83 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "7b66619e-dc3b-4553-bd21-0bf75b62e923")
+		(property "Reference" "J11"
+			(at 93.345 33.655 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Output1-2"
+			(at 97.79 36.195 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Connector_Phoenix_MC:PhoenixContact_MCV_1,5_4-G-3.5_1x04_P3.50mm_Vertical"
+			(at 89.535 36.83 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 89.535 36.83 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 89.535 36.83 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "7a245b5b-c5d0-4220-82b7-629e52fb5442")
+		)
+		(pin "2"
+			(uuid "d9e9da89-83d2-41c1-a9ee-d10c431a44f8")
+		)
+		(pin "3"
+			(uuid "9df41f3a-aa5a-4f92-b057-3c48b5aa7582")
+		)
+		(pin "4"
+			(uuid "8f5bc304-7876-4fbb-a3aa-1ff5dd8c3f77")
+		)
+		(instances
+			(project "EthercatAxisInterface"
+				(path "/5597aedc-b607-407f-bbfd-31b3b298ecb1/f395bce8-1f34-4034-a5f2-566a34e78cc6"
+					(reference "J11")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Isolator:TLP291-4")
+		(at 198.12 132.08 0)
+		(unit 4)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "7bf83f18-6488-4185-8037-5cc269962345")
+		(property "Reference" "U13"
+			(at 198.12 124.1257 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "TLP292-4"
+			(at 198.12 126.5499 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Package_SO:SOIC-16_4.55x10.3mm_P1.27mm"
+			(at 193.04 137.16 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+			)
+		)
+		(property "Datasheet" "https://toshiba.semicon-storage.com/info/docget.jsp?did=12858&prodName=TLP291-4"
+			(at 198.12 132.08 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Description" ""
+			(at 198.12 132.08 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "10"
+			(uuid "1e8636ff-ab88-4745-95db-32b1dd8a4556")
+		)
+		(pin "11"
+			(uuid "a19fb357-9eac-4b0f-9ed0-d5629c713fe1")
+		)
+		(pin "6"
+			(uuid "0ba2739c-d9a1-4263-9562-5c4c38d9557d")
+		)
+		(pin "12"
+			(uuid "79ad1f5a-5973-4531-87fa-de7716c9bd24")
+		)
+		(pin "7"
+			(uuid "581cad3e-e47d-4206-9199-aa415338ead1")
+		)
+		(pin "15"
+			(uuid "1c2125d8-27db-41f5-a00e-49ed6ef2d0c5")
+		)
+		(pin "2"
+			(uuid "befd0a1e-30d4-4a0e-bf90-3e768912a768")
+		)
+		(pin "8"
+			(uuid "43857843-3fa1-4f7f-b52a-4711bf5ed4e9")
+		)
+		(pin "4"
+			(uuid "0030b690-0e96-497a-b544-a4745fe78c1b")
+		)
+		(pin "9"
+			(uuid "e542a073-52d2-4a98-9834-dde55a6006c5")
+		)
+		(pin "14"
+			(uuid "e8ed82fa-0f8d-489b-9717-5f319981040b")
+		)
+		(pin "16"
+			(uuid "7d3b3b4f-b830-4a63-869a-b2b5ab461d19")
+		)
+		(pin "3"
+			(uuid "0562c575-5329-4b60-bd3c-802ee14a5ded")
+		)
+		(pin "13"
+			(uuid "f900e549-71b8-459e-b11d-3c870ab9c4fd")
+		)
+		(pin "5"
+			(uuid "97436f36-f7f7-4874-9a78-bca2f17a9b3d")
+		)
+		(pin "1"
+			(uuid "b96b518a-7d3f-44b4-b5f2-8b44a264c103")
+		)
+		(instances
+			(project "EthercatAxisInterface"
+				(path "/5597aedc-b607-407f-bbfd-31b3b298ecb1/f395bce8-1f34-4034-a5f2-566a34e78cc6"
+					(reference "U13")
+					(unit 4)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector_Generic:Conn_01x04")
+		(at 234.315 46.99 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "811caf77-00e3-4ec0-b92f-f24b32775f57")
+		(property "Reference" "J16"
+			(at 238.125 44.45 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Output3-4"
+			(at 241.935 47.625 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Connector_Phoenix_MC:PhoenixContact_MCV_1,5_4-G-3.5_1x04_P3.50mm_Vertical"
+			(at 234.315 46.99 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 234.315 46.99 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 234.315 46.99 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "fa7fc906-33f5-4720-96ff-02bae73d4f6b")
+		)
+		(pin "2"
+			(uuid "4b1ddb34-0358-4167-b6e0-b170b07e6749")
+		)
+		(pin "3"
+			(uuid "33875757-3815-4a43-a692-6933b59dd1f4")
+		)
+		(pin "4"
+			(uuid "51861c01-9c1a-4092-9335-c8813b932b07")
+		)
+		(instances
+			(project "EthercatAxisInterface"
+				(path "/5597aedc-b607-407f-bbfd-31b3b298ecb1/f395bce8-1f34-4034-a5f2-566a34e78cc6"
+					(reference "J16")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 182.88 143.51 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "8c016dc2-aa54-40a6-a446-722612fb22d2")
+		(property "Reference" "R95"
+			(at 182.88 145.415 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "330"
+			(at 181.61 150.495 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 181.102 143.51 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 182.88 143.51 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 182.88 143.51 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "f2502aed-ccc2-4795-8f03-746161f4d2af")
+		)
+		(pin "2"
+			(uuid "2b587771-2a8c-4f76-a829-861f19e5aa59")
+		)
+		(instances
+			(project "EthercatAxisInterface"
+				(path "/5597aedc-b607-407f-bbfd-31b3b298ecb1/f395bce8-1f34-4034-a5f2-566a34e78cc6"
+					(reference "R95")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 39.37 72.39 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "8da1a1a5-ee7c-47ef-b0b3-6b8e3e11602e")
+		(property "Reference" "R88"
+			(at 39.37 74.295 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "330"
+			(at 38.1 79.375 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 37.592 72.39 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 39.37 72.39 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 39.37 72.39 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "6b9fa88c-d421-4d69-99ee-346aa89ef847")
+		)
+		(pin "2"
+			(uuid "2ebd1a33-00c2-44ce-b22c-458f0c849324")
+		)
+		(instances
+			(project "EthercatAxisInterface"
+				(path "/5597aedc-b607-407f-bbfd-31b3b298ecb1/f395bce8-1f34-4034-a5f2-566a34e78cc6"
+					(reference "R88")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 191.77 152.4 90)
+		(mirror x)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "933d7b12-479f-480a-8555-1fa056cd7fea")
+		(property "Reference" "#PWR0100"
+			(at 198.12 152.4 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND_ISOL"
+			(at 195.58 152.4 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" ""
+			(at 191.77 152.4 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 191.77 152.4 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 191.77 152.4 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "eec9041d-de26-45c0-a9df-10df8920aadc")
+		)
+		(instances
+			(project "EthercatAxisInterface"
+				(path "/5597aedc-b607-407f-bbfd-31b3b298ecb1/f395bce8-1f34-4034-a5f2-566a34e78cc6"
+					(reference "#PWR0100")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector_Generic:Conn_01x04")
+		(at 235.585 118.11 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "9f4f33f2-21dd-4592-b5f2-3433b28f5b53")
+		(property "Reference" "J18"
+			(at 239.395 115.57 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Output3-4"
+			(at 243.205 118.745 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Connector_Phoenix_MC:PhoenixContact_MCV_1,5_4-G-3.5_1x04_P3.50mm_Vertical"
+			(at 235.585 118.11 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 235.585 118.11 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 235.585 118.11 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "b90e29a5-f3f3-4500-89f5-c7759b7128d7")
+		)
+		(pin "2"
+			(uuid "33a9de65-d2d9-4f4f-92e4-1d59035bdeef")
+		)
+		(pin "3"
+			(uuid "36b034e5-8a39-47b4-964d-2d3fb73b360c")
+		)
+		(pin "4"
+			(uuid "7099b82b-952f-42af-bf32-c625031d935e")
+		)
+		(instances
+			(project "EthercatAxisInterface"
+				(path "/5597aedc-b607-407f-bbfd-31b3b298ecb1/f395bce8-1f34-4034-a5f2-566a34e78cc6"
+					(reference "J18")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Isolator:TLP291-4")
+		(at 198.12 97.79 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "a45307e6-8646-40d8-b37a-cdb1b3259933")
+		(property "Reference" "U13"
+			(at 198.12 89.8357 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "TLP292-4"
+			(at 198.12 92.2599 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Package_SO:SOIC-16_4.55x10.3mm_P1.27mm"
+			(at 193.04 102.87 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+			)
+		)
+		(property "Datasheet" "https://toshiba.semicon-storage.com/info/docget.jsp?did=12858&prodName=TLP291-4"
+			(at 198.12 97.79 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Description" ""
+			(at 198.12 97.79 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "10"
+			(uuid "6c4c30ff-5178-4107-a287-95a6b9e60e89")
+		)
+		(pin "11"
+			(uuid "a19fb357-9eac-4b0f-9ed0-d5629c713fe7")
+		)
+		(pin "6"
+			(uuid "0ba2739c-d9a1-4263-9562-5c4c38d95583")
+		)
+		(pin "12"
+			(uuid "79ad1f5a-5973-4531-87fa-de7716c9bd2a")
+		)
+		(pin "7"
+			(uuid "5119a297-c90e-43c6-a6bb-aaaa1e8a5878")
+		)
+		(pin "15"
+			(uuid "e5640fbb-9c90-48f3-a673-4aa264b87377")
+		)
+		(pin "2"
+			(uuid "596daa73-cf37-41f0-83f3-bf9ca36fed0f")
+		)
+		(pin "8"
+			(uuid "6527b396-a6ea-405b-8d39-1836b401ae77")
+		)
+		(pin "4"
+			(uuid "0030b690-0e96-497a-b544-a4745fe78c20")
+		)
+		(pin "9"
+			(uuid "b20aff88-5854-4053-8d2d-c18c408553d1")
+		)
+		(pin "14"
+			(uuid "e8ed82fa-0f8d-489b-9717-5f3199810410")
+		)
+		(pin "16"
+			(uuid "95060e24-5237-4228-9b77-63679ed18d75")
+		)
+		(pin "3"
+			(uuid "0562c575-5329-4b60-bd3c-802ee14a5df2")
+		)
+		(pin "13"
+			(uuid "f900e549-71b8-459e-b11d-3c870ab9c502")
+		)
+		(pin "5"
+			(uuid "97436f36-f7f7-4874-9a78-bca2f17a9b43")
+		)
+		(pin "1"
+			(uuid "085a6a40-8980-49cb-87f2-dd45e99bb236")
+		)
+		(instances
+			(project "EthercatAxisInterface"
+				(path "/5597aedc-b607-407f-bbfd-31b3b298ecb1/f395bce8-1f34-4034-a5f2-566a34e78cc6"
+					(reference "U13")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Isolator:TLP291-4")
+		(at 53.34 97.79 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "b17bae70-c2cb-4a42-85e1-a08c074b80c8")
+		(property "Reference" "U11"
+			(at 53.34 89.8357 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "TLP292-4"
+			(at 53.34 92.2599 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Package_SO:SOIC-16_4.55x10.3mm_P1.27mm"
+			(at 48.26 102.87 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+			)
+		)
+		(property "Datasheet" "https://toshiba.semicon-storage.com/info/docget.jsp?did=12858&prodName=TLP291-4"
+			(at 53.34 97.79 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Description" ""
+			(at 53.34 97.79 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "10"
+			(uuid "6c4c30ff-5178-4107-a287-95a6b9e60e8a")
+		)
+		(pin "11"
+			(uuid "a19fb357-9eac-4b0f-9ed0-d5629c713fe8")
+		)
+		(pin "6"
+			(uuid "0ba2739c-d9a1-4263-9562-5c4c38d95584")
+		)
+		(pin "12"
+			(uuid "79ad1f5a-5973-4531-87fa-de7716c9bd2b")
+		)
+		(pin "7"
+			(uuid "5119a297-c90e-43c6-a6bb-aaaa1e8a5879")
+		)
+		(pin "15"
+			(uuid "1e37f043-6d84-4087-8b9b-cad0bb7786ff")
+		)
+		(pin "2"
+			(uuid "61f80c71-4b3c-4e19-ae3a-1d73bc38cf00")
+		)
+		(pin "8"
+			(uuid "6527b396-a6ea-405b-8d39-1836b401ae78")
+		)
+		(pin "4"
+			(uuid "0030b690-0e96-497a-b544-a4745fe78c21")
+		)
+		(pin "9"
+			(uuid "b20aff88-5854-4053-8d2d-c18c408553d2")
+		)
+		(pin "14"
+			(uuid "e8ed82fa-0f8d-489b-9717-5f3199810411")
+		)
+		(pin "16"
+			(uuid "ae6319ff-f7f3-42ee-9b9c-8ec079ed6f13")
+		)
+		(pin "3"
+			(uuid "0562c575-5329-4b60-bd3c-802ee14a5df3")
+		)
+		(pin "13"
+			(uuid "f900e549-71b8-459e-b11d-3c870ab9c503")
+		)
+		(pin "5"
+			(uuid "97436f36-f7f7-4874-9a78-bca2f17a9b44")
+		)
+		(pin "1"
+			(uuid "1b6848be-66a6-4607-958b-e645bed489cc")
+		)
+		(instances
+			(project "EthercatAxisInterface"
+				(path "/5597aedc-b607-407f-bbfd-31b3b298ecb1/f395bce8-1f34-4034-a5f2-566a34e78cc6"
+					(reference "U11")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Isolator:TLP291-4")
+		(at 196.85 60.96 0)
+		(unit 4)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "bdadf4f1-9fc0-4e52-98ee-08c081c6446e")
+		(property "Reference" "U12"
+			(at 196.85 53.0057 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "TLP292-4"
+			(at 196.85 55.4299 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Package_SO:SOIC-16_4.55x10.3mm_P1.27mm"
+			(at 191.77 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+			)
+		)
+		(property "Datasheet" "https://toshiba.semicon-storage.com/info/docget.jsp?did=12858&prodName=TLP291-4"
+			(at 196.85 60.96 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Description" ""
+			(at 196.85 60.96 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "10"
+			(uuid "d91af9ef-4ea1-4cbd-866c-ac70f2e0c1c0")
+		)
+		(pin "11"
+			(uuid "a19fb357-9eac-4b0f-9ed0-d5629c713fe2")
+		)
+		(pin "6"
+			(uuid "0ba2739c-d9a1-4263-9562-5c4c38d9557e")
+		)
+		(pin "12"
+			(uuid "79ad1f5a-5973-4531-87fa-de7716c9bd25")
+		)
+		(pin "7"
+			(uuid "91f71921-07a9-412a-aa5e-c2ce52ab4eae")
+		)
+		(pin "15"
+			(uuid "1c2125d8-27db-41f5-a00e-49ed6ef2d0c6")
+		)
+		(pin "2"
+			(uuid "befd0a1e-30d4-4a0e-bf90-3e768912a769")
+		)
+		(pin "8"
+			(uuid "eaa192f2-8a11-4d42-b67e-4f18e6964ad5")
+		)
+		(pin "4"
+			(uuid "0030b690-0e96-497a-b544-a4745fe78c1c")
+		)
+		(pin "9"
+			(uuid "70ed23de-2a74-4f4a-a1f9-24fd15745aca")
+		)
+		(pin "14"
+			(uuid "e8ed82fa-0f8d-489b-9717-5f319981040c")
+		)
+		(pin "16"
+			(uuid "7d3b3b4f-b830-4a63-869a-b2b5ab461d1a")
+		)
+		(pin "3"
+			(uuid "0562c575-5329-4b60-bd3c-802ee14a5dee")
+		)
+		(pin "13"
+			(uuid "f900e549-71b8-459e-b11d-3c870ab9c4fe")
+		)
+		(pin "5"
+			(uuid "97436f36-f7f7-4874-9a78-bca2f17a9b3e")
+		)
+		(pin "1"
+			(uuid "b96b518a-7d3f-44b4-b5f2-8b44a264c104")
+		)
+		(instances
+			(project "EthercatAxisInterface"
+				(path "/5597aedc-b607-407f-bbfd-31b3b298ecb1/f395bce8-1f34-4034-a5f2-566a34e78cc6"
+					(reference "U12")
+					(unit 4)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 191.77 81.28 90)
+		(mirror x)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "cb271d5b-f969-4c19-a09e-097532ddfdb5")
+		(property "Reference" "#PWR099"
+			(at 198.12 81.28 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND_ISOL"
+			(at 195.58 81.28 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" ""
+			(at 191.77 81.28 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 191.77 81.28 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 191.77 81.28 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "71b29dd8-8b8f-4f06-be17-7c250fed5928")
+		)
+		(instances
+			(project "EthercatAxisInterface"
+				(path "/5597aedc-b607-407f-bbfd-31b3b298ecb1/f395bce8-1f34-4034-a5f2-566a34e78cc6"
+					(reference "#PWR099")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Isolator:TLP291-4")
+		(at 53.34 109.22 0)
+		(unit 2)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "d4b24cf3-9fd5-486e-b0bf-dadbd44b78a6")
+		(property "Reference" "U11"
+			(at 53.34 101.2657 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "TLP292-4"
+			(at 53.34 103.6899 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Package_SO:SOIC-16_4.55x10.3mm_P1.27mm"
+			(at 48.26 114.3 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+			)
+		)
+		(property "Datasheet" "https://toshiba.semicon-storage.com/info/docget.jsp?did=12858&prodName=TLP291-4"
+			(at 53.34 109.22 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Description" ""
+			(at 53.34 109.22 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "10"
+			(uuid "6c4c30ff-5178-4107-a287-95a6b9e60e94")
+		)
+		(pin "11"
+			(uuid "a19fb357-9eac-4b0f-9ed0-d5629c713ff0")
+		)
+		(pin "6"
+			(uuid "0ba2739c-d9a1-4263-9562-5c4c38d9558c")
+		)
+		(pin "12"
+			(uuid "79ad1f5a-5973-4531-87fa-de7716c9bd33")
+		)
+		(pin "7"
+			(uuid "5119a297-c90e-43c6-a6bb-aaaa1e8a5883")
+		)
+		(pin "15"
+			(uuid "1c2125d8-27db-41f5-a00e-49ed6ef2d0d4")
+		)
+		(pin "2"
+			(uuid "befd0a1e-30d4-4a0e-bf90-3e768912a777")
+		)
+		(pin "8"
+			(uuid "6527b396-a6ea-405b-8d39-1836b401ae82")
+		)
+		(pin "4"
+			(uuid "df8e1aea-188c-42b6-ba01-9698d27eec85")
+		)
+		(pin "9"
+			(uuid "b20aff88-5854-4053-8d2d-c18c408553dc")
+		)
+		(pin "14"
+			(uuid "0344e400-ab6c-4d56-955b-77f4fac82682")
+		)
+		(pin "16"
+			(uuid "7d3b3b4f-b830-4a63-869a-b2b5ab461d28")
+		)
+		(pin "3"
+			(uuid "e04b8f0f-82bc-40f3-80ef-ad2b5805278e")
+		)
+		(pin "13"
+			(uuid "38995aa6-1478-4b61-8f3f-10df782d4106")
+		)
+		(pin "5"
+			(uuid "97436f36-f7f7-4874-9a78-bca2f17a9b4c")
+		)
+		(pin "1"
+			(uuid "b96b518a-7d3f-44b4-b5f2-8b44a264c112")
+		)
+		(instances
+			(project "EthercatAxisInterface"
+				(path "/5597aedc-b607-407f-bbfd-31b3b298ecb1/f395bce8-1f34-4034-a5f2-566a34e78cc6"
+					(reference "U11")
+					(unit 2)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 49.53 152.4 90)
+		(mirror x)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "d4d0e654-1649-434b-84d7-ad5519e95111")
+		(property "Reference" "#PWR098"
+			(at 55.88 152.4 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND_ISOL"
+			(at 53.34 152.4 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" ""
+			(at 49.53 152.4 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 49.53 152.4 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 49.53 152.4 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "46668ea1-f415-415e-a974-1a76c7667b1d")
+		)
+		(instances
+			(project "EthercatAxisInterface"
+				(path "/5597aedc-b607-407f-bbfd-31b3b298ecb1/f395bce8-1f34-4034-a5f2-566a34e78cc6"
+					(reference "#PWR098")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Isolator:TLP291-4")
+		(at 52.07 60.96 0)
+		(unit 4)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "d6fefeaf-3b01-4e55-abe4-63b7f8f80af9")
+		(property "Reference" "U10"
+			(at 52.07 53.0057 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "TLP292-4"
+			(at 52.07 55.4299 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Package_SO:SOIC-16_4.55x10.3mm_P1.27mm"
+			(at 46.99 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+			)
+		)
+		(property "Datasheet" "https://toshiba.semicon-storage.com/info/docget.jsp?did=12858&prodName=TLP291-4"
+			(at 52.07 60.96 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Description" ""
+			(at 52.07 60.96 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "10"
+			(uuid "a880985e-6e45-47cd-a461-062575e79259")
+		)
+		(pin "11"
+			(uuid "a19fb357-9eac-4b0f-9ed0-d5629c713fe3")
+		)
+		(pin "6"
+			(uuid "0ba2739c-d9a1-4263-9562-5c4c38d9557f")
+		)
+		(pin "12"
+			(uuid "79ad1f5a-5973-4531-87fa-de7716c9bd26")
+		)
+		(pin "7"
+			(uuid "e22f9734-ff94-4f39-ae02-e6aead5d195d")
+		)
+		(pin "15"
+			(uuid "1c2125d8-27db-41f5-a00e-49ed6ef2d0c7")
+		)
+		(pin "2"
+			(uuid "befd0a1e-30d4-4a0e-bf90-3e768912a76a")
+		)
+		(pin "8"
+			(uuid "fed8559b-2f2a-4be8-8cb6-43e37a1d1df7")
+		)
+		(pin "4"
+			(uuid "0030b690-0e96-497a-b544-a4745fe78c1d")
+		)
+		(pin "9"
+			(uuid "1847803e-d64b-41b0-b386-7ae2fb89eb40")
+		)
+		(pin "14"
+			(uuid "e8ed82fa-0f8d-489b-9717-5f319981040d")
+		)
+		(pin "16"
+			(uuid "7d3b3b4f-b830-4a63-869a-b2b5ab461d1b")
+		)
+		(pin "3"
+			(uuid "0562c575-5329-4b60-bd3c-802ee14a5def")
+		)
+		(pin "13"
+			(uuid "f900e549-71b8-459e-b11d-3c870ab9c4ff")
+		)
+		(pin "5"
+			(uuid "97436f36-f7f7-4874-9a78-bca2f17a9b3f")
+		)
+		(pin "1"
+			(uuid "b96b518a-7d3f-44b4-b5f2-8b44a264c105")
+		)
+		(instances
+			(project "EthercatAxisInterface"
+				(path "/5597aedc-b607-407f-bbfd-31b3b298ecb1/f395bce8-1f34-4034-a5f2-566a34e78cc6"
+					(reference "U10")
+					(unit 4)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 34.29 72.39 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "ea7c3481-7fdb-4937-aaae-e221db5de774")
+		(property "Reference" "R84"
+			(at 34.29 74.295 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "330"
+			(at 33.02 79.375 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 32.512 72.39 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 34.29 72.39 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 34.29 72.39 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "94663df0-7622-4400-ba9a-08957ecb1ec9")
+		)
+		(pin "2"
+			(uuid "b68594e8-8a4d-4017-bca7-00d19e1317fd")
+		)
+		(instances
+			(project "EthercatAxisInterface"
+				(path "/5597aedc-b607-407f-bbfd-31b3b298ecb1/f395bce8-1f34-4034-a5f2-566a34e78cc6"
+					(reference "R84")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector_Generic:Conn_01x04")
+		(at 90.805 107.95 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "eed55830-7df9-4eaf-a19e-eb2f02e74088")
+		(property "Reference" "J13"
+			(at 94.615 104.775 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Output1-2"
+			(at 99.06 107.315 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Connector_Phoenix_MC:PhoenixContact_MCV_1,5_4-G-3.5_1x04_P3.50mm_Vertical"
+			(at 90.805 107.95 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 90.805 107.95 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 90.805 107.95 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "fef6b72c-822f-4797-85f5-08395198555c")
+		)
+		(pin "2"
+			(uuid "54b42758-294b-45d1-a90e-8484ce22abac")
+		)
+		(pin "3"
+			(uuid "026cbc63-33da-4847-b9c0-4fd3db4686b7")
+		)
+		(pin "4"
+			(uuid "74d79d21-869c-44f4-a4cb-2b66f670d3b0")
+		)
+		(instances
+			(project "EthercatAxisInterface"
+				(path "/5597aedc-b607-407f-bbfd-31b3b298ecb1/f395bce8-1f34-4034-a5f2-566a34e78cc6"
+					(reference "J13")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Isolator:TLP291-4")
+		(at 52.07 38.1 0)
+		(unit 2)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "f332111e-418b-41b3-80c6-2abfbcbc9765")
+		(property "Reference" "U10"
+			(at 52.07 30.1457 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "TLP292-4"
+			(at 52.07 32.5699 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Package_SO:SOIC-16_4.55x10.3mm_P1.27mm"
+			(at 46.99 43.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(justify left)
+			)
+		)
+		(property "Datasheet" "https://toshiba.semicon-storage.com/info/docget.jsp?did=12858&prodName=TLP291-4"
+			(at 52.07 38.1 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Description" ""
+			(at 52.07 38.1 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "10"
+			(uuid "6c4c30ff-5178-4107-a287-95a6b9e60e95")
+		)
+		(pin "11"
+			(uuid "a19fb357-9eac-4b0f-9ed0-d5629c713ff1")
+		)
+		(pin "6"
+			(uuid "0ba2739c-d9a1-4263-9562-5c4c38d9558d")
+		)
+		(pin "12"
+			(uuid "79ad1f5a-5973-4531-87fa-de7716c9bd34")
+		)
+		(pin "7"
+			(uuid "5119a297-c90e-43c6-a6bb-aaaa1e8a5884")
+		)
+		(pin "15"
+			(uuid "1c2125d8-27db-41f5-a00e-49ed6ef2d0d5")
+		)
+		(pin "2"
+			(uuid "befd0a1e-30d4-4a0e-bf90-3e768912a778")
+		)
+		(pin "8"
+			(uuid "6527b396-a6ea-405b-8d39-1836b401ae83")
+		)
+		(pin "4"
+			(uuid "07db9b9d-33de-4bbb-bce1-a487b70bebb9")
+		)
+		(pin "9"
+			(uuid "b20aff88-5854-4053-8d2d-c18c408553dd")
+		)
+		(pin "14"
+			(uuid "5bab52ad-77d3-407e-a22c-9eded9de87cc")
+		)
+		(pin "16"
+			(uuid "7d3b3b4f-b830-4a63-869a-b2b5ab461d29")
+		)
+		(pin "3"
+			(uuid "7df1f4d3-eada-4e49-b47d-b75807a3a96d")
+		)
+		(pin "13"
+			(uuid "50e16412-19dc-4d45-aee4-a5e9d67ebc4a")
+		)
+		(pin "5"
+			(uuid "97436f36-f7f7-4874-9a78-bca2f17a9b4d")
+		)
+		(pin "1"
+			(uuid "b96b518a-7d3f-44b4-b5f2-8b44a264c113")
+		)
+		(instances
+			(project "EthercatAxisInterface"
+				(path "/5597aedc-b607-407f-bbfd-31b3b298ecb1/f395bce8-1f34-4034-a5f2-566a34e78cc6"
+					(reference "U10")
+					(unit 2)
+				)
+			)
+		)
+	)
+)

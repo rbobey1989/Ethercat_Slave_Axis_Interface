@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP XAL5050-822MEC
+D Power Inductors - SMD 8.2uH Shld 20% 6.1A 34.95mOhms AECQ2
+K
+F https://www.coilcraft.com/pdfs/xal50xx.pdf
+$ENDCMP
+#
+#End Doc Library

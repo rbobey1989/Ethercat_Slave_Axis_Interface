@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP MF-LSMF075_60X-2
+D 2920 Resettable SMD PPTC 0.75A/60V
+K
+F http://www.bourns.com/docs/Product-Datasheets/MF-LSMF.pdf
+$ENDCMP
+#
+#End Doc Library

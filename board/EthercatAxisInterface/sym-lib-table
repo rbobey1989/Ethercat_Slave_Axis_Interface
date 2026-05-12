@@ -1,0 +1,9 @@
+(sym_lib_table
+	(version 7)
+	(lib (name "2026-04-29_10-44-39") (type "KiCad") (uri "/home/rbobey1989/Store/LinuxCnC/Ethercat/Ethercat_Slave_Axis_Interface/board/Library/ul_AX58100LT/KiCADv6/2026-04-29_10-44-39.kicad_sym") (options "") (descr ""))
+	(lib (name "2026-05-09_17-52-08") (type "KiCad") (uri "/home/rbobey1989/Store/LinuxCnC/Ethercat/Ethercat_Slave_Axis_Interface/board/Library/ul_MF-MSMF050-2/KiCADv6/2026-05-09_17-52-08.kicad_sym") (options "") (descr ""))
+	(lib (name "SMBJ30A-13-F") (type "KiCad") (uri "/home/rbobey1989/Store/LinuxCnC/Ethercat/Ethercat_Slave_Axis_Interface/board/Library/SMBJ30A-13-F/SMBJ30A-13-F.kicad_sym") (options "") (descr ""))
+	(lib (name "XAL5050-822MEC") (type "KiCad") (uri "/home/rbobey1989/Store/LinuxCnC/Ethercat/Ethercat_Slave_Axis_Interface/board/Library/LIB_XAL5050-822MEC/XAL5050-822MEC/KiCad/XAL5050-822MEC.kicad_sym") (options "") (descr ""))
+	(lib (name "MF-LSMF075_60X-2") (type "KiCad") (uri "/home/rbobey1989/Store/LinuxCnC/Ethercat/Ethercat_Slave_Axis_Interface/board/Library/LIB_MF-LSMF075_60X-2/MF-LSMF075_60X-2/KiCad/MF-LSMF075_60X-2.kicad_sym") (options "") (descr ""))
+	(lib (name "MF-MSMF050-2") (type "KiCad") (uri "/home/rbobey1989/Store/LinuxCnC/Ethercat/Ethercat_Slave_Axis_Interface/board/Library/LIB_MF-MSMF050-2/MF-MSMF050-2/KiCad/MF-MSMF050-2.kicad_sym") (options "") (descr ""))
+)

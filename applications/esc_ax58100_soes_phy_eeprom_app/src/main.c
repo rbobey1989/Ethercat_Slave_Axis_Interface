@@ -84,5 +84,21 @@ int main(void)
             /* Re-enable EXTI3 now we've processed the event */
             LL_EXTI_EnableIT_0_31(LL_EXTI_LINE_3);
         }
+
+        while (g_servo_fast_ticks != 0U)
+        {
+            __disable_irq();
+
+            if (g_servo_fast_ticks != 0U)
+            {
+                g_servo_fast_ticks--;
+                __enable_irq();
+                servo_fast_cycle();
+            }
+            else
+            {
+                __enable_irq();
+            }
+        }
     }
 }

@@ -1,0 +1,293 @@
+(kicad_sch
+	(version 20260306)
+	(generator "eeschema")
+	(generator_version "10.0")
+	(uuid "5597aedc-b607-407f-bbfd-31b3b298ecb1")
+	(paper "A4")
+	(title_block
+		(title "Ethercat Axis Interface")
+	)
+	(lib_symbols)
+	(sheet
+		(at 111.76 20.32)
+		(size 63.5 39.37)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "0a376a6c-0f15-42f8-81f6-3a55619be267")
+		(property "Sheetname" "INPUTS"
+			(at 111.76 19.6084 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "Inputs_Interface.kicad_sch"
+			(at 111.76 60.2746 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "EthercatAxisInterface"
+				(path "/5597aedc-b607-407f-bbfd-31b3b298ecb1"
+					(page "5")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 27.94 74.93)
+		(size 60.96 45.72)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "5bf93325-f5d9-4344-9bf3-f5fc91bc1622")
+		(property "Sheetname" "AX58100 STRAP PHY EEPROM"
+			(at 27.94 74.2184 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "AX58100_01.kicad_sch"
+			(at 27.94 121.2346 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "EthercatAxisInterface"
+				(path "/5597aedc-b607-407f-bbfd-31b3b298ecb1"
+					(page "3")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 27.94 20.32)
+		(size 60.96 39.37)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "9f485422-734f-43d3-94ea-443cbc453d2e")
+		(property "Sheetname" "AX58100 CORE"
+			(at 27.94 19.6084 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "AX58100_00.kicad_sch"
+			(at 27.94 60.2746 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "EthercatAxisInterface"
+				(path "/5597aedc-b607-407f-bbfd-31b3b298ecb1"
+					(page "2")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 198.12 19.05)
+		(size 66.04 43.18)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "cd91a270-7393-4003-91a3-e42304da540b")
+		(property "Sheetname" "PWMDIR_ENC"
+			(at 198.12 18.3384 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "Axis.kicad_sch"
+			(at 198.12 62.8146 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "EthercatAxisInterface"
+				(path "/5597aedc-b607-407f-bbfd-31b3b298ecb1"
+					(page "7")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 27.94 137.16)
+		(size 62.23 48.26)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "d564400f-40ba-4aca-9c2a-14ec52a8353b")
+		(property "Sheetname" "STM32F4"
+			(at 27.94 136.4484 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "STM32F4.kicad_sch"
+			(at 27.94 186.0046 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "EthercatAxisInterface"
+				(path "/5597aedc-b607-407f-bbfd-31b3b298ecb1"
+					(page "4")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 111.76 76.2)
+		(size 63.5 39.37)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "f395bce8-1f34-4034-a5f2-566a34e78cc6")
+		(property "Sheetname" "OUTPUTS"
+			(at 111.76 75.4884 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "Outputs_Interface.kicad_sch"
+			(at 111.76 116.1546 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "EthercatAxisInterface"
+				(path "/5597aedc-b607-407f-bbfd-31b3b298ecb1"
+					(page "6")
+				)
+			)
+		)
+	)
+	(sheet_instances
+		(path "/"
+			(page "1")
+		)
+	)
+	(embedded_fonts no)
+)

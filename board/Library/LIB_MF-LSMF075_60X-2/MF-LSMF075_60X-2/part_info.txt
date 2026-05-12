@@ -1,0 +1,9 @@
+Manufacturer=Bourns
+PartNumber=MF-LSMF075/60X-2
+PartCategory=Resettable Fuse
+PackageCategory=Other
+PinCount=2
+Version=2.4
+Released=2023-12-07 11:34:00
+Downloaded=2026-05-10 20:08:14
+3D=Y

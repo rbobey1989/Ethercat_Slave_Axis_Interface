@@ -13,6 +13,8 @@
 #define PWM_STATUS_DIR_CHANGE_PENDING  (1U << 4)
 #define PWM_STATUS_COMMAND_CLAMPED     (1U << 5)
 
+#define PWM_DMA_COMMAND_LIMIT          32767
+
 void pwm_dma_init(void);
 void pwm_dma_set_enabled(uint8_t channel_index, bool enabled);
 bool pwm_dma_is_enabled(uint8_t channel_index);
