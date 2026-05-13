@@ -32,6 +32,7 @@ int main(void)
 
     /* Initialize SOES stack and try to enable DC */
     soes_init();
+    servo_load_static_config();
 
     /* Main loop: interrupt-driven. Enter low-power wait-for-interrupt loop.
      * EXTI0 does the main EtherCAT worker. For SYNC0 we use a minimal ISR

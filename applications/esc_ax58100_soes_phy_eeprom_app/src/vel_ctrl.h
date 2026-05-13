@@ -3,7 +3,7 @@
 
 #include <stdint.h>
 
-#define VEL_CTRL_CHANNELS 4U
+#define VEL_CTRL_CHANNELS 2U
 
 #define VEL_CTRL_MODE_OPEN_LOOP    0U
 #define VEL_CTRL_MODE_VELOCITY_PI  1U

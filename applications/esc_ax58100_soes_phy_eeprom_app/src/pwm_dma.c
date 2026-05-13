@@ -13,11 +13,9 @@
  *
  * Axis 0: PWM PE9  -> TIM1_CH1, DIR PE8
  * Axis 1: PWM PE11 -> TIM1_CH2, DIR PE10
- * Axis 2: PWM PE13 -> TIM1_CH3, DIR PE12
- * Axis 3: PWM PE14 -> TIM1_CH4, DIR PE15
  *
  * DMA is driven from TIM1 update events using DMA2 Stream5 Channel6. The DMA
- * burst updates CCR1..CCR4 together so all PWM channels stay phase-aligned.
+ * burst updates CCR1..CCR2 together so both PWM channels stay phase-aligned.
  */
 
 
@@ -48,17 +46,16 @@ typedef struct
 
 #define PWM_DMA_DIR_PORT            GPIOE
 
-static uint16_t g_pwm_dma_buffer[4];
+static uint16_t g_pwm_dma_buffer[PWM_DMA_CHANNELS];
 
 static const pwm_dma_hw_cfg_t g_pwm_hw[] = {
     {&TIM1->CCR1, PWM_DMA_DIR_PORT, LL_GPIO_PIN_8},
     {&TIM1->CCR2, PWM_DMA_DIR_PORT, LL_GPIO_PIN_10},
-    {&TIM1->CCR3, PWM_DMA_DIR_PORT, LL_GPIO_PIN_12},
-    {&TIM1->CCR4, PWM_DMA_DIR_PORT, LL_GPIO_PIN_15},
 };
 
 static pwm_dma_state_t g_pwm_state[PWM_DMA_CHANNELS];
 
+/* Reprogramar un stream DMA activo no es seguro: primero se fuerza EN=0 y se espera. */
 static void pwm_dma_wait_disabled(DMA_Stream_TypeDef *stream)
 {
     stream->CR &= ~DMA_SxCR_EN;
@@ -67,6 +64,7 @@ static void pwm_dma_wait_disabled(DMA_Stream_TypeDef *stream)
     }
 }
 
+/* Aplica el bit de direccion fisico al GPIO asociado al eje. */
 static void pwm_dma_set_dir_pin(const pwm_dma_hw_cfg_t *cfg, uint8_t dir)
 {
     if (dir != 0U)
@@ -79,6 +77,7 @@ static void pwm_dma_set_dir_pin(const pwm_dma_hw_cfg_t *cfg, uint8_t dir)
     }
 }
 
+/* Convierte el comando signed normalizado al duty absoluto en ticks del PWM. */
 static uint16_t pwm_dma_command_to_compare(int32_t command)
 {
     uint32_t magnitude;
@@ -100,18 +99,17 @@ static uint16_t pwm_dma_command_to_compare(int32_t command)
     return (uint16_t)((magnitude * PWM_DMA_PERIOD_TICKS) / PWM_DMA_COMMAND_MAX);
 }
 
+/* Configura las salidas PWM y los GPIO de direccion. */
 static void pwm_dma_gpio_init(void)
 {
-    static const uint32_t pwm_pins[4] = {
+    static const uint32_t pwm_pins[PWM_DMA_CHANNELS] = {
         LL_GPIO_PIN_9,
         LL_GPIO_PIN_11,
-        LL_GPIO_PIN_13,
-        LL_GPIO_PIN_14,
     };
 
     LL_AHB1_GRP1_EnableClock(LL_AHB1_GRP1_PERIPH_GPIOE);
 
-    for (uint8_t index = 0; index < 4U; ++index)
+    for (uint8_t index = 0; index < PWM_DMA_CHANNELS; ++index)
     {
         LL_GPIO_SetPinMode(GPIOE, pwm_pins[index], LL_GPIO_MODE_ALTERNATE);
         LL_GPIO_SetPinOutputType(GPIOE, pwm_pins[index], LL_GPIO_OUTPUT_PUSHPULL);
@@ -135,6 +133,10 @@ static void pwm_dma_gpio_init(void)
     }
 }
 
+/*
+ * TIM1 funciona como generador PWM y tambien como disparador del DMA burst.
+ * El burst actualiza CCR1 y CCR2 juntos para que ambos ejes cambien en el mismo update.
+ */
 static void pwm_dma_timer_init(void)
 {
     LL_APB2_GRP1_EnableClock(LL_APB2_GRP1_PERIPH_TIM1);
@@ -154,23 +156,16 @@ static void pwm_dma_timer_init(void)
                          | TIM_CCMR1_OC1M_2
                          | TIM_CCMR1_OC2M_1
                          | TIM_CCMR1_OC2M_2;
-    PWM_DMA_TIMER->CCMR2 = TIM_CCMR2_OC3PE
-                         | TIM_CCMR2_OC4PE
-                         | TIM_CCMR2_OC3M_1
-                         | TIM_CCMR2_OC3M_2
-                         | TIM_CCMR2_OC4M_1
-                         | TIM_CCMR2_OC4M_2;
     PWM_DMA_TIMER->CCER = TIM_CCER_CC1E
-                        | TIM_CCER_CC2E
-                        | TIM_CCER_CC3E
-                        | TIM_CCER_CC4E;
+                        | TIM_CCER_CC2E;
     PWM_DMA_TIMER->BDTR = TIM_BDTR_MOE;
-    PWM_DMA_TIMER->DCR = (13U << TIM_DCR_DBA_Pos) | (3U << TIM_DCR_DBL_Pos);
+    PWM_DMA_TIMER->DCR = (13U << TIM_DCR_DBA_Pos) | (1U << TIM_DCR_DBL_Pos);
     PWM_DMA_TIMER->DIER = TIM_DIER_UDE;
     PWM_DMA_TIMER->EGR = TIM_EGR_UG;
     PWM_DMA_TIMER->CR1 = TIM_CR1_ARPE | TIM_CR1_CEN;
 }
 
+/* Configura DMA2 Stream5 para escribir el bloque CCR1..CCR2 de forma circular. */
 static void pwm_dma_stream_init(void)
 {
     LL_AHB1_GRP1_EnableClock(LL_AHB1_GRP1_PERIPH_DMA2);
@@ -181,7 +176,7 @@ static void pwm_dma_stream_init(void)
 
     DMA2_Stream5->PAR = (uint32_t)&PWM_DMA_TIMER->DMAR;
     DMA2_Stream5->M0AR = (uint32_t)g_pwm_dma_buffer;
-    DMA2_Stream5->NDTR = 4U;
+    DMA2_Stream5->NDTR = PWM_DMA_CHANNELS;
     DMA2_Stream5->FCR = 0U;
     DMA2_Stream5->CR = (6U << DMA_SxCR_CHSEL_Pos)
                      | DMA_SxCR_DIR_0
@@ -193,6 +188,7 @@ static void pwm_dma_stream_init(void)
     DMA2_Stream5->CR |= DMA_SxCR_EN;
 }
 
+/* Estado inicial del modulador PWM. */
 void pwm_dma_init(void)
 {
     for (uint8_t index = 0; index < PWM_DMA_CHANNELS; ++index)
@@ -214,6 +210,7 @@ void pwm_dma_init(void)
     pwm_dma_stream_init();
 }
 
+/* Habilita o apaga logicamente un canal sin destruir su configuracion hardware. */
 void pwm_dma_set_enabled(uint8_t channel_index, bool enabled)
 {
     if (channel_index >= PWM_DMA_CHANNELS)
@@ -240,6 +237,10 @@ bool pwm_dma_is_enabled(uint8_t channel_index)
     return (g_pwm_state[channel_index].enabled != 0U);
 }
 
+/*
+ * Entrada principal del modulador.
+ * El comando signed fija direccion y magnitud; el clamp mantiene el rango valido.
+ */
 void pwm_dma_set_signed_command(uint8_t channel_index, int32_t command)
 {
     if (channel_index >= PWM_DMA_CHANNELS)

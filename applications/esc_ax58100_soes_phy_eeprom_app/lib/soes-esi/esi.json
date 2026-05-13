@@ -18,7 +18,7 @@
     "TextGroupName5": "AX58100",
     "ImageName": "IMGCBY",
     "TextDeviceType": "AxisInterface2000",
-    "TextDeviceName": "4 Axis Pwm Enc Channels GPIOs",
+    "TextDeviceName": "2 Axis Pwm Enc Channels GPIOs",
     "Port0Physical": "Y",
     "Port1Physical": "Y",
     "Port2Physical": " ",
@@ -51,16 +51,6 @@
             "name": "Axis_1_Ctrl_Kp",
             "data": "&Obj.Ctrl_Kp[1]",
             "value": "0"
-          },
-          {
-            "name": "Axis_2_Ctrl_Kp",
-            "data": "&Obj.Ctrl_Kp[2]",
-            "value": "0"
-          },
-          {
-            "name": "Axis_3_Ctrl_Kp",
-            "data": "&Obj.Ctrl_Kp[3]",
-            "value": "0"
           }
         ],
         "dtype": "INTEGER32",
@@ -82,16 +72,6 @@
           {
             "name": "Axis_1_Ctrl_Ki",
             "data": "&Obj.Ctrl_Ki[1]",
-            "value": "0"
-          },
-          {
-            "name": "Axis_2_Ctrl_Ki",
-            "data": "&Obj.Ctrl_Ki[2]",
-            "value": "0"
-          },
-          {
-            "name": "Axis_3_Ctrl_Ki",
-            "data": "&Obj.Ctrl_Ki[3]",
             "value": "0"
           }
         ],
@@ -115,16 +95,6 @@
             "name": "Axis_1_Ctrl_FF0",
             "data": "&Obj.Ctrl_FF0[1]",
             "value": "0"
-          },
-          {
-            "name": "Axis_2_Ctrl_FF0",
-            "data": "&Obj.Ctrl_FF0[2]",
-            "value": "0"
-          },
-          {
-            "name": "Axis_3_Ctrl_FF0",
-            "data": "&Obj.Ctrl_FF0[3]",
-            "value": "0"
           }
         ],
         "dtype": "INTEGER32",
@@ -146,16 +116,6 @@
           {
             "name": "Axis_1_Ctrl_FF1",
             "data": "&Obj.Ctrl_FF1[1]",
-            "value": "0"
-          },
-          {
-            "name": "Axis_2_Ctrl_FF1",
-            "data": "&Obj.Ctrl_FF1[2]",
-            "value": "0"
-          },
-          {
-            "name": "Axis_3_Ctrl_FF1",
-            "data": "&Obj.Ctrl_FF1[3]",
             "value": "0"
           }
         ],
@@ -179,16 +139,6 @@
             "name": "Axis_1_Ctrl_Integrator_Limit",
             "data": "&Obj.Ctrl_Integrator_Limit[1]",
             "value": "32767"
-          },
-          {
-            "name": "Axis_2_Ctrl_Integrator_Limit",
-            "data": "&Obj.Ctrl_Integrator_Limit[2]",
-            "value": "32767"
-          },
-          {
-            "name": "Axis_3_Ctrl_Integrator_Limit",
-            "data": "&Obj.Ctrl_Integrator_Limit[3]",
-            "value": "32767"
           }
         ],
         "dtype": "INTEGER32",
@@ -210,16 +160,6 @@
           {
             "name": "Axis_1_Ctrl_Output_Limit",
             "data": "&Obj.Ctrl_Output_Limit[1]",
-            "value": "32767"
-          },
-          {
-            "name": "Axis_2_Ctrl_Output_Limit",
-            "data": "&Obj.Ctrl_Output_Limit[2]",
-            "value": "32767"
-          },
-          {
-            "name": "Axis_3_Ctrl_Output_Limit",
-            "data": "&Obj.Ctrl_Output_Limit[3]",
             "value": "32767"
           }
         ],
@@ -243,28 +183,9 @@
             "name": "Axis_1_Mode",
             "data": "&Obj.Mode[1]",
             "value": "0"
-          },
-          {
-            "name": "Axis_2_Mode",
-            "data": "&Obj.Mode[2]",
-            "value": "0"
-          },
-          {
-            "name": "Axis_3_Mode",
-            "data": "&Obj.Mode[3]",
-            "value": "0"
           }
         ],
         "dtype": "UNSIGNED8",
-        "isSDOitem": true
-      },
-      "8007": {
-        "otype": "VAR",
-        "name": "Enc_Fast_Threshold_Cps",
-        "access": "RW",
-        "dtype": "UNSIGNED32",
-        "value": "50000",
-        "data": "&Obj.Enc_Fast_Threshold_Cps",
         "isSDOitem": true
       }
     },
@@ -286,16 +207,6 @@
             "name": "Enc_1_Pos",
             "value": "0",
             "data": "&Obj.Enc_Pos[1]"
-          },
-          {
-            "name": "Enc_2_Pos",
-            "value": "0",
-            "data": "&Obj.Enc_Pos[2]"
-          },
-          {
-            "name": "Enc_3_Pos",
-            "value": "0",
-            "data": "&Obj.Enc_Pos[3]"
           }
         ],
         "pdo_mappings": [
@@ -320,16 +231,6 @@
             "name": "Enc_1_Vel",
             "value": "0",
             "data": "&Obj.Enc_Vel[1]"
-          },
-          {
-            "name": "Enc_2_Vel",
-            "value": "0",
-            "data": "&Obj.Enc_Vel[2]"
-          },
-          {
-            "name": "Enc_3_Vel",
-            "value": "0",
-            "data": "&Obj.Enc_Vel[3]"
           }
         ],
         "pdo_mappings": [
@@ -354,16 +255,6 @@
             "name": "Enc_1_Status",
             "value": "0",
             "data": "&Obj.Enc_Status[1]"
-          },
-          {
-            "name": "Enc_2_Status",
-            "value": "0",
-            "data": "&Obj.Enc_Status[2]"
-          },
-          {
-            "name": "Enc_3_Status",
-            "value": "0",
-            "data": "&Obj.Enc_Status[3]"
           }
         ],
         "pdo_mappings": [
@@ -388,16 +279,6 @@
             "name": "Pwm_1_Status",
             "value": "0",
             "data": "&Obj.Pwm_Status[1]"
-          },
-          {
-            "name": "Pwm_2_Status",
-            "value": "0",
-            "data": "&Obj.Pwm_Status[2]"
-          },
-          {
-            "name": "Pwm_3_Status",
-            "value": "0",
-            "data": "&Obj.Pwm_Status[3]"
           }
         ],
         "pdo_mappings": [
@@ -421,16 +302,6 @@
           {
             "name": "Axis_1_Ctrl_Vel_Fb",
             "data": "&Obj.Ctrl_Vel_Fb[1]",
-            "value": "0"
-          },
-          {
-            "name": "Axis_2_Ctrl_Vel_Fb",
-            "data": "&Obj.Ctrl_Vel_Fb[2]",
-            "value": "0"
-          },
-          {
-            "name": "Axis_3_Ctrl_Vel_Fb",
-            "data": "&Obj.Ctrl_Vel_Fb[3]",
             "value": "0"
           }
         ],
@@ -469,16 +340,6 @@
             "name": "Pwm_1_Cmd",
             "value": "0",
             "data": "&Obj.Pwm_Cmd[1]"
-          },
-          {
-            "name": "Pwm_2_Cmd",
-            "value": "0",
-            "data": "&Obj.Pwm_Cmd[2]"
-          },
-          {
-            "name": "Pwm_3_Cmd",
-            "value": "0",
-            "data": "&Obj.Pwm_Cmd[3]"
           }
         ],
         "pdo_mappings": [
@@ -503,16 +364,6 @@
             "name": "Pwm_1_En",
             "value": "0",
             "data": "&Obj.Pwm_En[1]"
-          },
-          {
-            "name": "Pwm_2_En",
-            "value": "0",
-            "data": "&Obj.Pwm_En[2]"
-          },
-          {
-            "name": "Pwm_3_En",
-            "value": "0",
-            "data": "&Obj.Pwm_En[3]"
           }
         ],
         "pdo_mappings": [
@@ -537,16 +388,6 @@
             "name": "Enc_1_En",
             "value": "0",
             "data": "&Obj.Enc_En[1]"
-          },
-          {
-            "name": "Enc_2_En",
-            "value": "0",
-            "data": "&Obj.Enc_En[2]"
-          },
-          {
-            "name": "Enc_3_En",
-            "value": "0",
-            "data": "&Obj.Enc_En[3]"
           }
         ],
         "pdo_mappings": [
@@ -570,16 +411,6 @@
           {
             "name": "Axis_1_Ctrl_Vel_Cmd",
             "data": "&Obj.Ctrl_Vel_Cmd[1]",
-            "value": "0"
-          },
-          {
-            "name": "Axis_2_Ctrl_Vel_Cmd",
-            "data": "&Obj.Ctrl_Vel_Cmd[2]",
-            "value": "0"
-          },
-          {
-            "name": "Axis_3_Ctrl_Vel_Cmd",
-            "data": "&Obj.Ctrl_Vel_Cmd[3]",
             "value": "0"
           }
         ],

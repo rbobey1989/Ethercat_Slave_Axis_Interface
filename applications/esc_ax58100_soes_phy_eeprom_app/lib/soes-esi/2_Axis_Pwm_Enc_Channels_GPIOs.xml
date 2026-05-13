@@ -14,7 +14,7 @@
     <Devices>
       <Device Physics="YY ">
         <Type ProductCode="#xd9632" RevisionNo="#x1">AxisInterface2000</Type>
-        <Name LcId="1033">4 Axis Pwm Enc Channels GPIOs</Name>
+        <Name LcId="1033">2 Axis Pwm Enc Channels GPIOs</Name>
         <GroupType>Controller</GroupType>
         <Profile>
           <ProfileNo>5001</ProfileNo>
@@ -77,7 +77,7 @@
               </DataType>
               <DataType>
                 <Name>DT1600</Name>
-                <BitSize>144</BitSize>
+                <BitSize>80</BitSize>
                 <SubItem>
                   <SubIdx>0</SubIdx>
                   <Name>Max SubIndex</Name>
@@ -108,30 +108,10 @@
                     <Access>ro</Access>
                   </Flags>
                 </SubItem>
-                <SubItem>
-                  <SubIdx>3</SubIdx>
-                  <Name>Pwm_2_Cmd</Name>
-                  <Type>UDINT</Type>
-                  <BitSize>32</BitSize>
-                  <BitOffs>80</BitOffs>
-                  <Flags>
-                    <Access>ro</Access>
-                  </Flags>
-                </SubItem>
-                <SubItem>
-                  <SubIdx>4</SubIdx>
-                  <Name>Pwm_3_Cmd</Name>
-                  <Type>UDINT</Type>
-                  <BitSize>32</BitSize>
-                  <BitOffs>112</BitOffs>
-                  <Flags>
-                    <Access>ro</Access>
-                  </Flags>
-                </SubItem>
               </DataType>
               <DataType>
                 <Name>DT1601</Name>
-                <BitSize>144</BitSize>
+                <BitSize>80</BitSize>
                 <SubItem>
                   <SubIdx>0</SubIdx>
                   <Name>Max SubIndex</Name>
@@ -162,30 +142,10 @@
                     <Access>ro</Access>
                   </Flags>
                 </SubItem>
-                <SubItem>
-                  <SubIdx>3</SubIdx>
-                  <Name>Pwm_2_En</Name>
-                  <Type>UDINT</Type>
-                  <BitSize>32</BitSize>
-                  <BitOffs>80</BitOffs>
-                  <Flags>
-                    <Access>ro</Access>
-                  </Flags>
-                </SubItem>
-                <SubItem>
-                  <SubIdx>4</SubIdx>
-                  <Name>Pwm_3_En</Name>
-                  <Type>UDINT</Type>
-                  <BitSize>32</BitSize>
-                  <BitOffs>112</BitOffs>
-                  <Flags>
-                    <Access>ro</Access>
-                  </Flags>
-                </SubItem>
               </DataType>
               <DataType>
                 <Name>DT1602</Name>
-                <BitSize>144</BitSize>
+                <BitSize>80</BitSize>
                 <SubItem>
                   <SubIdx>0</SubIdx>
                   <Name>Max SubIndex</Name>
@@ -216,30 +176,10 @@
                     <Access>ro</Access>
                   </Flags>
                 </SubItem>
-                <SubItem>
-                  <SubIdx>3</SubIdx>
-                  <Name>Enc_2_En</Name>
-                  <Type>UDINT</Type>
-                  <BitSize>32</BitSize>
-                  <BitOffs>80</BitOffs>
-                  <Flags>
-                    <Access>ro</Access>
-                  </Flags>
-                </SubItem>
-                <SubItem>
-                  <SubIdx>4</SubIdx>
-                  <Name>Enc_3_En</Name>
-                  <Type>UDINT</Type>
-                  <BitSize>32</BitSize>
-                  <BitOffs>112</BitOffs>
-                  <Flags>
-                    <Access>ro</Access>
-                  </Flags>
-                </SubItem>
               </DataType>
               <DataType>
                 <Name>DT1603</Name>
-                <BitSize>144</BitSize>
+                <BitSize>80</BitSize>
                 <SubItem>
                   <SubIdx>0</SubIdx>
                   <Name>Max SubIndex</Name>
@@ -266,26 +206,6 @@
                   <Type>UDINT</Type>
                   <BitSize>32</BitSize>
                   <BitOffs>48</BitOffs>
-                  <Flags>
-                    <Access>ro</Access>
-                  </Flags>
-                </SubItem>
-                <SubItem>
-                  <SubIdx>3</SubIdx>
-                  <Name>Axis_2_Ctrl_Vel_Cmd</Name>
-                  <Type>UDINT</Type>
-                  <BitSize>32</BitSize>
-                  <BitOffs>80</BitOffs>
-                  <Flags>
-                    <Access>ro</Access>
-                  </Flags>
-                </SubItem>
-                <SubItem>
-                  <SubIdx>4</SubIdx>
-                  <Name>Axis_3_Ctrl_Vel_Cmd</Name>
-                  <Type>UDINT</Type>
-                  <BitSize>32</BitSize>
-                  <BitOffs>112</BitOffs>
                   <Flags>
                     <Access>ro</Access>
                   </Flags>
@@ -317,7 +237,7 @@
               </DataType>
               <DataType>
                 <Name>DT1A00</Name>
-                <BitSize>144</BitSize>
+                <BitSize>80</BitSize>
                 <SubItem>
                   <SubIdx>0</SubIdx>
                   <Name>Max SubIndex</Name>
@@ -348,30 +268,10 @@
                     <Access>ro</Access>
                   </Flags>
                 </SubItem>
-                <SubItem>
-                  <SubIdx>3</SubIdx>
-                  <Name>Enc_2_Pos</Name>
-                  <Type>UDINT</Type>
-                  <BitSize>32</BitSize>
-                  <BitOffs>80</BitOffs>
-                  <Flags>
-                    <Access>ro</Access>
-                  </Flags>
-                </SubItem>
-                <SubItem>
-                  <SubIdx>4</SubIdx>
-                  <Name>Enc_3_Pos</Name>
-                  <Type>UDINT</Type>
-                  <BitSize>32</BitSize>
-                  <BitOffs>112</BitOffs>
-                  <Flags>
-                    <Access>ro</Access>
-                  </Flags>
-                </SubItem>
               </DataType>
               <DataType>
                 <Name>DT1A01</Name>
-                <BitSize>144</BitSize>
+                <BitSize>80</BitSize>
                 <SubItem>
                   <SubIdx>0</SubIdx>
                   <Name>Max SubIndex</Name>
@@ -402,30 +302,10 @@
                     <Access>ro</Access>
                   </Flags>
                 </SubItem>
-                <SubItem>
-                  <SubIdx>3</SubIdx>
-                  <Name>Enc_2_Vel</Name>
-                  <Type>UDINT</Type>
-                  <BitSize>32</BitSize>
-                  <BitOffs>80</BitOffs>
-                  <Flags>
-                    <Access>ro</Access>
-                  </Flags>
-                </SubItem>
-                <SubItem>
-                  <SubIdx>4</SubIdx>
-                  <Name>Enc_3_Vel</Name>
-                  <Type>UDINT</Type>
-                  <BitSize>32</BitSize>
-                  <BitOffs>112</BitOffs>
-                  <Flags>
-                    <Access>ro</Access>
-                  </Flags>
-                </SubItem>
               </DataType>
               <DataType>
                 <Name>DT1A02</Name>
-                <BitSize>144</BitSize>
+                <BitSize>80</BitSize>
                 <SubItem>
                   <SubIdx>0</SubIdx>
                   <Name>Max SubIndex</Name>
@@ -456,30 +336,10 @@
                     <Access>ro</Access>
                   </Flags>
                 </SubItem>
-                <SubItem>
-                  <SubIdx>3</SubIdx>
-                  <Name>Enc_2_Status</Name>
-                  <Type>UDINT</Type>
-                  <BitSize>32</BitSize>
-                  <BitOffs>80</BitOffs>
-                  <Flags>
-                    <Access>ro</Access>
-                  </Flags>
-                </SubItem>
-                <SubItem>
-                  <SubIdx>4</SubIdx>
-                  <Name>Enc_3_Status</Name>
-                  <Type>UDINT</Type>
-                  <BitSize>32</BitSize>
-                  <BitOffs>112</BitOffs>
-                  <Flags>
-                    <Access>ro</Access>
-                  </Flags>
-                </SubItem>
               </DataType>
               <DataType>
                 <Name>DT1A03</Name>
-                <BitSize>144</BitSize>
+                <BitSize>80</BitSize>
                 <SubItem>
                   <SubIdx>0</SubIdx>
                   <Name>Max SubIndex</Name>
@@ -510,30 +370,10 @@
                     <Access>ro</Access>
                   </Flags>
                 </SubItem>
-                <SubItem>
-                  <SubIdx>3</SubIdx>
-                  <Name>Pwm_2_Status</Name>
-                  <Type>UDINT</Type>
-                  <BitSize>32</BitSize>
-                  <BitOffs>80</BitOffs>
-                  <Flags>
-                    <Access>ro</Access>
-                  </Flags>
-                </SubItem>
-                <SubItem>
-                  <SubIdx>4</SubIdx>
-                  <Name>Pwm_3_Status</Name>
-                  <Type>UDINT</Type>
-                  <BitSize>32</BitSize>
-                  <BitOffs>112</BitOffs>
-                  <Flags>
-                    <Access>ro</Access>
-                  </Flags>
-                </SubItem>
               </DataType>
               <DataType>
                 <Name>DT1A04</Name>
-                <BitSize>144</BitSize>
+                <BitSize>80</BitSize>
                 <SubItem>
                   <SubIdx>0</SubIdx>
                   <Name>Max SubIndex</Name>
@@ -560,26 +400,6 @@
                   <Type>UDINT</Type>
                   <BitSize>32</BitSize>
                   <BitOffs>48</BitOffs>
-                  <Flags>
-                    <Access>ro</Access>
-                  </Flags>
-                </SubItem>
-                <SubItem>
-                  <SubIdx>3</SubIdx>
-                  <Name>Axis_2_Ctrl_Vel_Fb</Name>
-                  <Type>UDINT</Type>
-                  <BitSize>32</BitSize>
-                  <BitOffs>80</BitOffs>
-                  <Flags>
-                    <Access>ro</Access>
-                  </Flags>
-                </SubItem>
-                <SubItem>
-                  <SubIdx>4</SubIdx>
-                  <Name>Axis_3_Ctrl_Vel_Fb</Name>
-                  <Type>UDINT</Type>
-                  <BitSize>32</BitSize>
-                  <BitOffs>112</BitOffs>
                   <Flags>
                     <Access>ro</Access>
                   </Flags>
@@ -708,15 +528,15 @@
               <DataType>
                 <Name>DT6000ARR</Name>
                 <BaseType>DINT</BaseType>
-                <BitSize>128</BitSize>
+                <BitSize>64</BitSize>
                 <ArrayInfo>
                   <LBound>1</LBound>
-                  <Elements>4</Elements>
+                  <Elements>2</Elements>
                 </ArrayInfo>
               </DataType>
               <DataType>
                 <Name>DT6000</Name>
-                <BitSize>144</BitSize>
+                <BitSize>80</BitSize>
                 <SubItem>
                   <SubIdx>0</SubIdx>
                   <Name>Max SubIndex</Name>
@@ -730,7 +550,7 @@
                 <SubItem>
                   <Name>Elements</Name>
                   <Type>DT6000ARR</Type>
-                  <BitSize>128</BitSize>
+                  <BitSize>64</BitSize>
                   <BitOffs>16</BitOffs>
                   <Flags>
                     <Access WriteRestrictions="PreOP">ro</Access>
@@ -741,15 +561,15 @@
               <DataType>
                 <Name>DT6001ARR</Name>
                 <BaseType>DINT</BaseType>
-                <BitSize>128</BitSize>
+                <BitSize>64</BitSize>
                 <ArrayInfo>
                   <LBound>1</LBound>
-                  <Elements>4</Elements>
+                  <Elements>2</Elements>
                 </ArrayInfo>
               </DataType>
               <DataType>
                 <Name>DT6001</Name>
-                <BitSize>144</BitSize>
+                <BitSize>80</BitSize>
                 <SubItem>
                   <SubIdx>0</SubIdx>
                   <Name>Max SubIndex</Name>
@@ -763,7 +583,7 @@
                 <SubItem>
                   <Name>Elements</Name>
                   <Type>DT6001ARR</Type>
-                  <BitSize>128</BitSize>
+                  <BitSize>64</BitSize>
                   <BitOffs>16</BitOffs>
                   <Flags>
                     <Access WriteRestrictions="PreOP">ro</Access>
@@ -774,15 +594,15 @@
               <DataType>
                 <Name>DT6002ARR</Name>
                 <BaseType>USINT</BaseType>
-                <BitSize>32</BitSize>
+                <BitSize>16</BitSize>
                 <ArrayInfo>
                   <LBound>1</LBound>
-                  <Elements>4</Elements>
+                  <Elements>2</Elements>
                 </ArrayInfo>
               </DataType>
               <DataType>
                 <Name>DT6002</Name>
-                <BitSize>48</BitSize>
+                <BitSize>32</BitSize>
                 <SubItem>
                   <SubIdx>0</SubIdx>
                   <Name>Max SubIndex</Name>
@@ -796,7 +616,7 @@
                 <SubItem>
                   <Name>Elements</Name>
                   <Type>DT6002ARR</Type>
-                  <BitSize>32</BitSize>
+                  <BitSize>16</BitSize>
                   <BitOffs>16</BitOffs>
                   <Flags>
                     <Access WriteRestrictions="PreOP">ro</Access>
@@ -807,15 +627,15 @@
               <DataType>
                 <Name>DT6003ARR</Name>
                 <BaseType>USINT</BaseType>
-                <BitSize>32</BitSize>
+                <BitSize>16</BitSize>
                 <ArrayInfo>
                   <LBound>1</LBound>
-                  <Elements>4</Elements>
+                  <Elements>2</Elements>
                 </ArrayInfo>
               </DataType>
               <DataType>
                 <Name>DT6003</Name>
-                <BitSize>48</BitSize>
+                <BitSize>32</BitSize>
                 <SubItem>
                   <SubIdx>0</SubIdx>
                   <Name>Max SubIndex</Name>
@@ -829,7 +649,7 @@
                 <SubItem>
                   <Name>Elements</Name>
                   <Type>DT6003ARR</Type>
-                  <BitSize>32</BitSize>
+                  <BitSize>16</BitSize>
                   <BitOffs>16</BitOffs>
                   <Flags>
                     <Access WriteRestrictions="PreOP">ro</Access>
@@ -840,15 +660,15 @@
               <DataType>
                 <Name>DT6004ARR</Name>
                 <BaseType>DINT</BaseType>
-                <BitSize>128</BitSize>
+                <BitSize>64</BitSize>
                 <ArrayInfo>
                   <LBound>1</LBound>
-                  <Elements>4</Elements>
+                  <Elements>2</Elements>
                 </ArrayInfo>
               </DataType>
               <DataType>
                 <Name>DT6004</Name>
-                <BitSize>144</BitSize>
+                <BitSize>80</BitSize>
                 <SubItem>
                   <SubIdx>0</SubIdx>
                   <Name>Max SubIndex</Name>
@@ -862,7 +682,7 @@
                 <SubItem>
                   <Name>Elements</Name>
                   <Type>DT6004ARR</Type>
-                  <BitSize>128</BitSize>
+                  <BitSize>64</BitSize>
                   <BitOffs>16</BitOffs>
                   <Flags>
                     <Access WriteRestrictions="PreOP">ro</Access>
@@ -873,15 +693,15 @@
               <DataType>
                 <Name>DT7000ARR</Name>
                 <BaseType>DINT</BaseType>
-                <BitSize>128</BitSize>
+                <BitSize>64</BitSize>
                 <ArrayInfo>
                   <LBound>1</LBound>
-                  <Elements>4</Elements>
+                  <Elements>2</Elements>
                 </ArrayInfo>
               </DataType>
               <DataType>
                 <Name>DT7000</Name>
-                <BitSize>144</BitSize>
+                <BitSize>80</BitSize>
                 <SubItem>
                   <SubIdx>0</SubIdx>
                   <Name>Max SubIndex</Name>
@@ -895,7 +715,7 @@
                 <SubItem>
                   <Name>Elements</Name>
                   <Type>DT7000ARR</Type>
-                  <BitSize>128</BitSize>
+                  <BitSize>64</BitSize>
                   <BitOffs>16</BitOffs>
                   <Flags>
                     <Access WriteRestrictions="PreOP">wo</Access>
@@ -906,15 +726,15 @@
               <DataType>
                 <Name>DT7001ARR</Name>
                 <BaseType>USINT</BaseType>
-                <BitSize>32</BitSize>
+                <BitSize>16</BitSize>
                 <ArrayInfo>
                   <LBound>1</LBound>
-                  <Elements>4</Elements>
+                  <Elements>2</Elements>
                 </ArrayInfo>
               </DataType>
               <DataType>
                 <Name>DT7001</Name>
-                <BitSize>48</BitSize>
+                <BitSize>32</BitSize>
                 <SubItem>
                   <SubIdx>0</SubIdx>
                   <Name>Max SubIndex</Name>
@@ -928,7 +748,7 @@
                 <SubItem>
                   <Name>Elements</Name>
                   <Type>DT7001ARR</Type>
-                  <BitSize>32</BitSize>
+                  <BitSize>16</BitSize>
                   <BitOffs>16</BitOffs>
                   <Flags>
                     <Access WriteRestrictions="PreOP">wo</Access>
@@ -939,15 +759,15 @@
               <DataType>
                 <Name>DT7002ARR</Name>
                 <BaseType>USINT</BaseType>
-                <BitSize>32</BitSize>
+                <BitSize>16</BitSize>
                 <ArrayInfo>
                   <LBound>1</LBound>
-                  <Elements>4</Elements>
+                  <Elements>2</Elements>
                 </ArrayInfo>
               </DataType>
               <DataType>
                 <Name>DT7002</Name>
-                <BitSize>48</BitSize>
+                <BitSize>32</BitSize>
                 <SubItem>
                   <SubIdx>0</SubIdx>
                   <Name>Max SubIndex</Name>
@@ -961,7 +781,7 @@
                 <SubItem>
                   <Name>Elements</Name>
                   <Type>DT7002ARR</Type>
-                  <BitSize>32</BitSize>
+                  <BitSize>16</BitSize>
                   <BitOffs>16</BitOffs>
                   <Flags>
                     <Access WriteRestrictions="PreOP">wo</Access>
@@ -972,15 +792,15 @@
               <DataType>
                 <Name>DT7004ARR</Name>
                 <BaseType>DINT</BaseType>
-                <BitSize>128</BitSize>
+                <BitSize>64</BitSize>
                 <ArrayInfo>
                   <LBound>1</LBound>
-                  <Elements>4</Elements>
+                  <Elements>2</Elements>
                 </ArrayInfo>
               </DataType>
               <DataType>
                 <Name>DT7004</Name>
-                <BitSize>144</BitSize>
+                <BitSize>80</BitSize>
                 <SubItem>
                   <SubIdx>0</SubIdx>
                   <Name>Max SubIndex</Name>
@@ -994,7 +814,7 @@
                 <SubItem>
                   <Name>Elements</Name>
                   <Type>DT7004ARR</Type>
-                  <BitSize>128</BitSize>
+                  <BitSize>64</BitSize>
                   <BitOffs>16</BitOffs>
                   <Flags>
                     <Access WriteRestrictions="PreOP">wo</Access>
@@ -1005,15 +825,15 @@
               <DataType>
                 <Name>DT8000ARR</Name>
                 <BaseType>DINT</BaseType>
-                <BitSize>128</BitSize>
+                <BitSize>64</BitSize>
                 <ArrayInfo>
                   <LBound>1</LBound>
-                  <Elements>4</Elements>
+                  <Elements>2</Elements>
                 </ArrayInfo>
               </DataType>
               <DataType>
                 <Name>DT8000</Name>
-                <BitSize>144</BitSize>
+                <BitSize>80</BitSize>
                 <SubItem>
                   <SubIdx>0</SubIdx>
                   <Name>Max SubIndex</Name>
@@ -1027,7 +847,7 @@
                 <SubItem>
                   <Name>Elements</Name>
                   <Type>DT8000ARR</Type>
-                  <BitSize>128</BitSize>
+                  <BitSize>64</BitSize>
                   <BitOffs>16</BitOffs>
                   <Flags>
                     <Access WriteRestrictions="PreOP">rw</Access>
@@ -1037,15 +857,15 @@
               <DataType>
                 <Name>DT8001ARR</Name>
                 <BaseType>DINT</BaseType>
-                <BitSize>128</BitSize>
+                <BitSize>64</BitSize>
                 <ArrayInfo>
                   <LBound>1</LBound>
-                  <Elements>4</Elements>
+                  <Elements>2</Elements>
                 </ArrayInfo>
               </DataType>
               <DataType>
                 <Name>DT8001</Name>
-                <BitSize>144</BitSize>
+                <BitSize>80</BitSize>
                 <SubItem>
                   <SubIdx>0</SubIdx>
                   <Name>Max SubIndex</Name>
@@ -1059,7 +879,7 @@
                 <SubItem>
                   <Name>Elements</Name>
                   <Type>DT8001ARR</Type>
-                  <BitSize>128</BitSize>
+                  <BitSize>64</BitSize>
                   <BitOffs>16</BitOffs>
                   <Flags>
                     <Access WriteRestrictions="PreOP">rw</Access>
@@ -1069,15 +889,15 @@
               <DataType>
                 <Name>DT8002ARR</Name>
                 <BaseType>DINT</BaseType>
-                <BitSize>128</BitSize>
+                <BitSize>64</BitSize>
                 <ArrayInfo>
                   <LBound>1</LBound>
-                  <Elements>4</Elements>
+                  <Elements>2</Elements>
                 </ArrayInfo>
               </DataType>
               <DataType>
                 <Name>DT8002</Name>
-                <BitSize>144</BitSize>
+                <BitSize>80</BitSize>
                 <SubItem>
                   <SubIdx>0</SubIdx>
                   <Name>Max SubIndex</Name>
@@ -1091,7 +911,7 @@
                 <SubItem>
                   <Name>Elements</Name>
                   <Type>DT8002ARR</Type>
-                  <BitSize>128</BitSize>
+                  <BitSize>64</BitSize>
                   <BitOffs>16</BitOffs>
                   <Flags>
                     <Access WriteRestrictions="PreOP">rw</Access>
@@ -1101,15 +921,15 @@
               <DataType>
                 <Name>DT8003ARR</Name>
                 <BaseType>DINT</BaseType>
-                <BitSize>128</BitSize>
+                <BitSize>64</BitSize>
                 <ArrayInfo>
                   <LBound>1</LBound>
-                  <Elements>4</Elements>
+                  <Elements>2</Elements>
                 </ArrayInfo>
               </DataType>
               <DataType>
                 <Name>DT8003</Name>
-                <BitSize>144</BitSize>
+                <BitSize>80</BitSize>
                 <SubItem>
                   <SubIdx>0</SubIdx>
                   <Name>Max SubIndex</Name>
@@ -1123,7 +943,7 @@
                 <SubItem>
                   <Name>Elements</Name>
                   <Type>DT8003ARR</Type>
-                  <BitSize>128</BitSize>
+                  <BitSize>64</BitSize>
                   <BitOffs>16</BitOffs>
                   <Flags>
                     <Access WriteRestrictions="PreOP">rw</Access>
@@ -1133,15 +953,15 @@
               <DataType>
                 <Name>DT8004ARR</Name>
                 <BaseType>DINT</BaseType>
-                <BitSize>128</BitSize>
+                <BitSize>64</BitSize>
                 <ArrayInfo>
                   <LBound>1</LBound>
-                  <Elements>4</Elements>
+                  <Elements>2</Elements>
                 </ArrayInfo>
               </DataType>
               <DataType>
                 <Name>DT8004</Name>
-                <BitSize>144</BitSize>
+                <BitSize>80</BitSize>
                 <SubItem>
                   <SubIdx>0</SubIdx>
                   <Name>Max SubIndex</Name>
@@ -1155,7 +975,7 @@
                 <SubItem>
                   <Name>Elements</Name>
                   <Type>DT8004ARR</Type>
-                  <BitSize>128</BitSize>
+                  <BitSize>64</BitSize>
                   <BitOffs>16</BitOffs>
                   <Flags>
                     <Access WriteRestrictions="PreOP">rw</Access>
@@ -1165,15 +985,15 @@
               <DataType>
                 <Name>DT8005ARR</Name>
                 <BaseType>DINT</BaseType>
-                <BitSize>128</BitSize>
+                <BitSize>64</BitSize>
                 <ArrayInfo>
                   <LBound>1</LBound>
-                  <Elements>4</Elements>
+                  <Elements>2</Elements>
                 </ArrayInfo>
               </DataType>
               <DataType>
                 <Name>DT8005</Name>
-                <BitSize>144</BitSize>
+                <BitSize>80</BitSize>
                 <SubItem>
                   <SubIdx>0</SubIdx>
                   <Name>Max SubIndex</Name>
@@ -1187,7 +1007,7 @@
                 <SubItem>
                   <Name>Elements</Name>
                   <Type>DT8005ARR</Type>
-                  <BitSize>128</BitSize>
+                  <BitSize>64</BitSize>
                   <BitOffs>16</BitOffs>
                   <Flags>
                     <Access WriteRestrictions="PreOP">rw</Access>
@@ -1197,15 +1017,15 @@
               <DataType>
                 <Name>DT8006ARR</Name>
                 <BaseType>USINT</BaseType>
-                <BitSize>32</BitSize>
+                <BitSize>16</BitSize>
                 <ArrayInfo>
                   <LBound>1</LBound>
-                  <Elements>4</Elements>
+                  <Elements>2</Elements>
                 </ArrayInfo>
               </DataType>
               <DataType>
                 <Name>DT8006</Name>
-                <BitSize>48</BitSize>
+                <BitSize>32</BitSize>
                 <SubItem>
                   <SubIdx>0</SubIdx>
                   <Name>Max SubIndex</Name>
@@ -1219,7 +1039,7 @@
                 <SubItem>
                   <Name>Elements</Name>
                   <Type>DT8006ARR</Type>
-                  <BitSize>32</BitSize>
+                  <BitSize>16</BitSize>
                   <BitOffs>16</BitOffs>
                   <Flags>
                     <Access WriteRestrictions="PreOP">rw</Access>
@@ -1271,7 +1091,7 @@
                 <Type>STRING(29)</Type>
                 <BitSize>232</BitSize>
                 <Info>
-                  <DefaultString>4 Axis Pwm Enc Channels GPIOs</DefaultString>
+                  <DefaultString>2 Axis Pwm Enc Channels GPIOs</DefaultString>
                 </Info>
                 <Flags>
                   <Access>ro</Access>
@@ -1346,12 +1166,12 @@
                 <Index>#x1600</Index>
                 <Name>Pwm_Cmd</Name>
                 <Type>DT1600</Type>
-                <BitSize>144</BitSize>
+                <BitSize>80</BitSize>
                 <Info>
                   <SubItem>
                     <Name>Max SubIndex</Name>
                     <Info>
-                      <DefaultValue>4</DefaultValue>
+                      <DefaultValue>2</DefaultValue>
                     </Info>
                   </SubItem>
                   <SubItem>
@@ -1366,18 +1186,6 @@
                       <DefaultValue>#x70000220</DefaultValue>
                     </Info>
                   </SubItem>
-                  <SubItem>
-                    <Name>Pwm_2_Cmd</Name>
-                    <Info>
-                      <DefaultValue>#x70000320</DefaultValue>
-                    </Info>
-                  </SubItem>
-                  <SubItem>
-                    <Name>Pwm_3_Cmd</Name>
-                    <Info>
-                      <DefaultValue>#x70000420</DefaultValue>
-                    </Info>
-                  </SubItem>
                 </Info>
                 <Flags>
                 </Flags>
@@ -1386,12 +1194,12 @@
                 <Index>#x1601</Index>
                 <Name>Pwm_En</Name>
                 <Type>DT1601</Type>
-                <BitSize>144</BitSize>
+                <BitSize>80</BitSize>
                 <Info>
                   <SubItem>
                     <Name>Max SubIndex</Name>
                     <Info>
-                      <DefaultValue>4</DefaultValue>
+                      <DefaultValue>2</DefaultValue>
                     </Info>
                   </SubItem>
                   <SubItem>
@@ -1406,18 +1214,6 @@
                       <DefaultValue>#x70010208</DefaultValue>
                     </Info>
                   </SubItem>
-                  <SubItem>
-                    <Name>Pwm_2_En</Name>
-                    <Info>
-                      <DefaultValue>#x70010308</DefaultValue>
-                    </Info>
-                  </SubItem>
-                  <SubItem>
-                    <Name>Pwm_3_En</Name>
-                    <Info>
-                      <DefaultValue>#x70010408</DefaultValue>
-                    </Info>
-                  </SubItem>
                 </Info>
                 <Flags>
                 </Flags>
@@ -1426,12 +1222,12 @@
                 <Index>#x1602</Index>
                 <Name>Enc_En</Name>
                 <Type>DT1602</Type>
-                <BitSize>144</BitSize>
+                <BitSize>80</BitSize>
                 <Info>
                   <SubItem>
                     <Name>Max SubIndex</Name>
                     <Info>
-                      <DefaultValue>4</DefaultValue>
+                      <DefaultValue>2</DefaultValue>
                     </Info>
                   </SubItem>
                   <SubItem>
@@ -1446,18 +1242,6 @@
                       <DefaultValue>#x70020208</DefaultValue>
                     </Info>
                   </SubItem>
-                  <SubItem>
-                    <Name>Enc_2_En</Name>
-                    <Info>
-                      <DefaultValue>#x70020308</DefaultValue>
-                    </Info>
-                  </SubItem>
-                  <SubItem>
-                    <Name>Enc_3_En</Name>
-                    <Info>
-                      <DefaultValue>#x70020408</DefaultValue>
-                    </Info>
-                  </SubItem>
                 </Info>
                 <Flags>
                 </Flags>
@@ -1466,12 +1250,12 @@
                 <Index>#x1603</Index>
                 <Name>Ctrl_Vel_Cmd</Name>
                 <Type>DT1603</Type>
-                <BitSize>144</BitSize>
+                <BitSize>80</BitSize>
                 <Info>
                   <SubItem>
                     <Name>Max SubIndex</Name>
                     <Info>
-                      <DefaultValue>4</DefaultValue>
+                      <DefaultValue>2</DefaultValue>
                     </Info>
                   </SubItem>
                   <SubItem>
@@ -1484,18 +1268,6 @@
                     <Name>Axis_1_Ctrl_Vel_Cmd</Name>
                     <Info>
                       <DefaultValue>#x70040220</DefaultValue>
-                    </Info>
-                  </SubItem>
-                  <SubItem>
-                    <Name>Axis_2_Ctrl_Vel_Cmd</Name>
-                    <Info>
-                      <DefaultValue>#x70040320</DefaultValue>
-                    </Info>
-                  </SubItem>
-                  <SubItem>
-                    <Name>Axis_3_Ctrl_Vel_Cmd</Name>
-                    <Info>
-                      <DefaultValue>#x70040420</DefaultValue>
                     </Info>
                   </SubItem>
                 </Info>
@@ -1528,12 +1300,12 @@
                 <Index>#x1A00</Index>
                 <Name>Enc_Pos</Name>
                 <Type>DT1A00</Type>
-                <BitSize>144</BitSize>
+                <BitSize>80</BitSize>
                 <Info>
                   <SubItem>
                     <Name>Max SubIndex</Name>
                     <Info>
-                      <DefaultValue>4</DefaultValue>
+                      <DefaultValue>2</DefaultValue>
                     </Info>
                   </SubItem>
                   <SubItem>
@@ -1548,18 +1320,6 @@
                       <DefaultValue>#x60000220</DefaultValue>
                     </Info>
                   </SubItem>
-                  <SubItem>
-                    <Name>Enc_2_Pos</Name>
-                    <Info>
-                      <DefaultValue>#x60000320</DefaultValue>
-                    </Info>
-                  </SubItem>
-                  <SubItem>
-                    <Name>Enc_3_Pos</Name>
-                    <Info>
-                      <DefaultValue>#x60000420</DefaultValue>
-                    </Info>
-                  </SubItem>
                 </Info>
                 <Flags>
                 </Flags>
@@ -1568,12 +1328,12 @@
                 <Index>#x1A01</Index>
                 <Name>Enc_Vel</Name>
                 <Type>DT1A01</Type>
-                <BitSize>144</BitSize>
+                <BitSize>80</BitSize>
                 <Info>
                   <SubItem>
                     <Name>Max SubIndex</Name>
                     <Info>
-                      <DefaultValue>4</DefaultValue>
+                      <DefaultValue>2</DefaultValue>
                     </Info>
                   </SubItem>
                   <SubItem>
@@ -1588,18 +1348,6 @@
                       <DefaultValue>#x60010220</DefaultValue>
                     </Info>
                   </SubItem>
-                  <SubItem>
-                    <Name>Enc_2_Vel</Name>
-                    <Info>
-                      <DefaultValue>#x60010320</DefaultValue>
-                    </Info>
-                  </SubItem>
-                  <SubItem>
-                    <Name>Enc_3_Vel</Name>
-                    <Info>
-                      <DefaultValue>#x60010420</DefaultValue>
-                    </Info>
-                  </SubItem>
                 </Info>
                 <Flags>
                 </Flags>
@@ -1608,12 +1356,12 @@
                 <Index>#x1A02</Index>
                 <Name>Enc_Status</Name>
                 <Type>DT1A02</Type>
-                <BitSize>144</BitSize>
+                <BitSize>80</BitSize>
                 <Info>
                   <SubItem>
                     <Name>Max SubIndex</Name>
                     <Info>
-                      <DefaultValue>4</DefaultValue>
+                      <DefaultValue>2</DefaultValue>
                     </Info>
                   </SubItem>
                   <SubItem>
@@ -1628,18 +1376,6 @@
                       <DefaultValue>#x60020208</DefaultValue>
                     </Info>
                   </SubItem>
-                  <SubItem>
-                    <Name>Enc_2_Status</Name>
-                    <Info>
-                      <DefaultValue>#x60020308</DefaultValue>
-                    </Info>
-                  </SubItem>
-                  <SubItem>
-                    <Name>Enc_3_Status</Name>
-                    <Info>
-                      <DefaultValue>#x60020408</DefaultValue>
-                    </Info>
-                  </SubItem>
                 </Info>
                 <Flags>
                 </Flags>
@@ -1648,12 +1384,12 @@
                 <Index>#x1A03</Index>
                 <Name>Pwm_Status</Name>
                 <Type>DT1A03</Type>
-                <BitSize>144</BitSize>
+                <BitSize>80</BitSize>
                 <Info>
                   <SubItem>
                     <Name>Max SubIndex</Name>
                     <Info>
-                      <DefaultValue>4</DefaultValue>
+                      <DefaultValue>2</DefaultValue>
                     </Info>
                   </SubItem>
                   <SubItem>
@@ -1668,18 +1404,6 @@
                       <DefaultValue>#x60030208</DefaultValue>
                     </Info>
                   </SubItem>
-                  <SubItem>
-                    <Name>Pwm_2_Status</Name>
-                    <Info>
-                      <DefaultValue>#x60030308</DefaultValue>
-                    </Info>
-                  </SubItem>
-                  <SubItem>
-                    <Name>Pwm_3_Status</Name>
-                    <Info>
-                      <DefaultValue>#x60030408</DefaultValue>
-                    </Info>
-                  </SubItem>
                 </Info>
                 <Flags>
                 </Flags>
@@ -1688,12 +1412,12 @@
                 <Index>#x1A04</Index>
                 <Name>Ctrl_Vel_Fb</Name>
                 <Type>DT1A04</Type>
-                <BitSize>144</BitSize>
+                <BitSize>80</BitSize>
                 <Info>
                   <SubItem>
                     <Name>Max SubIndex</Name>
                     <Info>
-                      <DefaultValue>4</DefaultValue>
+                      <DefaultValue>2</DefaultValue>
                     </Info>
                   </SubItem>
                   <SubItem>
@@ -1706,18 +1430,6 @@
                     <Name>Axis_1_Ctrl_Vel_Fb</Name>
                     <Info>
                       <DefaultValue>#x60040220</DefaultValue>
-                    </Info>
-                  </SubItem>
-                  <SubItem>
-                    <Name>Axis_2_Ctrl_Vel_Fb</Name>
-                    <Info>
-                      <DefaultValue>#x60040320</DefaultValue>
-                    </Info>
-                  </SubItem>
-                  <SubItem>
-                    <Name>Axis_3_Ctrl_Vel_Fb</Name>
-                    <Info>
-                      <DefaultValue>#x60040420</DefaultValue>
                     </Info>
                   </SubItem>
                 </Info>
@@ -1888,12 +1600,12 @@
                 <Index>#x6000</Index>
                 <Name>Enc_Pos</Name>
                 <Type>DT6000</Type>
-                <BitSize>144</BitSize>
+                <BitSize>80</BitSize>
                 <Info>
                   <SubItem>
                     <Name>Max SubIndex</Name>
                     <Info>
-                      <DefaultValue>4</DefaultValue>
+                      <DefaultValue>2</DefaultValue>
                     </Info>
                   </SubItem>
                   <SubItem>
@@ -1908,18 +1620,6 @@
                       <DefaultValue>0</DefaultValue>
                     </Info>
                   </SubItem>
-                  <SubItem>
-                    <Name>Enc_2_Pos</Name>
-                    <Info>
-                      <DefaultValue>0</DefaultValue>
-                    </Info>
-                  </SubItem>
-                  <SubItem>
-                    <Name>Enc_3_Pos</Name>
-                    <Info>
-                      <DefaultValue>0</DefaultValue>
-                    </Info>
-                  </SubItem>
                 </Info>
                 <Flags>
                 </Flags>
@@ -1928,12 +1628,12 @@
                 <Index>#x6001</Index>
                 <Name>Enc_Vel</Name>
                 <Type>DT6001</Type>
-                <BitSize>144</BitSize>
+                <BitSize>80</BitSize>
                 <Info>
                   <SubItem>
                     <Name>Max SubIndex</Name>
                     <Info>
-                      <DefaultValue>4</DefaultValue>
+                      <DefaultValue>2</DefaultValue>
                     </Info>
                   </SubItem>
                   <SubItem>
@@ -1948,18 +1648,6 @@
                       <DefaultValue>0</DefaultValue>
                     </Info>
                   </SubItem>
-                  <SubItem>
-                    <Name>Enc_2_Vel</Name>
-                    <Info>
-                      <DefaultValue>0</DefaultValue>
-                    </Info>
-                  </SubItem>
-                  <SubItem>
-                    <Name>Enc_3_Vel</Name>
-                    <Info>
-                      <DefaultValue>0</DefaultValue>
-                    </Info>
-                  </SubItem>
                 </Info>
                 <Flags>
                 </Flags>
@@ -1968,12 +1656,12 @@
                 <Index>#x6002</Index>
                 <Name>Enc_Status</Name>
                 <Type>DT6002</Type>
-                <BitSize>48</BitSize>
+                <BitSize>32</BitSize>
                 <Info>
                   <SubItem>
                     <Name>Max SubIndex</Name>
                     <Info>
-                      <DefaultValue>4</DefaultValue>
+                      <DefaultValue>2</DefaultValue>
                     </Info>
                   </SubItem>
                   <SubItem>
@@ -1988,18 +1676,6 @@
                       <DefaultValue>0</DefaultValue>
                     </Info>
                   </SubItem>
-                  <SubItem>
-                    <Name>Enc_2_Status</Name>
-                    <Info>
-                      <DefaultValue>0</DefaultValue>
-                    </Info>
-                  </SubItem>
-                  <SubItem>
-                    <Name>Enc_3_Status</Name>
-                    <Info>
-                      <DefaultValue>0</DefaultValue>
-                    </Info>
-                  </SubItem>
                 </Info>
                 <Flags>
                 </Flags>
@@ -2008,12 +1684,12 @@
                 <Index>#x6003</Index>
                 <Name>Pwm_Status</Name>
                 <Type>DT6003</Type>
-                <BitSize>48</BitSize>
+                <BitSize>32</BitSize>
                 <Info>
                   <SubItem>
                     <Name>Max SubIndex</Name>
                     <Info>
-                      <DefaultValue>4</DefaultValue>
+                      <DefaultValue>2</DefaultValue>
                     </Info>
                   </SubItem>
                   <SubItem>
@@ -2028,18 +1704,6 @@
                       <DefaultValue>0</DefaultValue>
                     </Info>
                   </SubItem>
-                  <SubItem>
-                    <Name>Pwm_2_Status</Name>
-                    <Info>
-                      <DefaultValue>0</DefaultValue>
-                    </Info>
-                  </SubItem>
-                  <SubItem>
-                    <Name>Pwm_3_Status</Name>
-                    <Info>
-                      <DefaultValue>0</DefaultValue>
-                    </Info>
-                  </SubItem>
                 </Info>
                 <Flags>
                 </Flags>
@@ -2048,12 +1712,12 @@
                 <Index>#x6004</Index>
                 <Name>Ctrl_Vel_Fb</Name>
                 <Type>DT6004</Type>
-                <BitSize>144</BitSize>
+                <BitSize>80</BitSize>
                 <Info>
                   <SubItem>
                     <Name>Max SubIndex</Name>
                     <Info>
-                      <DefaultValue>4</DefaultValue>
+                      <DefaultValue>2</DefaultValue>
                     </Info>
                   </SubItem>
                   <SubItem>
@@ -2064,18 +1728,6 @@
                   </SubItem>
                   <SubItem>
                     <Name>Axis_1_Ctrl_Vel_Fb</Name>
-                    <Info>
-                      <DefaultValue>0</DefaultValue>
-                    </Info>
-                  </SubItem>
-                  <SubItem>
-                    <Name>Axis_2_Ctrl_Vel_Fb</Name>
-                    <Info>
-                      <DefaultValue>0</DefaultValue>
-                    </Info>
-                  </SubItem>
-                  <SubItem>
-                    <Name>Axis_3_Ctrl_Vel_Fb</Name>
                     <Info>
                       <DefaultValue>0</DefaultValue>
                     </Info>
@@ -2101,12 +1753,12 @@
                 <Index>#x7000</Index>
                 <Name>Pwm_Cmd</Name>
                 <Type>DT7000</Type>
-                <BitSize>144</BitSize>
+                <BitSize>80</BitSize>
                 <Info>
                   <SubItem>
                     <Name>Max SubIndex</Name>
                     <Info>
-                      <DefaultValue>4</DefaultValue>
+                      <DefaultValue>2</DefaultValue>
                     </Info>
                   </SubItem>
                   <SubItem>
@@ -2121,18 +1773,6 @@
                       <DefaultValue>0</DefaultValue>
                     </Info>
                   </SubItem>
-                  <SubItem>
-                    <Name>Pwm_2_Cmd</Name>
-                    <Info>
-                      <DefaultValue>0</DefaultValue>
-                    </Info>
-                  </SubItem>
-                  <SubItem>
-                    <Name>Pwm_3_Cmd</Name>
-                    <Info>
-                      <DefaultValue>0</DefaultValue>
-                    </Info>
-                  </SubItem>
                 </Info>
                 <Flags>
                 </Flags>
@@ -2141,12 +1781,12 @@
                 <Index>#x7001</Index>
                 <Name>Pwm_En</Name>
                 <Type>DT7001</Type>
-                <BitSize>48</BitSize>
+                <BitSize>32</BitSize>
                 <Info>
                   <SubItem>
                     <Name>Max SubIndex</Name>
                     <Info>
-                      <DefaultValue>4</DefaultValue>
+                      <DefaultValue>2</DefaultValue>
                     </Info>
                   </SubItem>
                   <SubItem>
@@ -2161,18 +1801,6 @@
                       <DefaultValue>0</DefaultValue>
                     </Info>
                   </SubItem>
-                  <SubItem>
-                    <Name>Pwm_2_En</Name>
-                    <Info>
-                      <DefaultValue>0</DefaultValue>
-                    </Info>
-                  </SubItem>
-                  <SubItem>
-                    <Name>Pwm_3_En</Name>
-                    <Info>
-                      <DefaultValue>0</DefaultValue>
-                    </Info>
-                  </SubItem>
                 </Info>
                 <Flags>
                 </Flags>
@@ -2181,12 +1809,12 @@
                 <Index>#x7002</Index>
                 <Name>Enc_En</Name>
                 <Type>DT7002</Type>
-                <BitSize>48</BitSize>
+                <BitSize>32</BitSize>
                 <Info>
                   <SubItem>
                     <Name>Max SubIndex</Name>
                     <Info>
-                      <DefaultValue>4</DefaultValue>
+                      <DefaultValue>2</DefaultValue>
                     </Info>
                   </SubItem>
                   <SubItem>
@@ -2201,18 +1829,6 @@
                       <DefaultValue>0</DefaultValue>
                     </Info>
                   </SubItem>
-                  <SubItem>
-                    <Name>Enc_2_En</Name>
-                    <Info>
-                      <DefaultValue>0</DefaultValue>
-                    </Info>
-                  </SubItem>
-                  <SubItem>
-                    <Name>Enc_3_En</Name>
-                    <Info>
-                      <DefaultValue>0</DefaultValue>
-                    </Info>
-                  </SubItem>
                 </Info>
                 <Flags>
                 </Flags>
@@ -2221,12 +1837,12 @@
                 <Index>#x7004</Index>
                 <Name>Ctrl_Vel_Cmd</Name>
                 <Type>DT7004</Type>
-                <BitSize>144</BitSize>
+                <BitSize>80</BitSize>
                 <Info>
                   <SubItem>
                     <Name>Max SubIndex</Name>
                     <Info>
-                      <DefaultValue>4</DefaultValue>
+                      <DefaultValue>2</DefaultValue>
                     </Info>
                   </SubItem>
                   <SubItem>
@@ -2237,18 +1853,6 @@
                   </SubItem>
                   <SubItem>
                     <Name>Axis_1_Ctrl_Vel_Cmd</Name>
-                    <Info>
-                      <DefaultValue>0</DefaultValue>
-                    </Info>
-                  </SubItem>
-                  <SubItem>
-                    <Name>Axis_2_Ctrl_Vel_Cmd</Name>
-                    <Info>
-                      <DefaultValue>0</DefaultValue>
-                    </Info>
-                  </SubItem>
-                  <SubItem>
-                    <Name>Axis_3_Ctrl_Vel_Cmd</Name>
                     <Info>
                       <DefaultValue>0</DefaultValue>
                     </Info>
@@ -2274,12 +1878,12 @@
                 <Index>#x8000</Index>
                 <Name>Ctrl_Kp</Name>
                 <Type>DT8000</Type>
-                <BitSize>144</BitSize>
+                <BitSize>80</BitSize>
                 <Info>
                   <SubItem>
                     <Name>Max SubIndex</Name>
                     <Info>
-                      <DefaultValue>4</DefaultValue>
+                      <DefaultValue>2</DefaultValue>
                     </Info>
                   </SubItem>
                   <SubItem>
@@ -2294,18 +1898,6 @@
                       <DefaultValue>0</DefaultValue>
                     </Info>
                   </SubItem>
-                  <SubItem>
-                    <Name>Axis_2_Ctrl_Kp</Name>
-                    <Info>
-                      <DefaultValue>0</DefaultValue>
-                    </Info>
-                  </SubItem>
-                  <SubItem>
-                    <Name>Axis_3_Ctrl_Kp</Name>
-                    <Info>
-                      <DefaultValue>0</DefaultValue>
-                    </Info>
-                  </SubItem>
                 </Info>
                 <Flags>
                 </Flags>
@@ -2314,12 +1906,12 @@
                 <Index>#x8001</Index>
                 <Name>Ctrl_Ki</Name>
                 <Type>DT8001</Type>
-                <BitSize>144</BitSize>
+                <BitSize>80</BitSize>
                 <Info>
                   <SubItem>
                     <Name>Max SubIndex</Name>
                     <Info>
-                      <DefaultValue>4</DefaultValue>
+                      <DefaultValue>2</DefaultValue>
                     </Info>
                   </SubItem>
                   <SubItem>
@@ -2334,18 +1926,6 @@
                       <DefaultValue>0</DefaultValue>
                     </Info>
                   </SubItem>
-                  <SubItem>
-                    <Name>Axis_2_Ctrl_Ki</Name>
-                    <Info>
-                      <DefaultValue>0</DefaultValue>
-                    </Info>
-                  </SubItem>
-                  <SubItem>
-                    <Name>Axis_3_Ctrl_Ki</Name>
-                    <Info>
-                      <DefaultValue>0</DefaultValue>
-                    </Info>
-                  </SubItem>
                 </Info>
                 <Flags>
                 </Flags>
@@ -2354,12 +1934,12 @@
                 <Index>#x8002</Index>
                 <Name>Ctrl_FF0</Name>
                 <Type>DT8002</Type>
-                <BitSize>144</BitSize>
+                <BitSize>80</BitSize>
                 <Info>
                   <SubItem>
                     <Name>Max SubIndex</Name>
                     <Info>
-                      <DefaultValue>4</DefaultValue>
+                      <DefaultValue>2</DefaultValue>
                     </Info>
                   </SubItem>
                   <SubItem>
@@ -2374,18 +1954,6 @@
                       <DefaultValue>0</DefaultValue>
                     </Info>
                   </SubItem>
-                  <SubItem>
-                    <Name>Axis_2_Ctrl_FF0</Name>
-                    <Info>
-                      <DefaultValue>0</DefaultValue>
-                    </Info>
-                  </SubItem>
-                  <SubItem>
-                    <Name>Axis_3_Ctrl_FF0</Name>
-                    <Info>
-                      <DefaultValue>0</DefaultValue>
-                    </Info>
-                  </SubItem>
                 </Info>
                 <Flags>
                 </Flags>
@@ -2394,12 +1962,12 @@
                 <Index>#x8003</Index>
                 <Name>Ctrl_FF1</Name>
                 <Type>DT8003</Type>
-                <BitSize>144</BitSize>
+                <BitSize>80</BitSize>
                 <Info>
                   <SubItem>
                     <Name>Max SubIndex</Name>
                     <Info>
-                      <DefaultValue>4</DefaultValue>
+                      <DefaultValue>2</DefaultValue>
                     </Info>
                   </SubItem>
                   <SubItem>
@@ -2414,18 +1982,6 @@
                       <DefaultValue>0</DefaultValue>
                     </Info>
                   </SubItem>
-                  <SubItem>
-                    <Name>Axis_2_Ctrl_FF1</Name>
-                    <Info>
-                      <DefaultValue>0</DefaultValue>
-                    </Info>
-                  </SubItem>
-                  <SubItem>
-                    <Name>Axis_3_Ctrl_FF1</Name>
-                    <Info>
-                      <DefaultValue>0</DefaultValue>
-                    </Info>
-                  </SubItem>
                 </Info>
                 <Flags>
                 </Flags>
@@ -2434,12 +1990,12 @@
                 <Index>#x8004</Index>
                 <Name>Ctrl_Integrator_Limit</Name>
                 <Type>DT8004</Type>
-                <BitSize>144</BitSize>
+                <BitSize>80</BitSize>
                 <Info>
                   <SubItem>
                     <Name>Max SubIndex</Name>
                     <Info>
-                      <DefaultValue>4</DefaultValue>
+                      <DefaultValue>2</DefaultValue>
                     </Info>
                   </SubItem>
                   <SubItem>
@@ -2454,18 +2010,6 @@
                       <DefaultValue>32767</DefaultValue>
                     </Info>
                   </SubItem>
-                  <SubItem>
-                    <Name>Axis_2_Ctrl_Integrator_Limit</Name>
-                    <Info>
-                      <DefaultValue>32767</DefaultValue>
-                    </Info>
-                  </SubItem>
-                  <SubItem>
-                    <Name>Axis_3_Ctrl_Integrator_Limit</Name>
-                    <Info>
-                      <DefaultValue>32767</DefaultValue>
-                    </Info>
-                  </SubItem>
                 </Info>
                 <Flags>
                 </Flags>
@@ -2474,12 +2018,12 @@
                 <Index>#x8005</Index>
                 <Name>Ctrl_Output_Limit</Name>
                 <Type>DT8005</Type>
-                <BitSize>144</BitSize>
+                <BitSize>80</BitSize>
                 <Info>
                   <SubItem>
                     <Name>Max SubIndex</Name>
                     <Info>
-                      <DefaultValue>4</DefaultValue>
+                      <DefaultValue>2</DefaultValue>
                     </Info>
                   </SubItem>
                   <SubItem>
@@ -2494,18 +2038,6 @@
                       <DefaultValue>32767</DefaultValue>
                     </Info>
                   </SubItem>
-                  <SubItem>
-                    <Name>Axis_2_Ctrl_Output_Limit</Name>
-                    <Info>
-                      <DefaultValue>32767</DefaultValue>
-                    </Info>
-                  </SubItem>
-                  <SubItem>
-                    <Name>Axis_3_Ctrl_Output_Limit</Name>
-                    <Info>
-                      <DefaultValue>32767</DefaultValue>
-                    </Info>
-                  </SubItem>
                 </Info>
                 <Flags>
                 </Flags>
@@ -2514,12 +2046,12 @@
                 <Index>#x8006</Index>
                 <Name>Mode</Name>
                 <Type>DT8006</Type>
-                <BitSize>48</BitSize>
+                <BitSize>32</BitSize>
                 <Info>
                   <SubItem>
                     <Name>Max SubIndex</Name>
                     <Info>
-                      <DefaultValue>4</DefaultValue>
+                      <DefaultValue>2</DefaultValue>
                     </Info>
                   </SubItem>
                   <SubItem>
@@ -2534,32 +2066,8 @@
                       <DefaultValue>0</DefaultValue>
                     </Info>
                   </SubItem>
-                  <SubItem>
-                    <Name>Axis_2_Mode</Name>
-                    <Info>
-                      <DefaultValue>0</DefaultValue>
-                    </Info>
-                  </SubItem>
-                  <SubItem>
-                    <Name>Axis_3_Mode</Name>
-                    <Info>
-                      <DefaultValue>0</DefaultValue>
-                    </Info>
-                  </SubItem>
                 </Info>
                 <Flags>
-                </Flags>
-              </Object>
-              <Object>
-                <Index>#x8007</Index>
-                <Name>Enc_Fast_Threshold_Cps</Name>
-                <Type>UDINT</Type>
-                <BitSize>32</BitSize>
-                <Info>
-                  <DefaultValue>50000</DefaultValue>
-                </Info>
-                <Flags>
-                  <Access>rw</Access>
                 </Flags>
               </Object>
             </Objects>
@@ -2589,20 +2097,6 @@
             <Name>Pwm_1_Cmd</Name>
             <DataType>DINT</DataType>
           </Entry>
-          <Entry>
-            <Index>#x7000</Index>
-            <SubIndex>#x3</SubIndex>
-            <BitLen>32</BitLen>
-            <Name>Pwm_2_Cmd</Name>
-            <DataType>DINT</DataType>
-          </Entry>
-          <Entry>
-            <Index>#x7000</Index>
-            <SubIndex>#x4</SubIndex>
-            <BitLen>32</BitLen>
-            <Name>Pwm_3_Cmd</Name>
-            <DataType>DINT</DataType>
-          </Entry>
         </RxPdo>
         <RxPdo Fixed="true" Mandatory="true" Sm="2">
           <Index>#x1601</Index>
@@ -2619,20 +2113,6 @@
             <SubIndex>#x2</SubIndex>
             <BitLen>8</BitLen>
             <Name>Pwm_1_En</Name>
-            <DataType>USINT</DataType>
-          </Entry>
-          <Entry>
-            <Index>#x7001</Index>
-            <SubIndex>#x3</SubIndex>
-            <BitLen>8</BitLen>
-            <Name>Pwm_2_En</Name>
-            <DataType>USINT</DataType>
-          </Entry>
-          <Entry>
-            <Index>#x7001</Index>
-            <SubIndex>#x4</SubIndex>
-            <BitLen>8</BitLen>
-            <Name>Pwm_3_En</Name>
             <DataType>USINT</DataType>
           </Entry>
         </RxPdo>
@@ -2653,20 +2133,6 @@
             <Name>Enc_1_En</Name>
             <DataType>USINT</DataType>
           </Entry>
-          <Entry>
-            <Index>#x7002</Index>
-            <SubIndex>#x3</SubIndex>
-            <BitLen>8</BitLen>
-            <Name>Enc_2_En</Name>
-            <DataType>USINT</DataType>
-          </Entry>
-          <Entry>
-            <Index>#x7002</Index>
-            <SubIndex>#x4</SubIndex>
-            <BitLen>8</BitLen>
-            <Name>Enc_3_En</Name>
-            <DataType>USINT</DataType>
-          </Entry>
         </RxPdo>
         <RxPdo Fixed="true" Mandatory="true" Sm="2">
           <Index>#x1603</Index>
@@ -2683,20 +2149,6 @@
             <SubIndex>#x2</SubIndex>
             <BitLen>32</BitLen>
             <Name>Axis_1_Ctrl_Vel_Cmd</Name>
-            <DataType>DINT</DataType>
-          </Entry>
-          <Entry>
-            <Index>#x7004</Index>
-            <SubIndex>#x3</SubIndex>
-            <BitLen>32</BitLen>
-            <Name>Axis_2_Ctrl_Vel_Cmd</Name>
-            <DataType>DINT</DataType>
-          </Entry>
-          <Entry>
-            <Index>#x7004</Index>
-            <SubIndex>#x4</SubIndex>
-            <BitLen>32</BitLen>
-            <Name>Axis_3_Ctrl_Vel_Cmd</Name>
             <DataType>DINT</DataType>
           </Entry>
         </RxPdo>
@@ -2728,20 +2180,6 @@
             <Name>Enc_1_Pos</Name>
             <DataType>DINT</DataType>
           </Entry>
-          <Entry>
-            <Index>#x6000</Index>
-            <SubIndex>#x3</SubIndex>
-            <BitLen>32</BitLen>
-            <Name>Enc_2_Pos</Name>
-            <DataType>DINT</DataType>
-          </Entry>
-          <Entry>
-            <Index>#x6000</Index>
-            <SubIndex>#x4</SubIndex>
-            <BitLen>32</BitLen>
-            <Name>Enc_3_Pos</Name>
-            <DataType>DINT</DataType>
-          </Entry>
         </TxPdo>
         <TxPdo Fixed="true" Mandatory="true" Sm="3">
           <Index>#x1A01</Index>
@@ -2758,20 +2196,6 @@
             <SubIndex>#x2</SubIndex>
             <BitLen>32</BitLen>
             <Name>Enc_1_Vel</Name>
-            <DataType>DINT</DataType>
-          </Entry>
-          <Entry>
-            <Index>#x6001</Index>
-            <SubIndex>#x3</SubIndex>
-            <BitLen>32</BitLen>
-            <Name>Enc_2_Vel</Name>
-            <DataType>DINT</DataType>
-          </Entry>
-          <Entry>
-            <Index>#x6001</Index>
-            <SubIndex>#x4</SubIndex>
-            <BitLen>32</BitLen>
-            <Name>Enc_3_Vel</Name>
             <DataType>DINT</DataType>
           </Entry>
         </TxPdo>
@@ -2792,20 +2216,6 @@
             <Name>Enc_1_Status</Name>
             <DataType>USINT</DataType>
           </Entry>
-          <Entry>
-            <Index>#x6002</Index>
-            <SubIndex>#x3</SubIndex>
-            <BitLen>8</BitLen>
-            <Name>Enc_2_Status</Name>
-            <DataType>USINT</DataType>
-          </Entry>
-          <Entry>
-            <Index>#x6002</Index>
-            <SubIndex>#x4</SubIndex>
-            <BitLen>8</BitLen>
-            <Name>Enc_3_Status</Name>
-            <DataType>USINT</DataType>
-          </Entry>
         </TxPdo>
         <TxPdo Fixed="true" Mandatory="true" Sm="3">
           <Index>#x1A03</Index>
@@ -2822,20 +2232,6 @@
             <SubIndex>#x2</SubIndex>
             <BitLen>8</BitLen>
             <Name>Pwm_1_Status</Name>
-            <DataType>USINT</DataType>
-          </Entry>
-          <Entry>
-            <Index>#x6003</Index>
-            <SubIndex>#x3</SubIndex>
-            <BitLen>8</BitLen>
-            <Name>Pwm_2_Status</Name>
-            <DataType>USINT</DataType>
-          </Entry>
-          <Entry>
-            <Index>#x6003</Index>
-            <SubIndex>#x4</SubIndex>
-            <BitLen>8</BitLen>
-            <Name>Pwm_3_Status</Name>
             <DataType>USINT</DataType>
           </Entry>
         </TxPdo>
@@ -2856,20 +2252,6 @@
             <Name>Axis_1_Ctrl_Vel_Fb</Name>
             <DataType>DINT</DataType>
           </Entry>
-          <Entry>
-            <Index>#x6004</Index>
-            <SubIndex>#x3</SubIndex>
-            <BitLen>32</BitLen>
-            <Name>Axis_2_Ctrl_Vel_Fb</Name>
-            <DataType>DINT</DataType>
-          </Entry>
-          <Entry>
-            <Index>#x6004</Index>
-            <SubIndex>#x4</SubIndex>
-            <BitLen>32</BitLen>
-            <Name>Axis_3_Ctrl_Vel_Fb</Name>
-            <DataType>DINT</DataType>
-          </Entry>
         </TxPdo>
         <TxPdo Fixed="true" Mandatory="true" Sm="3">
           <Index>#x1A05</Index>
@@ -2883,7 +2265,7 @@
           </Entry>
         </TxPdo>
         <Mailbox DataLinkLayer="true">
-          <CoE SdoInfo="true" PdoAssign="true" PdoConfig="true" PdoUpload="true" CompleteAccess="true" />
+          <CoE SdoInfo="true" PdoAssign="false" PdoConfig="false" PdoUpload="true" CompleteAccess="false" />
         </Mailbox>
         <Dc>
           <OpMode>

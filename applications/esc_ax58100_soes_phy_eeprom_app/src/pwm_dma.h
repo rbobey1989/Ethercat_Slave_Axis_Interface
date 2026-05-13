@@ -4,7 +4,7 @@
 #include <stdbool.h>
 #include <stdint.h>
 
-#define PWM_DMA_CHANNELS 4U
+#define PWM_DMA_CHANNELS 2U
 
 #define PWM_STATUS_ENABLED             (1U << 0)
 #define PWM_STATUS_REQUEST_NONZERO     (1U << 1)

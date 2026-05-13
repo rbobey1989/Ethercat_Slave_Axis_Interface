@@ -6,6 +6,11 @@
 #include "pwm_dma.h"
 
 #define VEL_CTRL_SHIFT 12
+
+/*
+ * Estado del PI por eje.
+ * previous_command se usa para calcular FF1 como derivada discreta del setpoint.
+ */
 typedef struct
 {
     uint8_t enabled;
@@ -23,6 +28,7 @@ typedef struct
 
 static vel_ctrl_axis_t g_vel_ctrl[VEL_CTRL_CHANNELS];
 
+/* Saturador comun para limites de integrador y de salida. */
 static int32_t vel_ctrl_clamp(int32_t value, int32_t low, int32_t high)
 {
     if (value < low)
@@ -38,6 +44,7 @@ static int32_t vel_ctrl_clamp(int32_t value, int32_t low, int32_t high)
     return value;
 }
 
+/* Inicializa los dos ejes con limites por defecto coherentes con el modulador PWM. */
 void vel_ctrl_init(void)
 {
     for (uint8_t axis = 0; axis < VEL_CTRL_CHANNELS; ++axis)
@@ -56,6 +63,10 @@ void vel_ctrl_init(void)
     }
 }
 
+/*
+ * Al reactivar el eje se realinea previous_command para que FF1 no vea un salto falso.
+ * Al desactivar se vacian integrador y salida.
+ */
 void vel_ctrl_set_enabled(uint8_t axis, uint8_t enabled)
 {
     if (axis >= VEL_CTRL_CHANNELS)
@@ -79,6 +90,7 @@ void vel_ctrl_set_enabled(uint8_t axis, uint8_t enabled)
     state->enabled = enabled ? 1U : 0U;
 }
 
+/* Setpoint de velocidad escrito por el host. */
 void vel_ctrl_set_host_command(uint8_t axis, int32_t command)
 {
     if (axis >= VEL_CTRL_CHANNELS)
@@ -89,6 +101,7 @@ void vel_ctrl_set_host_command(uint8_t axis, int32_t command)
     g_vel_ctrl[axis].host_command = command;
 }
 
+/* Ganancias del PI y de los dos términos feedforward. */
 void vel_ctrl_set_gains(uint8_t axis, int32_t kp, int32_t ki, int32_t ff0, int32_t ff1)
 {
     if (axis >= VEL_CTRL_CHANNELS)
@@ -102,6 +115,7 @@ void vel_ctrl_set_gains(uint8_t axis, int32_t kp, int32_t ki, int32_t ff0, int32
     g_vel_ctrl[axis].ff1 = ff1;
 }
 
+/* Limites independientes para el integrador y para la salida final. */
 void vel_ctrl_set_limits(uint8_t axis, int32_t integrator_limit, int32_t output_limit)
 {
     if (axis >= VEL_CTRL_CHANNELS)
@@ -113,6 +127,10 @@ void vel_ctrl_set_limits(uint8_t axis, int32_t integrator_limit, int32_t output_
     g_vel_ctrl[axis].output_limit = (output_limit > 0) ? output_limit : 0;
 }
 
+/*
+ * Tick rapido del PI de velocidad.
+ * Usa Enc_Vel del estimador por eventos como feedback principal.
+ */
 void vel_ctrl_fast_tick(void)
 {
     for (uint8_t axis = 0; axis < VEL_CTRL_CHANNELS; ++axis)
@@ -125,7 +143,7 @@ void vel_ctrl_fast_tick(void)
             continue;
         }
 
-        int32_t velocity_feedback = enc_dma_get_velocity(axis);
+        int32_t velocity_feedback = enc_dma_get_velocity_rise_ab(axis);
         int32_t command_delta = state->host_command - state->previous_command;
         int32_t error = state->host_command - velocity_feedback;
         int32_t proportional = (state->kp * error) >> VEL_CTRL_SHIFT;
@@ -154,6 +172,7 @@ void vel_ctrl_fast_tick(void)
     }
 }
 
+/* Salida ya saturada del PI, lista para pasar a pwm_dma. */
 int32_t vel_ctrl_get_output(uint8_t axis)
 {
     if (axis >= VEL_CTRL_CHANNELS)

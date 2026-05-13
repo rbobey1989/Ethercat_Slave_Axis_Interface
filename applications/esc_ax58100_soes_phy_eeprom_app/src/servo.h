@@ -4,6 +4,7 @@
 #include <stdint.h>
 
 void servo_init(void);
+void servo_load_static_config(void);
 void servo_cycle(void);
 void servo_fast_cycle(void);
 

@@ -6,6 +6,7 @@ Alcance de este documento:
 
 - STM32 objetivo: `STM32F407VGT6`
 - Aplicacion: `esc_ax58100_soes_phy_eeprom_app`
+- Arquitectura actual del firmware: 2 ejes, encoder por contador x4 + eventos A/B por EXTI
 - EEPROM de arranque del AX58100: fisica, externa al STM32
 - Reloj actual del firmware: `HSI -> PLL -> 168 MHz`
 
@@ -21,9 +22,9 @@ Recuento consolidado sobre los puertos visibles en el firmware:
 
 | Grupo | Cantidad |
 | --- | ---: |
-| GPIO usados por el firmware | 63 |
+| GPIO usados por el firmware | 53 |
 | GPIO reservados | 4 |
-| GPIO libres | 15 |
+| GPIO libres | 25 |
 
 Reservas consideradas:
 
@@ -35,10 +36,10 @@ Reservas consideradas:
 | Puerto | Usados por firmware | Reservados | Libres |
 | --- | --- | --- | --- |
 | `PA` | `PA0`, `PA1`, `PA2`, `PA3`, `PA4`, `PA5`, `PA6`, `PA7`, `PA15` | `PA13`, `PA14` | `PA8`, `PA9`, `PA10`, `PA11`, `PA12` |
-| `PB` | `PB3`, `PB4`, `PB5`, `PB9`, `PB10`, `PB11`, `PB12`, `PB13`, `PB14`, `PB15` | none | `PB0`, `PB1`, `PB2`, `PB6`, `PB7`, `PB8` |
-| `PC` | `PC0`, `PC1`, `PC2`, `PC3`, `PC5`, `PC6`, `PC7`, `PC8`, `PC9`, `PC10`, `PC11`, `PC12` | none | `PC4`, `PC13`, `PC14`, `PC15` |
-| `PD` | `PD0`, `PD1`, `PD2`, `PD3`, `PD4`, `PD5`, `PD6`, `PD7`, `PD8`, `PD9`, `PD10`, `PD11`, `PD12`, `PD13`, `PD14`, `PD15` | none | none |
-| `PE` | `PE0`, `PE1`, `PE2`, `PE3`, `PE4`, `PE5`, `PE6`, `PE7`, `PE8`, `PE9`, `PE10`, `PE11`, `PE12`, `PE13`, `PE14`, `PE15` | none | none |
+| `PB` | `PB3`, `PB6`, `PB7`, `PB8`, `PB9`, `PB10`, `PB11`, `PB13`, `PB14`, `PB15` | none | `PB0`, `PB1`, `PB2`, `PB4`, `PB5`, `PB12` |
+| `PC` | `PC0`, `PC1`, `PC2`, `PC3`, `PC5`, `PC10`, `PC11`, `PC12` | none | `PC4`, `PC6`, `PC7`, `PC8`, `PC9`, `PC13`, `PC14`, `PC15` |
+| `PD` | `PD0`, `PD1`, `PD2`, `PD3`, `PD4`, `PD5`, `PD6`, `PD7`, `PD8`, `PD9`, `PD10`, `PD11`, `PD14`, `PD15` | none | `PD12`, `PD13` |
+| `PE` | `PE0`, `PE1`, `PE2`, `PE3`, `PE4`, `PE5`, `PE6`, `PE7`, `PE8`, `PE9`, `PE10`, `PE11` | none | `PE12`, `PE13`, `PE14`, `PE15` |
 | `PH` | none | `PH0`, `PH1` | none |
 
 ## EtherCAT AX58100
@@ -63,13 +64,11 @@ Salidas PWM y direccion:
 | --- | --- | --- | --- |
 | 0 | `PE9` | `TIM1_CH1` | `PE8` |
 | 1 | `PE11` | `TIM1_CH2` | `PE10` |
-| 2 | `PE13` | `TIM1_CH3` | `PE12` |
-| 3 | `PE14` | `TIM1_CH4` | `PE15` |
 
 Perifericos asociados:
 
-- `TIM1` para las cuatro PWM
-- `DMA2 Stream5 Channel6` para actualizar `CCR1..CCR4`
+- `TIM1` para las dos PWM
+- `DMA2 Stream5 Channel6` para actualizar `CCR1..CCR2`
 
 ## Encoders por eje
 
@@ -79,82 +78,72 @@ Entradas de posicion en cuadratura:
 | --- | --- | --- | --- |
 | 0 | `PA0` | `PA1` | `TIM5_CH1/CH2` |
 | 1 | `PA15` | `PB3` | `TIM2_CH1/CH2` |
-| 2 | `PD12` | `PD13` | `TIM4_CH1/CH2` |
-| 3 | `PC6` | `PC7` | `TIM8_CH1/CH2` |
 
-Captura lenta de periodo, normalmente derivada de la fase A:
+Eventos de velocidad por flanco ascendente duplicado de A/B:
 
-| Eje | Pin | Timer | DMA |
+| Eje | Evento A | Evento B | Uso |
 | --- | --- | --- | --- |
-| 0 | `PB4` | `TIM3_CH1` | `DMA1 Stream4 Channel5` |
-| 1 | `PB5` | `TIM3_CH2` | `DMA1 Stream5 Channel5` |
-| 2 | `PC8` | `TIM3_CH3` | `DMA1 Stream7 Channel5` |
-| 3 | `PC9` | `TIM3_CH4` | `DMA1 Stream2 Channel5` |
+| 0 | `PB6` | `PB7` | `EXTI6` / `EXTI7` |
+| 1 | `PB8` | `PB9` | `EXTI8` / `EXTI9` |
 
 Captura de `Z` / index implementada por interrupcion:
 
-| Eje | Z / Index | Uso previsto |
+| Eje | Z / Index | Uso |
 | --- | --- | --- |
-| 0 | `PB9` | `EXTI9`, latched por firmware |
-| 1 | `PB10` | `EXTI10`, latched por firmware |
-| 2 | `PB11` | `EXTI11`, latched por firmware |
-| 3 | `PB12` | `EXTI12`, latched por firmware |
+| 0 | `PB10` | `EXTI10`, nivel + latch por firmware |
+| 1 | `PB11` | `EXTI11`, nivel + latch por firmware |
 
-Nota importante:
+Notas importantes:
 
-- `PA15`, `PB3` y `PB4` comparten funciones con `SWJ/JTAG`, pero eso no impide usar depuracion/programacion normal por `SWD` mientras se reserven `PA13` (`SWDIO`) y `PA14` (`SWCLK`). La implicacion real es otra: si esos tres pines se usan para encoder/captura, renuncias a `JTAG` completo y tambien a `SWO`/trace en `PB3`.
-- En otras palabras: para una placa que solo vaya a usar `SWD`, reutilizar `PA15/PB3/PB4` es tecnicamente viable; se vuelve una mala eleccion solo si quieres mantener opciones de `JTAG`, `SWO`, boundary-scan, o una zona de debug mas limpia para futuras revisiones.
-- `Z` se expone ya a traves de `Enc_Status` en el OD/PDO existente: bit 5 = nivel actual fisico de la entrada Z; bit 6 = pulso de un ciclo servo cuando hubo un flanco ascendente nuevo desde el ultimo latch. En otras palabras, bit 5 describe el estado instantaneo del pin y bit 6 describe un evento nuevo.
+- El firmware ya no usa la antigua rama de captura lenta por `TIM3`. Por tanto `PB4`, `PB5`, `PC8` y `PC9` han dejado de estar reclamados por el bloque encoder en esta variante.
+- `PA15` y `PB3` comparten funciones con `SWJ/JTAG`, pero eso no impide usar depuracion/programacion normal por `SWD` mientras se reserven `PA13` (`SWDIO`) y `PA14` (`SWCLK`).
+- La implicacion real es que esta asignacion renuncia a `JTAG` completo y a `SWO`/trace en `PB3`.
+
+## Temporizacion local sin pin dedicado
+
+Temporizadores usados por firmware que no consumen GPIO:
+
+| Funcion | Recurso |
+| --- | --- |
+| Lazo rapido local de servo | `TIM9` a 4 kHz |
+| Timestamp de eventos encoder | `DWT->CYCCNT` |
 
 ## Estado actual del proyecto
 
 El proyecto queda documentado segun el firmware actual, sin proponer aqui un
 pinout alternativo. La distribucion vigente que debe considerarse congelada es:
 
-- PWM de los 4 ejes en `TIM1` sobre `PE9`, `PE11`, `PE13`, `PE14`, con
-  direccion en `PE8`, `PE10`, `PE12`, `PE15`.
-- Posicion en cuadratura en `TIM5`, `TIM2`, `TIM4` y `TIM8` usando
-  `PA0/PA1`, `PA15/PB3`, `PD12/PD13`, `PC6/PC7`.
-- Captura lenta de velocidad en `TIM3_CH1..CH4` usando `PB4`, `PB5`, `PC8`,
-  `PC9`.
-- `Z` por `EXTI` en `PB9..PB12`.
-
-Con la decision actual de depurar solo por `SWD` mediante `CMSIS-DAP` o
-`ST-Link/V2`, esta asignacion es valida: `PA15`, `PB3` y `PB4` pueden usarse
-en la aplicacion siempre que `PA13` y `PA14` sigan reservados para `SWDIO` y
-`SWCLK`.
+- PWM de los 2 ejes en `TIM1` sobre `PE9` y `PE11`, con direccion en `PE8` y `PE10`.
+- Posicion en cuadratura en `TIM5` y `TIM2` usando `PA0/PA1` y `PA15/PB3`.
+- Estimacion de velocidad por eventos `rising A+B` duplicados a `PB6..PB9`.
+- `Z` por `EXTI` en `PB10..PB11`.
+- IO temporales de 16 entradas y 16 salidas en `PD0..PD11`, `PE0..PE7`, `PC1`, `PC5`, `PC10..PC12`, `PA2`, `PA3`, `PB13..PB15`, `PD14`, `PD15`.
 
 ## Estado funcional expuesto por firmware
 
 La superficie funcional visible hoy desde EtherCAT es minimalista y estable:
 
 - `servo.c` publica por eje `Enc_Pos`, `Enc_Vel`, `Enc_Status` y `Pwm_Status`.
-- Las salidas del master siguen siendo `Pwm_Cmd`, `Pwm_En`, `Enc_En` y
-  `Outputs`.
-- No hay objetos extra para posicion exacta de index ni contador de eventos de
-  index; la semantica de `Z` queda encapsulada en firmware.
+- Las salidas del master siguen siendo `Pwm_Cmd`, `Pwm_En`, `Enc_En`, `Ctrl_Vel_Cmd` y `Outputs`.
+- No hay objetos extra para posicion exacta de index ni contador de eventos de index; la semantica de `Z` queda encapsulada en firmware.
 
 Bits actuales de `Enc_Status`:
 
-| Bit | Mascara | Significado |
+| Bit | Mascara | Significado actual |
 | --- | --- | --- |
 | 0 | `1U << 0` | Encoder habilitado |
-| 1 | `1U << 1` | Captura lenta valida |
-| 2 | `1U << 2` | Captura lenta fresca en este latch |
-| 3 | `1U << 3` | Velocidad fusionada basada en fuente rapida |
-| 4 | `1U << 4` | Velocidad fusionada basada en fuente lenta |
+| 1 | `1U << 1` | Existe una estimacion de velocidad valida |
+| 2 | `1U << 2` | La estimacion sigue dentro del timeout interno |
+| 3 | `1U << 3` | Reservado; se mantiene libre para no renumerar el byte de estado exportado |
+| 4 | `1U << 4` | Velocidad basada en fuente de eventos A/B |
 | 5 | `1U << 5` | Nivel actual de `Z` |
 | 6 | `1U << 6` | Pulso de un ciclo servo por nuevo evento de `Z` |
 
-Resumen practico del estado actual:
+Notas funcionales del estimador actual:
 
-- La unica redistribucion de GPIO temporales respecto al reparto anterior esta
-  en `src/io.c`, que movio las entradas temporales a `PA2/PA3`, `PB13..PB15`,
-  `PC1`, `PC5`, `PC10..PC12`, `PD14`, `PD15`.
-- El bloque encoder mantiene la combinacion actual de contador en cuadratura,
-  captura lenta por `TIM3` y latch de `Z` por `EXTI`.
-- El OD/PDO activo sigue siendo el minimo necesario para LinuxCNC: posicion,
-  velocidad, entradas, `Enc_Status`, `Pwm_Status`, comandos y enables.
+- La velocidad se estima a partir de una ventana de 2 eventos `rising A+B` para reducir latencia.
+- Como la fuente de velocidad usa flancos `rising A+B` y no cuadratura completa, entre eventos consecutivos hay 2 counts x4; por eso entre pulsos la cota superior es `2 counts / age`.
+- Se mantiene la politica estilo HostMot2 de cota decreciente entre pulsos, pero con timeout absoluto interno de `0.25 s` para reducir la latencia de forzado a cero.
 
 ## IO temporales expuestos por PDO
 
@@ -205,15 +194,15 @@ Entradas digitales temporales:
 Los siguientes pines no aparecen reclamados por esta app:
 
 - `PA8`, `PA9`, `PA10`, `PA11`, `PA12`
-- `PB0`, `PB1`, `PB2`, `PB6`, `PB7`, `PB8`
-- `PC4`, `PC13`, `PC14`, `PC15`
+- `PB0`, `PB1`, `PB2`, `PB4`, `PB5`, `PB12`
+- `PC4`, `PC6`, `PC7`, `PC8`, `PC9`, `PC13`, `PC14`, `PC15`
+- `PD12`, `PD13`
+- `PE12`, `PE13`, `PE14`, `PE15`
 
-## Reservas y notas de diseno
+## Reservas y notas de diseño
 
 - `PA13` y `PA14` deben mantenerse para `SWDIO` y `SWCLK`.
 - `PH0` y `PH1` conviene reservarlos para `HSE_IN` y `HSE_OUT` en la PCB, aunque el firmware actual arranque con HSI.
-- `PE0..PE15` quedan completamente ocupados por IO temporal y PWM/direccion.
-- `PD0..PD15` quedan completamente ocupados por IO temporal, encoder del eje 2 y las entradas temporales `Inputs[14]` y `Inputs[15]`.
 - `PDI_EMU` debe leerse como bootstrap del AX58100 (`Device emulation`, bit `0x0141.0`), no como salida de estado de EEPROM cargada.
 - `EEP_DONE` sigue siendo una salida de estado util para diagnostico, pero no es obligatoria para el firmware actual con EEPROM fisica.
 - Esta variante con EEPROM fisica no asigna pines STM32 a la carga de EEPROM del AX58100. Si en el futuro migras a una solucion asistida por MCU, habra que reservar al menos `SCL`, `SDA` y, si quieres diagnostico de arranque, `EEP_DONE`.
